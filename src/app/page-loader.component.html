@@ -1,0 +1,5 @@
+<div class="page-shell">
+  <div *ngIf="loading" class="page-loader">Loading page...</div>
+  <div *ngIf="error" class="page-error">This page could not be loaded.</div>
+  <div #pageHost class="page-host" [innerHTML]="pageHtml"></div>
+</div>
