@@ -1,13 +1,19 @@
 import { Routes } from '@angular/router';
-import { PageLoaderComponent } from './page-loader.component';
+import { AboutPageComponent } from './pages/about/about-page.component';
+import { ContactPageComponent } from './pages/contact/contact-page.component';
+import { HomePageComponent } from './pages/home/home-page.component';
+import { PortfolioDetailsPageComponent } from './pages/portfolio-details/portfolio-details-page.component';
+import { PortfolioPageComponent } from './pages/portfolio/portfolio-page.component';
+import { StoriesPageComponent } from './pages/stories/stories-page.component';
+import { StoryDetailsPageComponent } from './pages/story-details/story-details-page.component';
 
 export const routes: Routes = [
-  { path: '', component: PageLoaderComponent, data: { slug: 'index' }, pathMatch: 'full' },
-  { path: 'about', component: PageLoaderComponent, data: { slug: 'about' } },
-  { path: 'contact', component: PageLoaderComponent, data: { slug: 'contact' } },
-  { path: 'portfolio', component: PageLoaderComponent, data: { slug: 'portfolio' } },
-  { path: 'portfolio-details', component: PageLoaderComponent, data: { slug: 'portfolio-details' } },
-  { path: 'stories', component: PageLoaderComponent, data: { slug: 'stories' } },
-  { path: 'story-details', component: PageLoaderComponent, data: { slug: 'story-details' } },
+  { path: '', component: HomePageComponent, pathMatch: 'full' },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'portfolio', component: PortfolioPageComponent },
+  { path: 'portfolio-details', component: PortfolioDetailsPageComponent },
+  { path: 'stories', component: StoriesPageComponent },
+  { path: 'story-details', component: StoryDetailsPageComponent },
   { path: '**', redirectTo: '' },
 ];

@@ -278,7 +278,9 @@
         .replace(/\.html?$/i, '')
         .trim();
 
-      if (!slug || !dewcoPages.has(slug)) {
+      const normalized = slug || 'index';
+
+      if (!dewcoPages.has(normalized)) {
         const li = $(this).closest('li');
         if (li.length) {
           li.remove();
@@ -287,7 +289,7 @@
         }
         return;
       }
-      const targetPath = slug === 'index' ? '/' : `/${slug}`;
+      const targetPath = normalized === 'index' ? '/' : `/${normalized}`;
       $(this).attr('href', targetPath);
     });
 
