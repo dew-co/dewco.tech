@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+my DewCo Brand
+
+Dew & Company (DewCo)
+
+Tagline: “Dipankar’s Company of Ideas”
+Essence: A creator’s lab where ideas turn into products — spanning AI, automation, design, and human-centered innovation.
+
+Core Position:
+
+Dew & Company (DewCo) is the personal innovation studio of Dipankar Chowdhury, built on a decade of experience in full-stack engineering, automation architecture, and SaaS product design.
+
+As the founder and full-stack engineer, I use DewCo as a sandbox for developing new ventures such as Wander356, TRAC App, Quant-Grade Trading Bot, and more.
+
+As the creative R&D, DewCo explores emerging technologies, develops prototypes, and transforms experimental concepts into standalone ventures.
