@@ -3904,7 +3904,7 @@ label {
   display: inline-block;
 }
 .cs_site_branding img {
-  max-height: 45px;
+  max-height: 75px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -4371,7 +4371,7 @@ label {
 ----------------------------------------------------------------*/
 .cs_footer {
   background-color: #f7f7f7;
-  padding-top: 133px;
+  padding-top: 80px;
   position: relative;
 }
 @media (max-width: 991px) {
