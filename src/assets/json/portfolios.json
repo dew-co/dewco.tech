@@ -1,0 +1,67 @@
+[
+  {
+    "id": "wander365",
+    "name": "WanderRest (formerly Wander365)",
+    "headline": "Wander365 → WanderRest: Full-Stack Travel Experience Platform for Modern Explorers",
+    "short_headline": "WanderRest – Smart Tours & Travel Booking Platform",
+    "tagline": "Wander more, plan less.",
+    "category": "Travel / Hospitality",
+    "image": {
+      "src": "/assets/portfolio/wanderrest-cover.jpg",
+      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
+    },
+    "link": "/portfolio/wanderrest-wander365"
+  },
+  {
+    "id": "quantgrade_trading_bot",
+    "name": "Quant-Grade Indian & Crypto Trading Bot",
+    "headline": "Quant-Grade: Multi-Timeframe Algorithmic Trading Engine for Indian Markets & Crypto",
+    "short_headline": "Quant-Grade – AI-Assisted Trading Bot",
+    "tagline": "Quant-grade analysis for non-quant traders.",
+    "category": "FinTech / Trading",
+    "image": {
+      "src": "/assets/portfolio/quantgrade-cover.jpg",
+      "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+    },
+    "link": "/portfolio/quantgrade-trading-bot"
+  },
+  {
+    "id": "trac_app",
+    "name": "TRAC App – Trading Review & Analytics Companion",
+    "headline": "TRAC: Structured Trade Journal & Performance Analytics for Serious Traders",
+    "short_headline": "TRAC – Trading Review & Analytics",
+    "tagline": "Every trade tracked, every mistake learned.",
+    "category": "FinTech / Analytics",
+    "image": {
+      "src": "/assets/portfolio/trac-app-cover.jpg",
+      "alt": "TRAC App trade journal and performance analytics dashboard"
+    },
+    "link": "/portfolio/trac-app"
+  },
+  {
+    "id": "lan_cam",
+    "name": "LAN-Cam – Local Network Camera & Screen Sync",
+    "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
+    "short_headline": "LAN-Cam – Local Screen & Camera Streaming",
+    "tagline": "No internet, no cloud – just pure LAN streaming.",
+    "category": "Productivity / EdTech / Utilities",
+    "image": {
+      "src": "/assets/portfolio/lan-cam-cover.jpg",
+      "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+    },
+    "link": "/portfolio/lan-cam"
+  },
+  {
+    "id": "gloveflix_platform",
+    "name": "GloveFlix 2.0 – Hybrid Streaming & VIP Access Platform",
+    "headline": "GloveFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
+    "short_headline": "GloveFlix – Public Movie Hub with Private VIP Club",
+    "tagline": "Publicly discover, privately enjoy.",
+    "category": "Media / Entertainment",
+    "image": {
+      "src": "/assets/portfolio/gloveflix-cover.jpg",
+      "alt": "GloveFlix movie discovery and VIP access interface on desktop and mobile"
+    },
+    "link": "/portfolio/gloveflix"
+  }
+]

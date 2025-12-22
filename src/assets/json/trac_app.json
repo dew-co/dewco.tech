@@ -1,0 +1,211 @@
+{
+  "id": "trac_app",
+  "project_name": "TRAC App – Trading Review & Analytics Companion",
+  "headline": "TRAC: Structured Trade Journal & Performance Analytics for Serious Traders",
+  "short_headline": "TRAC App – Trading Review & Analytics Companion",
+  "taglines": [
+    "Turn random trades into a measurable edge.",
+    "Journal less, learn more from your trades.",
+    "Every trade tracked, every mistake learned.",
+    "From screenshots and notes to clean trade intelligence.",
+    "Your daily trading report card, automated."
+  ],
+  "client": {
+    "brand_name_current": "TRAC App",
+    "industry": "FinTech / Trading Analytics / Trader Productivity",
+    "location": "India (global trader-friendly)",
+    "audience": [
+      "Retail traders (equity, F&O, crypto, forex)",
+      "Swing and intraday traders",
+      "Trading mentors and small prop desks",
+      "Users of Quant-Grade & similar trading engines"
+    ]
+  },
+  "studio": {
+    "owned_by": "Dipankar Chowdhury",
+    "brand": "Dew & Company (DewCo)",
+    "parent_company": "Gloventis Solution"
+  },
+  "snapshot": {
+    "role": [
+      "Product Strategy",
+      "UX/UI Design",
+      "Backend & API Engineering",
+      "Data Modeling & Analytics Design",
+      "Integration & Automation Architecture"
+    ],
+    "platform": [
+      "Web App (Dashboard & Journal)",
+      "API Layer (for broker & bot integrations)",
+      "Notification & Summary System"
+    ],
+    "project_type": "In-house product (SaaS-ready trade journaling and analytics platform)",
+    "status": "Active – early product with continuous feature expansion",
+    "initial_launch_date": "2024-10-01",
+    "completed_date_v1": "2024-10-20",
+    "engagement_model": "Internal product build with future SaaS/B2B licensing plan"
+  },
+  "about": {
+    "short": "TRAC (Trading Review & Analytics Companion) is a structured trade journaling and performance analytics app that helps traders track every trade, understand patterns, and improve decision-making with clean, visual insights.",
+    "long": "TRAC App was created to solve a very common trader problem: trades are executed every day, but very few are actually reviewed properly. Most traders either maintain messy Excel sheets, rely on screenshots, or do not track anything consistently.\n\nTRAC turns trade tracking into a simple, repeatable workflow. Traders can import their trades (manually or via CSV/API), tag them by setup and emotion, attach screenshots/notes, and then review results in a clean dashboard. The app highlights which strategies work, what timeframes perform best, and where risk leaks are happening.\n\nThe system is designed to work independently or alongside engines like Quant-Grade. While Quant-Grade focuses on generating signals, TRAC focuses on the human layer: execution quality, discipline, and continuous improvement through structured reviews and analytics."
+  },
+  "roles_and_responsibilities": [
+    "Defined the product concept and positioning: a neutral analytics layer that works with any broker or strategy.",
+    "Designed end-to-end UX for logging, tagging, and reviewing trades with minimum friction.",
+    "Modeled the data structures for trades, tags, sessions, mistakes, screenshots, and P&L curves.",
+    "Implemented backend APIs to store and query trades, performance stats, and filters.",
+    "Built dashboards and visualizations to show performance by strategy, symbol, session, and tag.",
+    "Planned integration points with Quant-Grade and external broker APIs for semi-automated imports."
+  ],
+  "objectives": [
+    "Make structured trade journaling easy enough that traders actually do it daily.",
+    "Provide clear performance analytics without overwhelming users with complexity.",
+    "Help traders identify their best strategies, timeframes, symbols, and risk profiles.",
+    "Create a daily/weekly review workflow that improves discipline and execution.",
+    "Design TRAC as a standalone SaaS and as a plug-in analytics layer for other products."
+  ],
+  "features": {
+    "journaling": [
+      "Manual trade entry with fields for instrument, direction, size, entry, exit, fees, and notes.",
+      "Bulk import via CSV from brokers or platforms (planned extensions for common formats).",
+      "Tagging system for setups, emotions, mistakes, and playbook categories.",
+      "Screenshot upload for before/after trade charts or broker statements.",
+      "Session-based grouping (morning, afternoon, full day; or specific sessions like expiry day, news day)."
+    ],
+    "analytics": [
+      "Performance summary by day, week, month, and custom ranges.",
+      "Win rate, average R/R, average gain/loss, and expectancy metrics.",
+      "Breakdown by setup/tag, instrument, direction (long/short), and timeframe.",
+      "Equity curve visualization with drawdown overlays.",
+      "Heatmaps for weekday, time-of-day, and instrument clusters."
+    ],
+    "review_workflow": [
+      "End-of-day review mode listing all trades with quick tagging and notes.",
+      "End-of-week summary with key metrics and top 3 lessons prompts.",
+      "Marking trades as 'planned', 'impulsive', or 'missed opportunity'.",
+      "Highlight of best and worst trades of the period with quick drill-down."
+    ],
+    "risk_and_behavior": [
+      "Tracking max allowed daily loss vs actual realized loss.",
+      "Flags for overtrading days (when trade count exceeds set limit).",
+      "Metrics for average hold time vs planned hold time.",
+      "Behavioral tags like 'revenge trade', 'FOMO entry', 'early exit', etc."
+    ],
+    "integrations_and_automation": [
+      "API endpoints to receive trades from external systems (e.g., bots or custom scripts).",
+      "Conceptual integration with Quant-Grade to automatically tag trades by strategy/signal ID.",
+      "Email or Telegram-style summaries for daily/weekly reports.",
+      "Export functionality for PDF/CSV summaries for sharing with mentors or CA."
+    ],
+    "admin_and_account": [
+      "Multi-account support (equity, F&O, crypto) under one user.",
+      "Basic role support for mentor accounts to review student trades (future roadmap).",
+      "Plan tiers concept (Free, Pro, Mentor) with usage limits and feature flags."
+    ]
+  },
+  "tech_stack": {
+    "backend": [
+      "Python backend using FastAPI / Django REST Framework for trade and analytics APIs.",
+      "Task queue for asynchronous imports and bulk analytics recomputation.",
+      "Background workers for generating periodic summaries and reports."
+    ],
+    "data_and_analytics": [
+      "PostgreSQL as primary database for trades, tags, and user data.",
+      "Efficient indexing and partitioning patterns for trade history queries.",
+      "Pandas/NumPy-based analytics jobs for metric computations where needed."
+    ],
+    "frontend": [
+      "React / Next.js web app for the dashboard and journaling interface.",
+      "Component library for tables, filters, charts, and forms.",
+      "Responsive UX with desktop-first layout and mobile-friendly key flows (quick add, summary view)."
+    ],
+    "visualizations": [
+      "Charting library for equity curves, histograms, and heatmaps.",
+      "Reusable chart components that can also be embedded in email/PDF reports."
+    ],
+    "integrations": [
+      "CSV importers with mapping UI for generic broker exports.",
+      "Planned broker API integrations for direct sync where allowed (e.g., via official APIs).",
+      "Webhook/API integration concept for Quant-Grade and similar engines."
+    ],
+    "hosting_devops": [
+      "Containerized services (Docker) for backend and frontend.",
+      "Deployment on VPS/cloud with environment separation (dev/stage/prod).",
+      "Basic CI/CD pipeline for code testing, migrations, and rollout."
+    ]
+  },
+  "timeline": {
+    "ideation_and_validation": {
+      "phase": "Ideation & Validation",
+      "start": "2024-06-15",
+      "end": "2024-07-15",
+      "summary": "Interviews with traders, review of existing journaling habits, and definition of core pain points and feature set."
+    },
+    "design_and_prototyping": {
+      "phase": "UX/UI Design & Prototyping",
+      "start": "2024-07-16",
+      "end": "2024-08-20",
+      "summary": "Designed journaling flows, analytics views, and review workflows with interactive prototypes."
+    },
+    "development_v1": {
+      "phase": "Core App Development v1",
+      "start": "2024-08-21",
+      "end": "2024-10-01",
+      "summary": "Implemented backend, database schema, core journaling flows, and basic analytics dashboard."
+    },
+    "internal_beta": {
+      "phase": "Internal Beta / Dogfooding",
+      "date": "2024-10-20",
+      "summary": "Used TRAC for personal and small-circle trading review to refine flows and fix UX issues."
+    },
+    "ongoing_enhancements": {
+      "phase": "Ongoing Enhancements & SaaS Prep",
+      "start": "2024-11-01",
+      "end": null,
+      "summary": "Continuous improvements to analytics, imports, and integration roadmap, preparing for public SaaS release."
+    }
+  },
+  "budget": {
+    "currency": "INR",
+    "internal_build_equivalent": 180000,
+    "internal_build_range": [150000, 220000],
+    "notes": "Represents equivalent full project value including research, design, backend/frontend development, and infrastructure. Actual cost is largely internal time and cloud resources as it is an in-house product."
+  },
+  "challenges": [
+    "Traders have very different journaling styles; designing a structure that is flexible but still standardized was difficult.",
+    "Many brokers and platforms use different CSV formats and data conventions.",
+    "Balancing depth of analytics with simplicity for users new to performance statistics.",
+    "Ensuring journaling does not feel like extra work after a long trading session.",
+    "Designing for both manual and automated trade imports without confusing the user."
+  ],
+  "solutions": [
+    "Created a core schema for trades with optional fields and tag-based extension rather than rigid columns only.",
+    "Designed a flexible CSV mapping UI so traders can adapt imports from any broker format.",
+    "Focused the main dashboard on a small set of key metrics and allowed power users to drill down if needed.",
+    "Built quick-add flows and end-of-day review mode to keep journaling low-friction and focused.",
+    "Separated manual and automated imports clearly in the UI while unifying them in the backend data model."
+  ],
+  "outcomes": {
+    "qualitative": [
+      "Provided a clear, repeatable review structure for trades instead of ad-hoc notes and screenshots.",
+      "Enabled visibility into what setups and time windows are genuinely profitable vs emotionally preferred.",
+      "Helped standardize performance tracking for multiple accounts (equity, F&O, crypto) under one view.",
+      "Established TRAC as a natural companion product to any trading engine or discretionary strategy."
+    ],
+    "example_metrics_note": "As an early-stage internal product, results are focused on personal and small-group usage. Public metrics and anonymized case studies can be added after a broader launch."
+  },
+  "portfolio_copy": {
+    "grid_card": "TRAC App – Trading Review & Analytics Companion that turns scattered trade logs into structured insights and disciplined improvement.",
+    "one_liner": "A structured trade journaling and analytics app that helps traders understand their edge, fix repeated mistakes, and improve execution over time."
+  },
+  "links": {
+    "live_app": null,
+    "demo_or_video": null,
+    "case_study_page": null,
+    "github_or_repo": null
+  },
+  "meta": {
+    "last_updated_for_portfolio": "2025-12-22",
+    "notes_for_future_edit": "Fill in real URLs, broker names, and sample anonymized screenshots/metrics once TRAC is ready for public demo."
+  }
+}
