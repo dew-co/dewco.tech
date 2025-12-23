@@ -1,0 +1,235 @@
+{
+  "id": "arceon_ai",
+  "project_name": "Arceon AI – AI-powered document processing & claim automation SaaS",
+  "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
+  "short_headline": "Arceon AI – Document Processing & Claim Automation",
+  "taglines": [
+    "Automate claims. Reduce review time. Increase accuracy.",
+    "From documents to decisions — in seconds.",
+    "AI extraction + policy rules + audit trails in one platform.",
+    "Turn messy PDFs into structured, actionable data.",
+    "Claims automation built for speed and compliance."
+  ],
+  "client": {
+    "brand_name_current": "Arceon AI",
+    "industry": "InsurTech / HealthTech / FinTech / Enterprise Automation",
+    "location": "India (global-ready SaaS)",
+    "audience": [
+      "Insurance claims teams",
+      "TPAs and healthcare administrators",
+      "Finance back-office operations",
+      "Enterprises processing high-volume documents",
+      "BPO/KPO operations teams"
+    ]
+  },
+  "studio": {
+    "owned_by": "Dipankar Chowdhury",
+    "brand": "Dew & Company (DewCo)",
+    "parent_company": "Gloventis Solution"
+  },
+  "snapshot": {
+    "role": [
+      "Product Strategy",
+      "System Architecture",
+      "UX/UI Design",
+      "Backend Engineering (Django/DRF)",
+      "LLM Integration (OpenAI)",
+      "Automation & Workflow Design"
+    ],
+    "platform": [
+      "SaaS Web App (Admin Console)",
+      "REST API (Integrations)",
+      "Document Processing Pipeline",
+      "Rule Engine + Review Workflow",
+      "Reporting & Audit Logs"
+    ],
+    "project_type": "In-house SaaS product / enterprise automation platform",
+    "status": "Active – product build and iteration",
+    "project_start_date": "2025-01-10",
+    "initial_launch_date": "2025-06-15",
+    "completed_date_v1": "2025-08-01",
+    "engagement_model": "Internal product build with future B2B SaaS licensing"
+  },
+  "about": {
+    "short": "Arceon AI is a SaaS platform that automates document processing and claim workflows. It extracts key entities from PDFs and images using OpenAI, validates them via configurable rules, routes cases for human review when needed, and maintains complete audit trails.",
+    "long": "Arceon AI was created to eliminate the slow, manual work involved in processing claims and document-heavy workflows. Traditional processing requires human operators to read PDFs, copy values, verify details, and decide whether a claim should be approved, rejected, or escalated.\n\nArceon AI combines an AI extraction layer (OpenAI) with a robust enterprise backend (Django/DRF). The platform ingests documents (invoices, EOBs, claim forms, prescriptions, receipts, KYC proofs), converts them into structured data, applies policy and validation rules, flags anomalies, and sends uncertain cases into a guided review queue.\n\nThe result is a modern claims automation system: faster decisions, fewer errors, consistent rule application, and complete traceability through audit logs, role-based permissions, and workflow histories."
+  },
+  "objectives": [
+    "Automate extraction of structured data from unstructured documents (PDFs/images).",
+    "Reduce claim processing turnaround time with AI + rules + human-in-the-loop review.",
+    "Provide a configurable rule engine for validation, flagging, and routing.",
+    "Offer an API-first SaaS that integrates with existing enterprise systems.",
+    "Ensure compliance readiness via audit logs, RBAC, and change history."
+  ],
+  "key_modules": {
+    "document_ingestion": [
+      "Upload portal with batch ingestion",
+      "Email-to-ingest and API ingest endpoints (optional)",
+      "File type handling (PDF, JPG, PNG)",
+      "Document versioning and re-processing"
+    ],
+    "ai_extraction": [
+      "Field extraction (names, dates, amounts, codes, IDs, provider details)",
+      "Template-free extraction using LLM prompts + structured output",
+      "Confidence scoring and source citations (page/line references where possible)",
+      "Normalization (dates, currencies, totals, codes)"
+    ],
+    "validation_and_rules": [
+      "Configurable rules (thresholds, required fields, cross-field checks)",
+      "Duplicate detection and mismatch detection",
+      "Fraud/anomaly flags (basic heuristic + rule-based)",
+      "Auto-approve / auto-reject / send-to-review routing"
+    ],
+    "human_review_queue": [
+      "Review inbox with filters and priority",
+      "Side-by-side doc viewer and extracted fields",
+      "Inline edits with tracked changes",
+      "Escalate, request-more-info, approve, reject actions"
+    ],
+    "claims_workflow": [
+      "Status pipeline (New → Extracted → Validated → Review → Approved/Rejected)",
+      "SLAs, timers, assignment rules",
+      "Role-based visibility and permissions"
+    ],
+    "audit_and_compliance": [
+      "Full audit trail for every change and decision",
+      "Who/when/what tracking (user and system actions)",
+      "Exportable logs and reports",
+      "Access control and session management"
+    ],
+    "analytics_and_reporting": [
+      "Processing volume, approval rates, review rates",
+      "Average extraction and processing time",
+      "Top failure reasons and rule-trigger frequency",
+      "Operational dashboards by team, client, or department"
+    ]
+  },
+  "features": {
+    "core": [
+      "Upload and ingest documents in bulk",
+      "AI extraction into structured claim fields",
+      "Rule engine for validation and automated routing",
+      "Human-in-the-loop review UI",
+      "Audit logs and exportable reports"
+    ],
+    "enterprise_ready": [
+      "RBAC (Admin, Supervisor, Reviewer, Viewer)",
+      "Multi-tenant ready structure (org/workspace separation)",
+      "API keys + secure integration endpoints",
+      "Webhook notifications for status changes",
+      "Configurable data retention policies (planned)"
+    ],
+    "security": [
+      "Encryption in transit (TLS)",
+      "Secure storage with access controls",
+      "Token-based authentication (JWT/session)",
+      "Rate limiting and request logging"
+    ]
+  },
+  "tech_stack": {
+    "backend": [
+      "Django",
+      "Django REST Framework (DRF)",
+      "PostgreSQL",
+      "Redis (caching/queues)",
+      "Celery (background jobs)",
+      "Object storage (S3-compatible) for documents"
+    ],
+    "ai": [
+      "OpenAI API for extraction and classification",
+      "Prompt templates with structured JSON output",
+      "Fallback parsing rules for low-confidence fields"
+    ],
+    "frontend": [
+      "Admin dashboard (React/Next.js or Django templates for internal console)",
+      "Responsive UI for reviewer workflows",
+      "Document viewer with field mapping"
+    ],
+    "devops": [
+      "Dockerized services",
+      "CI/CD pipeline for deploy",
+      "Environment separation (dev/stage/prod)",
+      "Observability: logs + metrics for processing pipeline"
+    ]
+  },
+  "timeline": {
+    "discovery_and_requirements": {
+      "phase": "Discovery & Requirements",
+      "start": "2025-01-10",
+      "end": "2025-02-05",
+      "summary": "Identified core document types, claim workflows, and compliance needs. Defined product scope and system architecture."
+    },
+    "ux_and_prototyping": {
+      "phase": "UX/UI Design & Prototyping",
+      "start": "2025-02-06",
+      "end": "2025-03-10",
+      "summary": "Designed ingestion flow, reviewer experience, dashboards, and audit log views."
+    },
+    "backend_and_pipeline_build": {
+      "phase": "Backend + Processing Pipeline",
+      "start": "2025-03-11",
+      "end": "2025-06-14",
+      "summary": "Built Django/DRF APIs, database models, background tasks, extraction service, and rules engine foundation."
+    },
+    "initial_launch": {
+      "phase": "Initial Launch",
+      "date": "2025-06-15",
+      "summary": "Internal/limited release with core ingestion, extraction, validation, and review flows."
+    },
+    "v1_hardening": {
+      "phase": "Stabilization & v1 Completion",
+      "start": "2025-06-16",
+      "end": "2025-08-01",
+      "summary": "Improved accuracy, added better audit logs, role control, analytics dashboards, and error handling."
+    },
+    "ongoing": {
+      "phase": "Ongoing Enhancements",
+      "start": "2025-08-02",
+      "end": null,
+      "summary": "Advanced rule builder UI, multi-tenant packaging, integrations, and scalability improvements."
+    }
+  },
+  "budget": {
+    "currency": "INR",
+    "internal_build_equivalent": 350000,
+    "internal_build_range": [300000, 550000],
+    "notes": "Equivalent value for a full SaaS build including extraction pipeline, review UI, rule engine, security, and deployment. Actual cost is mostly internal engineering time + infra + OpenAI usage."
+  },
+  "challenges": [
+    "Extraction accuracy varies across document layouts, scan quality, and handwriting.",
+    "Ensuring trust and traceability (why a claim was flagged/approved).",
+    "Keeping review workflow fast while still capturing enough compliance context.",
+    "Designing a rule engine flexible enough for multiple industries (insurance/healthcare/finance).",
+    "Cost control and batching for OpenAI calls at scale."
+  ],
+  "solutions": [
+    "Used structured outputs and field-level confidence scoring to guide review instead of guessing.",
+    "Implemented human-in-the-loop review for low-confidence fields and anomaly triggers.",
+    "Added audit logs for every extracted field, edit, decision, and rule match.",
+    "Separated extraction, validation, and workflow services to scale independently.",
+    "Optimized batching, caching, and retries for AI calls, with safe fallbacks."
+  ],
+  "outcomes": {
+    "qualitative": [
+      "Significantly reduces manual copy-paste work from PDFs into systems.",
+      "Accelerates claim decision workflows while maintaining auditability.",
+      "Standardizes validation across teams with configurable rules and consistent routing.",
+      "Creates a scalable foundation for enterprise document automation beyond claims."
+    ],
+    "example_metrics_note": "Operational metrics (avg extraction time, review rate, approval automation rate) should be added after production usage analytics are finalized."
+  },
+  "portfolio_copy": {
+    "grid_card": "Arceon AI – AI-powered document processing and claim automation SaaS built with OpenAI + Django/DRF for fast, auditable decisions.",
+    "one_liner": "A SaaS platform that extracts data from documents using OpenAI, validates via rules, routes uncertain cases to reviewers, and keeps full audit trails."
+  },
+  "links": {
+    "live_app": null,
+    "demo_or_video": null,
+    "case_study_page": null,
+    "github_or_repo": null
+  },
+  "meta": {
+    "last_updated_for_portfolio": "2025-12-24",
+    "notes_for_future_edit": "Replace placeholder dates with exact internal milestones and add real links/screenshots when publishing the case study."
+  }
+}

@@ -1,42 +1,71 @@
 [
   {
     "id": "wander365",
-    "name": "WanderRest (formerly Wander365)",
-    "headline": "Wander365 → WanderRest: Full-Stack Travel Experience Platform for Modern Explorers",
-    "short_headline": "WanderRest – Smart Tours & Travel Booking Platform",
+    "name": "Wander365",
+    "headline": "Wander365: Full-Stack Travel Experience Platform for Modern Explorers",
+    "short_headline": "Wander365 – Smart Tours & Travel Booking Platform",
     "tagline": "Wander more, plan less.",
     "category": "Travel / Hospitality",
-    "image": {
-      "src": "/assets/portfolio/wanderrest-cover.jpg",
-      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
+    "image-1": {
+      "src": "/assets/portfolio/wander365-cover-2.png",
+      "alt": "Wander365 travel booking website shown on laptop and mobile screens"
     },
-    "link": "/portfolio/wanderrest-wander365"
+    "image-2": {
+      "src": "/assets/portfolio/wander365-cover-1.png",
+      "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+    },
+    "link": "/portfolio/wander365"
   },
   {
     "id": "quantgrade_trading_bot",
-    "name": "Quant-Grade Indian & Crypto Trading Bot",
+    "name": "Quant-Grade Trading Bot",
     "headline": "Quant-Grade: Multi-Timeframe Algorithmic Trading Engine for Indian Markets & Crypto",
     "short_headline": "Quant-Grade – AI-Assisted Trading Bot",
     "tagline": "Quant-grade analysis for non-quant traders.",
     "category": "FinTech / Trading",
-    "image": {
-      "src": "/assets/portfolio/quantgrade-cover.jpg",
+    "image-1": {
+      "src": "/assets/portfolio/quantgrade-cover-1.png",
+      "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+    },
+    "image-2": {
+      "src": "/assets/portfolio/quantgrade-cover-2.png",
       "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
     "link": "/portfolio/quantgrade-trading-bot"
   },
   {
     "id": "trac_app",
-    "name": "TRAC App – Trading Review & Analytics Companion",
-    "headline": "TRAC: Structured Trade Journal & Performance Analytics for Serious Traders",
-    "short_headline": "TRAC – Trading Review & Analytics",
-    "tagline": "Every trade tracked, every mistake learned.",
-    "category": "FinTech / Analytics",
-    "image": {
-      "src": "/assets/portfolio/trac-app-cover.jpg",
-      "alt": "TRAC App trade journal and performance analytics dashboard"
+    "name": "TRAC App – Tracking Remote Activity Control",
+    "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
+    "short_headline": "TRAC App – Remote Activity Control",
+    "tagline": "Tracking. Remote access. Activity control. In one dashboard.",
+    "category": "Productivity / IT Management",
+    "image-1": {
+      "src": "/assets/portfolio/trac-app-cover-1.png",
+      "alt": "TRAC App dashboard showing remote device activity and control actions"
+    },
+    "image-2": {
+      "src": "/assets/portfolio/trac-app-cover-2.png",
+      "alt": "TRAC App dashboard showing remote device activity and control actions"
     },
     "link": "/portfolio/trac-app"
+  },
+  {
+    "id": "gloveflix_platform",
+    "name": "GloVeFlix 2.0 – Hybrid Streaming & VIP Access Platform",
+    "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
+    "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
+    "tagline": "Publicly discover, privately enjoy.",
+    "category": "Media / Entertainment",
+    "image-1": {
+      "src": "/assets/portfolio/gloveflix-cover-1.png",
+      "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+    },
+    "image-2": {
+      "src": "/assets/portfolio/gloveflix-cover-2.png",
+      "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+    },
+    "link": "/portfolio/gloveflix"
   },
   {
     "id": "lan_cam",
@@ -45,23 +74,31 @@
     "short_headline": "LAN-Cam – Local Screen & Camera Streaming",
     "tagline": "No internet, no cloud – just pure LAN streaming.",
     "category": "Productivity / EdTech / Utilities",
-    "image": {
-      "src": "/assets/portfolio/lan-cam-cover.jpg",
+    "image-1": {
+      "src": "/assets/portfolio/lan-cam-cover-1.png",
+      "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+    },
+    "image-2": {
+      "src": "/assets/portfolio/lan-cam-cover-2.png",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "link": "/portfolio/lan-cam"
   },
   {
-    "id": "gloveflix_platform",
-    "name": "GloveFlix 2.0 – Hybrid Streaming & VIP Access Platform",
-    "headline": "GloveFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
-    "short_headline": "GloveFlix – Public Movie Hub with Private VIP Club",
-    "tagline": "Publicly discover, privately enjoy.",
-    "category": "Media / Entertainment",
-    "image": {
-      "src": "/assets/portfolio/gloveflix-cover.jpg",
-      "alt": "GloveFlix movie discovery and VIP access interface on desktop and mobile"
-    },
-    "link": "/portfolio/gloveflix"
-  }
+  "id": "arceon_ai",
+  "name": "Arceon AI – Document Processing & Claim Automation",
+  "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
+  "short_headline": "Arceon AI – Claims Automation SaaS",
+  "tagline": "From documents to decisions — in seconds.",
+  "category": "AI SaaS / Enterprise Automation",
+  "image-1": {
+    "src": "/assets/portfolio/arceon-ai-cover-1.png",
+    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+  },
+  "image-2": {
+    "src": "/assets/portfolio/arceon-ai-cover-2.png",
+    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+  },
+  "link": "/portfolio/arceon-ai"
+}
 ]

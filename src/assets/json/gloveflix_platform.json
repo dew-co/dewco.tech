@@ -1,8 +1,8 @@
 {
   "id": "gloveflix_platform",
-  "project_name": "GloveFlix 2.0 – Hybrid Streaming & VIP Access Platform",
-  "headline": "GloveFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
-  "short_headline": "GloveFlix – Public Movie Hub with Private VIP Club",
+  "project_name": "GloVeFlix 2.0 – Hybrid Streaming & VIP Access Platform",
+  "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
+  "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
   "taglines": [
     "Publicly discover, privately enjoy.",
     "SEO-powered movie discovery, VIP-powered experience.",
@@ -11,7 +11,7 @@
     "A smart bridge between legal discovery and premium communities."
   ],
   "client": {
-    "brand_name_current": "GloveFlix",
+    "brand_name_current": "GloVeFlix",
     "industry": "Media / Entertainment / Content Discovery",
     "location": "India (global audience-ready)",
     "audience": [
@@ -41,14 +41,14 @@
       "Admin & Content Management Tools"
     ],
     "project_type": "In-house product (SEO + community + streaming funnel)",
-    "status": "Active – GloveFlix 2.0 in build/iteration mode",
+    "status": "Active – GloVeFlix 2.0 in build/iteration mode",
     "initial_launch_date": "2024-04-15",
     "completed_date_v1": "2024-05-10",
     "engagement_model": "Internal product build with multi-pillar monetization strategy"
   },
   "about": {
-    "short": "GloveFlix is a three-pillar entertainment platform: a public, SEO-optimized movie discovery site, a private VIP club on Telegram/WhatsApp, and a hidden streaming subdomain that serves curated content to paying members while keeping the brand’s public face clean and search-friendly.",
-    "long": "GloveFlix was designed as a hybrid model that combines SEO traffic, private communities, and a controlled streaming experience under a single brand. Instead of trying to be just another streaming site, GloveFlix focuses on **three pillars**:\n\n1) **Public SEO Website (Legal & Open)** – A Google-friendly site that focuses on metadata: movie and series information, posters, descriptions, ratings, and recommendations. This layer is built to attract organic traffic and keep everything on the public site safe and indexable.\n\n2) **VIP Club (Telegram + WhatsApp)** – A private access community where the real monetization happens. Users who like the GloveFlix experience can opt into VIP via forms and CTAs. The VIP club becomes the core for offers, early alerts, curated lists, and premium experiences.\n\n3) **Private Streaming Subdomain** – A hidden/unguessable subdomain that hosts the internal player experience and only surfaces for VIP members via controlled links. This separation keeps the public brand focused on discovery and SEO, while the private layer focuses on engagement and premium experiences, relying on integrations only where legally allowed.\n\nThe GloveFlix 2.0 plan organizes all of this into a clear funnel: **SEO traffic → Engagement on the public site → VIP conversion → Private player access for members**, with Firebase and modern frontend tooling managing identity, access, and content flows."
+    "short": "GloVeFlix is a three-pillar entertainment platform: a public, SEO-optimized movie discovery site, a private VIP club on Telegram/WhatsApp, and a hidden streaming subdomain that serves curated content to paying members while keeping the brand’s public face clean and search-friendly.",
+    "long": "GloVeFlix was designed as a hybrid model that combines SEO traffic, private communities, and a controlled streaming experience under a single brand. Instead of trying to be just another streaming site, GloVeFlix focuses on **three pillars**:\n\n1) **Public SEO Website (Legal & Open)** – A Google-friendly site that focuses on metadata: movie and series information, posters, descriptions, ratings, and recommendations. This layer is built to attract organic traffic and keep everything on the public site safe and indexable.\n\n2) **VIP Club (Telegram + WhatsApp)** – A private access community where the real monetization happens. Users who like the GloVeFlix experience can opt into VIP via forms and CTAs. The VIP club becomes the core for offers, early alerts, curated lists, and premium experiences.\n\n3) **Private Streaming Subdomain** – A hidden/unguessable subdomain that hosts the internal player experience and only surfaces for VIP members via controlled links. This separation keeps the public brand focused on discovery and SEO, while the private layer focuses on engagement and premium experiences, relying on integrations only where legally allowed.\n\nThe GloVeFlix 2.0 plan organizes all of this into a clear funnel: **SEO traffic → Engagement on the public site → VIP conversion → Private player access for members**, with Firebase and modern frontend tooling managing identity, access, and content flows."
   },
   "roles_and_responsibilities": [
     "Defined the overall three-pillar product strategy and conversion funnel.",
@@ -82,7 +82,7 @@
       "Planned automation hooks for welcome messages, onboarding sequences, and offers."
     ],
     "pillar_3_private_streaming_subdomain": [
-      "Hidden subdomain for the GloveFlix player that is not directly discoverable from search engines.",
+      "Hidden subdomain for the GloVeFlix player that is not directly discoverable from search engines.",
       "VIP-only access route, potentially via expiring tokens or invite links.",
       "Unified player UI that can integrate with third-party embed sources where legal and allowed.",
       "View-tracking and click-tracking to understand engagement (without exposing internal details publicly).",
@@ -103,7 +103,7 @@
   },
   "tech_stack": {
     "frontend": [
-      "Angular front-end SPA for both the public GloveFlix site and parts of the VIP experience.",
+      "Angular front-end SPA for both the public GloVeFlix site and parts of the VIP experience.",
       "Responsive, mobile-first UI with reusable components for movie cards, lists, and detail pages."
     ],
     "backend_and_services": [
@@ -136,7 +136,7 @@
       "summary": "Defined the three-pillar model: Public SEO site, VIP Club, and Private Player, plus revenue strategy."
     },
     "v1_public_site": {
-      "phase": "GloveFlix v1 – Public Site + Basic Metadata",
+      "phase": "GloVeFlix v1 – Public Site + Basic Metadata",
       "start": "2024-03-11",
       "end": "2024-04-15",
       "summary": "Implemented the first Angular + Firebase-based public website with movie/series metadata pages."
@@ -154,7 +154,7 @@
       "summary": "Set up hidden subdomain, basic guarded routes, and integrated player UI with allowed external sources."
     },
     "gloveflix_2_0_plan": {
-      "phase": "GloveFlix 2.0 Planning & Refactor",
+      "phase": "GloVeFlix 2.0 Planning & Refactor",
       "start": "2024-09-01",
       "end": null,
       "summary": "Planning performance improvements, better VIP segmentation, content enhancements, and a more scalable admin panel."
@@ -178,19 +178,19 @@
     "Designed the VIP funnel as a value-first journey (recommendations, lists, community) before asking for deeper commitment.",
     "Abstracted the player integration so content sources can be swapped or restricted based on legal/partner requirements.",
     "Used Firebase Hosting and Angular performance optimizations (lazy loading, code-splitting) to support SEO and speed.",
-    "Defined clear brand language and UI patterns so users feel they are still in GloveFlix even as they move between public site, VIP club, and private player."
+    "Defined clear brand language and UI patterns so users feel they are still in GloVeFlix even as they move between public site, VIP club, and private player."
   ],
   "outcomes": {
     "qualitative": [
       "Created a structured three-layer architecture instead of a single monolithic streaming site.",
-      "Positioned GloveFlix as an SEO-first discovery brand with a strong VIP/community angle.",
+      "Positioned GloVeFlix as an SEO-first discovery brand with a strong VIP/community angle.",
       "Built a technical foundation on Firebase + Angular that is easy to iterate and scale.",
-      "Prepared GloveFlix 2.0 to evolve into a reusable blueprint for other niche content brands."
+      "Prepared GloVeFlix 2.0 to evolve into a reusable blueprint for other niche content brands."
     ],
     "example_metrics_note": "As an evolving in-house product, outcomes are measured in SEO growth, VIP conversions, and user engagement. Exact numbers can be added later as analytics mature."
   },
   "portfolio_copy": {
-    "grid_card": "GloveFlix – SEO-first movie discovery platform with a private VIP club and hidden streaming subdomain, built on Angular + Firebase.",
+    "grid_card": "GloVeFlix – SEO-first movie discovery platform with a private VIP club and hidden streaming subdomain, built on Angular + Firebase.",
     "one_liner": "A three-pillar entertainment platform that converts SEO traffic into VIP community members and delivers a controlled, private viewing experience."
   },
   "links": {
@@ -201,6 +201,6 @@
   },
   "meta": {
     "last_updated_for_portfolio": "2025-12-22",
-    "notes_for_future_edit": "Insert real URLs, analytics highlights, and refined legal/compliance notes as GloveFlix 2.0 stabilizes."
+    "notes_for_future_edit": "Insert real URLs, analytics highlights, and refined legal/compliance notes as GloVeFlix 2.0 stabilizes."
   }
 }

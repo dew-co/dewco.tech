@@ -1,24 +1,25 @@
 {
   "id": "trac_app",
-  "project_name": "TRAC App – Trading Review & Analytics Companion",
-  "headline": "TRAC: Structured Trade Journal & Performance Analytics for Serious Traders",
-  "short_headline": "TRAC App – Trading Review & Analytics Companion",
+  "project_name": "TRAC App – Tracking Remote Activity Control Application",
+  "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
+  "short_headline": "TRAC App – Tracking Remote Activity Control",
   "taglines": [
-    "Turn random trades into a measurable edge.",
-    "Journal less, learn more from your trades.",
-    "Every trade tracked, every mistake learned.",
-    "From screenshots and notes to clean trade intelligence.",
-    "Your daily trading report card, automated."
+    "See every critical device, from anywhere.",
+    "Tracking. Remote access. Activity control. In one dashboard.",
+    "Bring order and visibility to your distributed machines.",
+    "From blind remote work to fully observable systems.",
+    "Monitor, manage, and control — without leaving your desk."
   ],
   "client": {
     "brand_name_current": "TRAC App",
-    "industry": "FinTech / Trading Analytics / Trader Productivity",
-    "location": "India (global trader-friendly)",
+    "full_form": "Tracking Remote Activity Control",
+    "industry": "Productivity / IT Management / Remote Monitoring",
+    "location": "India (remote-friendly, global use-case)",
     "audience": [
-      "Retail traders (equity, F&O, crypto, forex)",
-      "Swing and intraday traders",
-      "Trading mentors and small prop desks",
-      "Users of Quant-Grade & similar trading engines"
+      "Small and mid-size teams with remote devices",
+      "IT admins and operations teams",
+      "Computer labs, training centres, and classrooms",
+      "Founders who need visibility into distributed machines"
     ]
   },
   "studio": {
@@ -28,184 +29,194 @@
   },
   "snapshot": {
     "role": [
-      "Product Strategy",
-      "UX/UI Design",
+      "Product Concept & System Design",
+      "UX/UI Design for Dashboard and Agent Controls",
       "Backend & API Engineering",
-      "Data Modeling & Analytics Design",
-      "Integration & Automation Architecture"
+      "Desktop Agent Architecture",
+      "Automation & Alerting"
     ],
     "platform": [
-      "Web App (Dashboard & Journal)",
-      "API Layer (for broker & bot integrations)",
-      "Notification & Summary System"
+      "Web Dashboard (Admin & Monitoring)",
+      "Desktop/Endpoint Agent",
+      "API Layer & Notification Channel"
     ],
-    "project_type": "In-house product (SaaS-ready trade journaling and analytics platform)",
-    "status": "Active – early product with continuous feature expansion",
-    "initial_launch_date": "2024-10-01",
-    "completed_date_v1": "2024-10-20",
-    "engagement_model": "Internal product build with future SaaS/B2B licensing plan"
+    "project_type": "In-house product (remote activity tracking & control platform)",
+    "status": "Active – internal deployment & ongoing refinement",
+    "project_start_date": "2024-04-01",
+    "initial_launch_date": "2024-09-15",
+    "completed_date_v1": "2024-10-15",
+    "engagement_model": "Internal product build with future SaaS/seat-based licensing plan"
   },
   "about": {
-    "short": "TRAC (Trading Review & Analytics Companion) is a structured trade journaling and performance analytics app that helps traders track every trade, understand patterns, and improve decision-making with clean, visual insights.",
-    "long": "TRAC App was created to solve a very common trader problem: trades are executed every day, but very few are actually reviewed properly. Most traders either maintain messy Excel sheets, rely on screenshots, or do not track anything consistently.\n\nTRAC turns trade tracking into a simple, repeatable workflow. Traders can import their trades (manually or via CSV/API), tag them by setup and emotion, attach screenshots/notes, and then review results in a clean dashboard. The app highlights which strategies work, what timeframes perform best, and where risk leaks are happening.\n\nThe system is designed to work independently or alongside engines like Quant-Grade. While Quant-Grade focuses on generating signals, TRAC focuses on the human layer: execution quality, discipline, and continuous improvement through structured reviews and analytics."
+    "short": "TRAC App (Tracking Remote Activity Control) is a monitoring and control platform that lets you track the status, activity, and usage of remote devices from a single dashboard, with the ability to trigger safe remote actions like lock, restart, or app-level controls.",
+    "long": "TRAC App was built to solve a recurring problem in distributed teams, computer labs, and shared work environments: once machines are remote, it becomes very hard to know who is doing what, which devices are idle, which are overloaded, and how to act quickly when something goes wrong.\n\nTRAC combines a lightweight endpoint/desktop agent with a central web dashboard. The agent runs on each machine, periodically sending status and activity signals (online/offline, active user, running apps, CPU/RAM load, optional screenshots or window titles). From the dashboard, admins can see all devices at a glance, drill into a specific machine, and execute safe remote actions such as lock screen, log out current user, restart, or trigger a pre-defined command.\n\nUnlike heavy enterprise tools, TRAC is designed to be simple, scriptable, and brandable. It can be used in offices, training centres, small labs, or within a founder’s own ecosystem of devices, making it a core utility for future automation and control workflows in the DewCo / Gloventis ecosystem."
   },
   "roles_and_responsibilities": [
-    "Defined the product concept and positioning: a neutral analytics layer that works with any broker or strategy.",
-    "Designed end-to-end UX for logging, tagging, and reviewing trades with minimum friction.",
-    "Modeled the data structures for trades, tags, sessions, mistakes, screenshots, and P&L curves.",
-    "Implemented backend APIs to store and query trades, performance stats, and filters.",
-    "Built dashboards and visualizations to show performance by strategy, symbol, session, and tag.",
-    "Planned integration points with Quant-Grade and external broker APIs for semi-automated imports."
+    "Defined the product scope for a lightweight, scriptable remote activity tracking and control tool.",
+    "Designed the information architecture and UX for the central TRAC dashboard (device list, detail view, actions).",
+    "Modeled data for devices, heartbeats, sessions, activity logs, and control events.",
+    "Implemented backend APIs to collect agent signals and expose them securely to the dashboard.",
+    "Designed and prototyped the desktop agent (installer, configuration, background service).",
+    "Set up alert pipelines (e.g., email/notification on offline/critical devices or unusual activity)."
   ],
   "objectives": [
-    "Make structured trade journaling easy enough that traders actually do it daily.",
-    "Provide clear performance analytics without overwhelming users with complexity.",
-    "Help traders identify their best strategies, timeframes, symbols, and risk profiles.",
-    "Create a daily/weekly review workflow that improves discipline and execution.",
-    "Design TRAC as a standalone SaaS and as a plug-in analytics layer for other products."
+    "Provide a single-pane-of-glass view of all critical devices, whether in-office or remote.",
+    "Track online/offline status, current user, and high-level activity in near real-time.",
+    "Allow safe, auditable remote actions (lock, restart, run command, notify user).",
+    "Log historical activity so patterns (idle times, usage spikes, downtime) can be understood.",
+    "Make the architecture modular so TRAC can later integrate with other DewCo products and external systems."
   ],
   "features": {
-    "journaling": [
-      "Manual trade entry with fields for instrument, direction, size, entry, exit, fees, and notes.",
-      "Bulk import via CSV from brokers or platforms (planned extensions for common formats).",
-      "Tagging system for setups, emotions, mistakes, and playbook categories.",
-      "Screenshot upload for before/after trade charts or broker statements.",
-      "Session-based grouping (morning, afternoon, full day; or specific sessions like expiry day, news day)."
+    "device_and_activity_tracking": [
+      "Device registration with unique ID, hostname, tags (location, team, purpose).",
+      "Online/offline status with last-seen timestamps (heartbeats).",
+      "Current user and active session information where supported.",
+      "High-level resource stats: CPU, memory, disk usage snapshots.",
+      "Optional activity hints (active window title, basic app list, or categorized usage, configurable for privacy)."
     ],
-    "analytics": [
-      "Performance summary by day, week, month, and custom ranges.",
-      "Win rate, average R/R, average gain/loss, and expectancy metrics.",
-      "Breakdown by setup/tag, instrument, direction (long/short), and timeframe.",
-      "Equity curve visualization with drawdown overlays.",
-      "Heatmaps for weekday, time-of-day, and instrument clusters."
+    "remote_control_actions": [
+      "Remote lock screen / sign out current user (OS-supported).",
+      "Safe restart/shutdown commands with confirmation.",
+      "Trigger custom scripts or commands defined in admin panel (e.g., restart a service, clear temp files).",
+      "Send on-screen notification/message to the user for instructions or warnings.",
+      "All actions logged with who triggered them and when."
     ],
-    "review_workflow": [
-      "End-of-day review mode listing all trades with quick tagging and notes.",
-      "End-of-week summary with key metrics and top 3 lessons prompts.",
-      "Marking trades as 'planned', 'impulsive', or 'missed opportunity'.",
-      "Highlight of best and worst trades of the period with quick drill-down."
+    "dashboard_and_ux": [
+      "Global device list view with search, filters (status, tag, location, OS).",
+      "Per-device detail page with timeline of status, actions, and activity logs.",
+      "Color-coded health/status indicators (Online, Idle, Busy, Offline, Attention).",
+      "Quick actions from the list (e.g., Lock, Ping, Open detail view).",
+      "Responsive layout optimized for desktop admins, with basic mobile-friendly overview."
     ],
-    "risk_and_behavior": [
-      "Tracking max allowed daily loss vs actual realized loss.",
-      "Flags for overtrading days (when trade count exceeds set limit).",
-      "Metrics for average hold time vs planned hold time.",
-      "Behavioral tags like 'revenge trade', 'FOMO entry', 'early exit', etc."
+    "alerts_and_reporting": [
+      "Configurable alerts for offline devices, high CPU/RAM, or no activity for X minutes/hours.",
+      "Optional alerts for unauthorized usage windows (e.g., activity outside office hours).",
+      "Daily/weekly summary reports of uptime, incidents, and remote actions executed.",
+      "Audit log of all control actions and configuration changes."
     ],
-    "integrations_and_automation": [
-      "API endpoints to receive trades from external systems (e.g., bots or custom scripts).",
-      "Conceptual integration with Quant-Grade to automatically tag trades by strategy/signal ID.",
-      "Email or Telegram-style summaries for daily/weekly reports.",
-      "Export functionality for PDF/CSV summaries for sharing with mentors or CA."
+    "security_and_privacy_controls": [
+      "Agent authentication using API keys or device tokens.",
+      "Role-based access control on dashboard (Owner, Admin, Viewer).",
+      "Granular toggles to enable/disable screenshots or app-level tracking per device.",
+      "Encryption in transit for agent-to-server communication."
     ],
-    "admin_and_account": [
-      "Multi-account support (equity, F&O, crypto) under one user.",
-      "Basic role support for mentor accounts to review student trades (future roadmap).",
-      "Plan tiers concept (Free, Pro, Mentor) with usage limits and feature flags."
+    "admin_and_configuration": [
+      "Group devices by department, project, lab, or location.",
+      "Define policy profiles (e.g., strict lab mode vs. light monitoring mode).",
+      "Configure which remote actions are allowed per role.",
+      "Export logs for compliance or troubleshooting."
     ]
   },
   "tech_stack": {
     "backend": [
-      "Python backend using FastAPI / Django REST Framework for trade and analytics APIs.",
-      "Task queue for asynchronous imports and bulk analytics recomputation.",
-      "Background workers for generating periodic summaries and reports."
+      "Python backend using FastAPI / Django REST Framework for APIs.",
+      "Background workers/cron jobs for processing heartbeats and generating alerts.",
+      "WebSockets or long-poll channels (optional) for more real-time updates to the dashboard."
     ],
-    "data_and_analytics": [
-      "PostgreSQL as primary database for trades, tags, and user data.",
-      "Efficient indexing and partitioning patterns for trade history queries.",
-      "Pandas/NumPy-based analytics jobs for metric computations where needed."
+    "agent_side": [
+      "Lightweight desktop agent (e.g., Python/Go/.NET depending on OS) running as background service.",
+      "OS integration for system metrics and remote commands (lock, restart, etc.).",
+      "Config file or environment-based provisioning for registration and server URL."
     ],
     "frontend": [
-      "React / Next.js web app for the dashboard and journaling interface.",
-      "Component library for tables, filters, charts, and forms.",
-      "Responsive UX with desktop-first layout and mobile-friendly key flows (quick add, summary view)."
+      "React / Next.js-based admin dashboard.",
+      "Reusable components for device tables, status badges, and activity timelines.",
+      "Charts and visualizations built with a standard JS charting library."
     ],
-    "visualizations": [
-      "Charting library for equity curves, histograms, and heatmaps.",
-      "Reusable chart components that can also be embedded in email/PDF reports."
+    "data_and_storage": [
+      "PostgreSQL for devices, users, actions, and logs.",
+      "Time-series style tables for heartbeats and resource metrics.",
+      "Redis (optional) for caching latest device states for quick UI fetch."
     ],
     "integrations": [
-      "CSV importers with mapping UI for generic broker exports.",
-      "Planned broker API integrations for direct sync where allowed (e.g., via official APIs).",
-      "Webhook/API integration concept for Quant-Grade and similar engines."
+      "Email provider or webhook endpoints for alerts.",
+      "Pluggable notification channels (Slack/Telegram-style webhooks – roadmap).",
+      "API endpoints for other internal systems to query device status programmatically."
     ],
     "hosting_devops": [
-      "Containerized services (Docker) for backend and frontend.",
-      "Deployment on VPS/cloud with environment separation (dev/stage/prod).",
-      "Basic CI/CD pipeline for code testing, migrations, and rollout."
+      "Containerized services (Docker) for backend, dashboard, and worker processes.",
+      "Deployed on VPS/cloud with environment-based configuration (dev/stage/prod).",
+      "Monitoring for the TRAC backend itself (health checks, log aggregation)."
     ]
   },
   "timeline": {
-    "ideation_and_validation": {
-      "phase": "Ideation & Validation",
-      "start": "2024-06-15",
-      "end": "2024-07-15",
-      "summary": "Interviews with traders, review of existing journaling habits, and definition of core pain points and feature set."
+    "ideation_and_need_validation": {
+      "phase": "Ideation & Need Validation",
+      "start": "2024-04-01",
+      "end": "2024-04-30",
+      "summary": "Identified the need for a lightweight remote activity and control tool for distributed machines within the DewCo/Gloventis ecosystem."
     },
-    "design_and_prototyping": {
-      "phase": "UX/UI Design & Prototyping",
-      "start": "2024-07-16",
-      "end": "2024-08-20",
-      "summary": "Designed journaling flows, analytics views, and review workflows with interactive prototypes."
+    "architecture_and_design": {
+      "phase": "Architecture & UX Design",
+      "start": "2024-05-01",
+      "end": "2024-06-15",
+      "summary": "Designed the agent–server–dashboard architecture and the UX for device lists, detail views, and remote actions."
     },
     "development_v1": {
-      "phase": "Core App Development v1",
-      "start": "2024-08-21",
-      "end": "2024-10-01",
-      "summary": "Implemented backend, database schema, core journaling flows, and basic analytics dashboard."
+      "phase": "Core Development v1",
+      "start": "2024-06-16",
+      "end": "2024-09-14",
+      "summary": "Implemented core backend APIs, basic agent, and initial dashboard for internal usage."
     },
-    "internal_beta": {
-      "phase": "Internal Beta / Dogfooding",
-      "date": "2024-10-20",
-      "summary": "Used TRAC for personal and small-circle trading review to refine flows and fix UX issues."
+    "internal_launch": {
+      "phase": "Internal Launch / Dogfooding",
+      "date": "2024-09-15",
+      "summary": "Deployed TRAC App on a small set of internal machines to test stability, usability, and control actions."
     },
-    "ongoing_enhancements": {
-      "phase": "Ongoing Enhancements & SaaS Prep",
-      "start": "2024-11-01",
+    "v1_hardening": {
+      "phase": "Stabilization & Logging/Alerting Enhancements",
+      "start": "2024-09-16",
+      "end": "2024-10-15",
+      "summary": "Improved logging, alerts, and safety checks for remote actions; refined UI based on internal feedback."
+    },
+    "ongoing_improvements": {
+      "phase": "Ongoing Enhancements & SaaS Readiness",
+      "start": "2024-10-16",
       "end": null,
-      "summary": "Continuous improvements to analytics, imports, and integration roadmap, preparing for public SaaS release."
+      "summary": "Preparing multi-tenant support, role-based access improvements, and advanced reporting for potential SaaS rollout."
     }
   },
   "budget": {
     "currency": "INR",
-    "internal_build_equivalent": 180000,
-    "internal_build_range": [150000, 220000],
-    "notes": "Represents equivalent full project value including research, design, backend/frontend development, and infrastructure. Actual cost is largely internal time and cloud resources as it is an in-house product."
+    "internal_build_equivalent": 190000,
+    "internal_build_range": [160000, 230000],
+    "notes": "Represents equivalent commercial project value, including system design, backend, agent development, dashboard, and alerting. As an in-house utility, cost is primarily internal engineering time and infra."
   },
   "challenges": [
-    "Traders have very different journaling styles; designing a structure that is flexible but still standardized was difficult.",
-    "Many brokers and platforms use different CSV formats and data conventions.",
-    "Balancing depth of analytics with simplicity for users new to performance statistics.",
-    "Ensuring journaling does not feel like extra work after a long trading session.",
-    "Designing for both manual and automated trade imports without confusing the user."
+    "Designing an agent that is powerful enough to provide meaningful signals but lightweight and stable for always-on use.",
+    "Balancing visibility (metrics, activity hints) with privacy and trust requirements.",
+    "Handling intermittent connectivity and ensuring the dashboard reflects accurate, recent states.",
+    "Making remote actions safe and auditable so accidental misuse is minimized.",
+    "Keeping the UI simple enough for non-technical admins while still exposing advanced filters and logs."
   ],
   "solutions": [
-    "Created a core schema for trades with optional fields and tag-based extension rather than rigid columns only.",
-    "Designed a flexible CSV mapping UI so traders can adapt imports from any broker format.",
-    "Focused the main dashboard on a small set of key metrics and allowed power users to drill down if needed.",
-    "Built quick-add flows and end-of-day review mode to keep journaling low-friction and focused.",
-    "Separated manual and automated imports clearly in the UI while unifying them in the backend data model."
+    "Kept the agent architecture modular with separate modules for metrics, activity hints, and control, so features can be enabled/disabled per deployment.",
+    "Introduced per-device and per-policy toggles for what data is collected (e.g., metrics only vs. metrics + activity hints).",
+    "Implemented heartbeats with clear last-seen timestamps and simple state logic so admins can trust what they see.",
+    "Logged all remote actions with user, time, and device, and added confirmation prompts for sensitive operations like shutdown.",
+    "Designed the dashboard around a clean device list + detail pattern, with filters and advanced logs tucked behind simple defaults."
   ],
   "outcomes": {
     "qualitative": [
-      "Provided a clear, repeatable review structure for trades instead of ad-hoc notes and screenshots.",
-      "Enabled visibility into what setups and time windows are genuinely profitable vs emotionally preferred.",
-      "Helped standardize performance tracking for multiple accounts (equity, F&O, crypto) under one view.",
-      "Established TRAC as a natural companion product to any trading engine or discretionary strategy."
+      "Provided a clear real-time view of internal machines, reducing guesswork about which devices are online or idle.",
+      "Enabled quick, centralized responses to issues (e.g., locking or restarting a problematic machine) without physical access.",
+      "Created a reusable foundation for future automation workflows (e.g., auto-healing scripts, scheduled maintenance).",
+      "Positioned TRAC App as a core infrastructure utility in the DewCo / Gloventis ecosystem for future SaaS/enterprise offerings."
     ],
-    "example_metrics_note": "As an early-stage internal product, results are focused on personal and small-group usage. Public metrics and anonymized case studies can be added after a broader launch."
+    "example_metrics_note": "As an internal-first tool, success is measured in reduced manual checks, faster incident response, and improved visibility rather than public usage numbers. External-facing metrics can be added later if TRAC is commercialized."
   },
   "portfolio_copy": {
-    "grid_card": "TRAC App – Trading Review & Analytics Companion that turns scattered trade logs into structured insights and disciplined improvement.",
-    "one_liner": "A structured trade journaling and analytics app that helps traders understand their edge, fix repeated mistakes, and improve execution over time."
+    "grid_card": "TRAC App – Tracking Remote Activity Control platform that gives you a live view of all your machines and lets you execute safe remote actions from a single dashboard.",
+    "one_liner": "A remote activity tracking and control application that monitors distributed devices in real time and gives admins safe, auditable remote control over them."
   },
   "links": {
-    "live_app": null,
-    "demo_or_video": null,
+    "live_dashboard": null,
+    "agent_download": null,
     "case_study_page": null,
     "github_or_repo": null
   },
   "meta": {
-    "last_updated_for_portfolio": "2025-12-22",
-    "notes_for_future_edit": "Fill in real URLs, broker names, and sample anonymized screenshots/metrics once TRAC is ready for public demo."
+    "last_updated_for_portfolio": "2025-12-23",
+    "notes_for_future_edit": "Replace placeholder dates and ranges with your exact internal milestones, and add real URLs/screenshots once you’re ready to show TRAC publicly."
   }
 }
