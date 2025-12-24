@@ -8,6 +8,40 @@ export interface PortfolioImage {
   alt: string;
 }
 
+export interface PortfolioClient {
+  brand_name_current?: string;
+  brand_name_future?: string;
+  full_form?: string;
+  industry?: string;
+  location?: string;
+  audience?: string[];
+  [key: string]: any;
+}
+
+export interface PortfolioSnapshot {
+  role?: string[];
+  platform?: string[];
+  project_type?: string;
+  status?: string;
+  project_start_date?: string;
+  initial_launch_date?: string;
+  completed_date_v1?: string;
+  planned_rebrand_target?: string;
+  engagement_model?: string;
+  [key: string]: any;
+}
+
+export interface PortfolioBudget {
+  currency?: string;
+  internal_build_equivalent?: number;
+  internal_build_range?: [number, number];
+  initial_build_estimated?: number;
+  initial_build_range?: [number, number];
+  retainer_monthly_range?: [number, number];
+  notes?: string;
+  [key: string]: any;
+}
+
 export interface Portfolio {
   id: string;
   name: string;
@@ -30,6 +64,34 @@ interface PortfolioRaw {
   'image-1': PortfolioImage;
   'image-2': PortfolioImage;
   link: string;
+}
+
+export interface PortfolioDetail {
+  id: string;
+  project_name: string;
+  headline: string;
+  short_headline: string;
+  taglines?: string[];
+  client?: PortfolioClient;
+  studio?: Record<string, any>;
+  snapshot?: PortfolioSnapshot;
+  'cover-image'?: PortfolioImage;
+  'body-image-1'?: PortfolioImage;
+  'body-image-2'?: PortfolioImage;
+  'body-media'?: { src: string; alt?: string };
+  about?: { short?: string; long?: string };
+  roles_and_responsibilities?: string[];
+  objectives?: string[];
+  features?: Record<string, string[]>;
+  tech_stack?: Record<string, string[]>;
+  timeline?: Record<string, Record<string, string | null>>;
+  budget?: PortfolioBudget;
+  challenges?: string[];
+  solutions?: string[];
+  outcomes?: { qualitative?: string[]; example_metrics_note?: string };
+  portfolio_copy?: { grid_card?: string; one_liner?: string };
+  links?: Record<string, string | null>;
+  meta?: Record<string, any>;
 }
 
 @Injectable({
@@ -65,7 +127,11 @@ export class PortfolioService {
       category: raw.category,
       image1: raw['image-1'],
       image2: raw['image-2'],
-      link: raw.link || '/portfolio-details',
+      link: raw.link || `/portfolio/${raw.id.replace(/_/g, '-')}`,
     };
+  }
+
+  getPortfolioDetail(id: string): Observable<PortfolioDetail> {
+    return this.http.get<PortfolioDetail>(`assets/json/${id}.json`);
   }
 }

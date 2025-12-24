@@ -1,67 +1,267 @@
-<!-- Start Video Block -->
-    <div class="cs_height_105 cs_height_lg_70"></div>
-    <div class="container">
-      <div class="cs_section_heading cs_style_2 cs_type_1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-        <div class="cs_section_subtitle"><span>3D Graphics</span></div>
-        <h2 class="cs_section_title">Endless abstract loop </h2>
+<div class="cs_height_120 cs_height_lg_80"></div>
+
+<ng-container *ngIf="state$ | async as state">
+  <ng-container *ngIf="state.detail as detail; else portfolioNotFound">
+    <section class="container">
+      <div class="cs_section_heading cs_style_3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.05s">
+        <div class="cs_section_subtitle">
+          <span>{{ detail.short_headline || detail.headline }}</span>
+        </div>
+        <h1 class="cs_section_title">{{ detail.project_name || detail.headline }}</h1>
+        <p class="cs_primary_color">{{ detail.headline }}</p>
       </div>
-      <div class="cs_height_45 cs_height_lg_30"></div>
+
+      <div class="cs_height_20"></div>
+
+      <div class="cs_tag_list" *ngIf="detail.taglines?.length">
+        <span
+          class="cs_tag cs_radius_5"
+          *ngFor="let tagline of detail.taglines; trackBy: trackByIndex"
+        >
+          {{ tagline }}
+        </span>
+      </div>
+
+      <div class="cs_height_30"></div>
+
       <div class="row">
-        <div class="col-lg-3 col-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s">
-          <div class="cs_portfolio_info_1">
-            <p>Client</p>
-            <h3>Andreo Bowla</h3>
-          </div>
-          <div class="cs_height_20 cs_height_lg_20"></div>
+        <div class="col-lg-7">
+          <p class="cs_medium" style="white-space: pre-line;">
+            {{ detail.about?.short || detail.about?.long }}
+          </p>
         </div>
-        <div class="col-lg-3 col-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="cs_portfolio_info_1">
-            <p>Location</p>
-            <h3>United Kindom</h3>
+        <div class="col-lg-5">
+          <div class="cs_portfolio_info_grid">
+            <div *ngIf="detail.client" class="cs_portfolio_info_1">
+              <p>Client</p>
+              <h3 class="cs_mb_10">{{ detail.client.brand_name_current || detail.project_name }}</h3>
+              <p *ngIf="detail.client.industry">{{ detail.client.industry }}</p>
+              <p *ngIf="detail.client.location">{{ detail.client.location }}</p>
+            </div>
+            <div *ngIf="detail.snapshot" class="cs_portfolio_info_1">
+              <p>Status</p>
+              <h3 class="cs_mb_10">{{ detail.snapshot.status || 'In progress' }}</h3>
+              <p *ngIf="detail.snapshot.project_type">{{ detail.snapshot.project_type }}</p>
+              <p *ngIf="detail.snapshot.engagement_model">{{ detail.snapshot.engagement_model }}</p>
+            </div>
           </div>
-          <div class="cs_height_20 cs_height_lg_20"></div>
-        </div>
-        <div class="col-lg-3 col-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
-          <div class="cs_portfolio_info_1">
-            <p>Budgets</p>
-            <h3>$1330 USD</h3>
-          </div>
-          <div class="cs_height_20 cs_height_lg_20"></div>
-        </div>
-        <div class="col-lg-3 col-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-          <div class="cs_portfolio_info_1">
-            <p>Completed</p>
-            <h3>11 August 2023</h3>
-          </div>
-          <div class="cs_height_20 cs_height_lg_20"></div>
         </div>
       </div>
-      <div class="cs_height_35 cs_height_lg_15"></div>
-      <div class="cs_portfolio_details">
-        <img src="assets/img/portfolio_details_1.jpeg" alt="">
-        <img src="assets/img/portfolio_details_2.jpeg" alt="">
-        <p>An abstract graphic object is a visual representation of an abstract concept or idea. It is typically created using lines, shapes, and other visual elements, and it does not depict any specific physical objects or scenes. Abstract graphic objects are often used in art, design, and communication to convey complex ideas or concepts in a simple, visual form. They can be used to illustrate abstract concepts such as emotions, abstractions, or relationships. Abstract graphic objects can be created using a variety of media, including drawing, painting, printing, and digital media.</p>
-        <img src="assets/img/portfolio_details_3.jpeg" alt="">
-        <p>Illusionist can be destroy your choise abstract graphic object is a visual representation of an abstract concept or idea. It is typically created using lines, shapes, and other visual elements, and it does not depict any specific physical objects or scenes. Abstract graphic objects are often used in art, design, and communication to convey complex ideas or concepts in a simple, visual form. They can be used to illustrate abstract concepts such as emotions, abstractions, or relationships. Abstract graphic objects can be created using a variety of media, including drawing, painting, printing, and digital partners.</p>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail['cover-image']?.src">
+      <div class="cs_radius_10 cs_overflow_hidden cs_mb_40">
+        <img
+          class="cs_w100"
+          [src]="detail['cover-image']?.src"
+          [alt]="detail['cover-image']?.alt || detail.project_name"
+        />
       </div>
-      <div class="cs_text_btn_group cs_semi_bold cs_primary_color">
-        <div>
-          <a href="#" class="cs_text_btn cs_type_1">
-            <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.469669 5.46967C0.176777 5.76256 0.176777 6.23744 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.696699C6.01041 0.403806 5.53553 0.403806 5.24264 0.696699L0.469669 5.46967ZM26 5.25L1 5.25V6.75L26 6.75V5.25Z" fill="currentColor"/>
-            </svg>  
-            <span>Prev Project</span>                   
+    </section>
+
+    <section class="container" *ngIf="detail.about?.long">
+      <div class="row">
+        <div class="col-lg-8">
+          <h3 class="cs_mb_20">Project Overview</h3>
+          <p style="white-space: pre-line;">{{ detail.about?.long }}</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="cs_portfolio_info_1 cs_mb_25" *ngIf="detail.client">
+            <p class="cs_bold">Client & Audience</p>
+            <ng-container *ngFor="let entry of detail.client | keyvalue">
+              <div class="cs_text_muted cs_mb_5" *ngIf="!isArray(entry.value)">
+                <strong>{{ formatLabel(entry.key) }}:</strong> {{ entry.value }}
+              </div>
+              <ul class="cs_list cs_mb_5" *ngIf="isArray(entry.value)">
+                <li *ngFor="let item of entry.value; trackBy: trackByIndex">{{ item }}</li>
+              </ul>
+            </ng-container>
+          </div>
+
+          <div class="cs_portfolio_info_1 cs_mb_25" *ngIf="detail.snapshot">
+            <p class="cs_bold">Snapshot</p>
+            <ng-container *ngFor="let entry of detail.snapshot | keyvalue">
+              <div class="cs_text_muted cs_mb_5" *ngIf="!isArray(entry.value)">
+                <strong>{{ formatLabel(entry.key) }}:</strong> {{ entry.value }}
+              </div>
+              <ul class="cs_list cs_mb_5" *ngIf="isArray(entry.value)">
+                <li *ngFor="let item of entry.value; trackBy: trackByIndex">{{ item }}</li>
+              </ul>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.roles_and_responsibilities?.length || detail.objectives?.length">
+      <div class="row">
+        <div class="col-lg-6" *ngIf="detail.roles_and_responsibilities?.length">
+          <h3 class="cs_mb_15">Roles & Responsibilities</h3>
+          <ul class="cs_list cs_mb_30">
+            <li *ngFor="let item of detail.roles_and_responsibilities; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" *ngIf="detail.objectives?.length">
+          <h3 class="cs_mb_15">Objectives</h3>
+          <ul class="cs_list cs_mb_30">
+            <li *ngFor="let item of detail.objectives; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.features">
+      <h3 class="cs_mb_20">Features</h3>
+      <div class="row">
+        <div class="col-lg-6 cs_mb_25" *ngFor="let feature of detail.features | keyvalue">
+          <h4 class="cs_mb_10">{{ formatLabel(feature.key) }}</h4>
+          <ul class="cs_list">
+            <li *ngFor="let item of feature.value; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.tech_stack">
+      <h3 class="cs_mb_20">Tech Stack</h3>
+      <div class="row">
+        <div class="col-lg-6 cs_mb_25" *ngFor="let stack of detail.tech_stack | keyvalue">
+          <h4 class="cs_mb_10">{{ formatLabel(stack.key) }}</h4>
+          <ul class="cs_list">
+            <li *ngFor="let item of stack.value; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.timeline">
+      <h3 class="cs_mb_20">Timeline</h3>
+      <div class="row">
+        <div class="col-lg-6 cs_mb_25" *ngFor="let phase of detail.timeline | keyvalue">
+          <div class="cs_portfolio_info_1">
+            <p class="cs_text_muted">{{ formatLabel(phase.key) }}</p>
+            <h4 class="cs_mb_5">{{ phase.value['phase'] || phase.value['date'] }}</h4>
+            <p class="cs_mb_5" *ngIf="phase.value['start'] || phase.value['end']">
+              {{ phase.value['start'] || phase.value['date'] }} <span *ngIf="phase.value['end']">- {{ phase.value['end'] }}</span>
+            </p>
+            <p>{{ phase.value['summary'] }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.challenges?.length || detail.solutions?.length">
+      <div class="row">
+        <div class="col-lg-6" *ngIf="detail.challenges?.length">
+          <h3 class="cs_mb_15">Challenges</h3>
+          <ul class="cs_list cs_mb_30">
+            <li *ngFor="let item of detail.challenges; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="col-lg-6" *ngIf="detail.solutions?.length">
+          <h3 class="cs_mb_15">Solutions</h3>
+          <ul class="cs_list cs_mb_30">
+            <li *ngFor="let item of detail.solutions; trackBy: trackByIndex">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.outcomes">
+      <h3 class="cs_mb_15">Outcomes</h3>
+      <ul class="cs_list cs_mb_20" *ngIf="detail.outcomes.qualitative?.length">
+        <li *ngFor="let item of detail.outcomes.qualitative; trackBy: trackByIndex">{{ item }}</li>
+      </ul>
+      <p class="cs_text_muted" *ngIf="detail.outcomes.example_metrics_note">{{ detail.outcomes.example_metrics_note }}</p>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.budget">
+      <h3 class="cs_mb_15">Budget (Approx)</h3>
+      <div class="cs_portfolio_info_1">
+        <p class="cs_mb_5">
+          <strong>Currency:</strong> {{ detail.budget.currency }}
+        </p>
+        <p class="cs_mb_5" *ngIf="detail.budget.initial_build_estimated">
+          <strong>Initial Build:</strong> {{ detail.budget.initial_build_estimated }}
+        </p>
+        <p class="cs_mb_5" *ngIf="detail.budget.internal_build_equivalent">
+          <strong>Internal Build:</strong> {{ detail.budget.internal_build_equivalent }}
+        </p>
+        <p class="cs_mb_5" *ngIf="detail.budget.internal_build_range">
+          <strong>Range:</strong> {{ detail.budget.internal_build_range[0] }} - {{ detail.budget.internal_build_range[1] }}
+        </p>
+        <p *ngIf="detail.budget.notes">{{ detail.budget.notes }}</p>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail['body-image-1']?.src || detail['body-image-2']?.src || detail['body-media']?.src">
+      <div class="row">
+        <div class="col-lg-6 cs_mb_25" *ngIf="detail['body-image-1']?.src">
+          <img
+            class="cs_w100 cs_radius_10"
+            [src]="detail['body-image-1']?.src"
+            [alt]="detail['body-image-1']?.alt || detail.project_name"
+          />
+        </div>
+        <div class="col-lg-6 cs_mb_25" *ngIf="detail['body-image-2']?.src">
+          <img
+            class="cs_w100 cs_radius_10"
+            [src]="detail['body-image-2']?.src"
+            [alt]="detail['body-image-2']?.alt || detail.project_name"
+          />
+        </div>
+        <div class="col-12" *ngIf="detail['body-media']?.src">
+          <video class="cs_w100 cs_radius_10" controls [src]="detail['body-media']?.src"></video>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
+    <section class="container" *ngIf="detail.links">
+      <h3 class="cs_mb_15">Links</h3>
+      <div class="cs_text_btn_group cs_primary_color">
+        <ng-container *ngFor="let link of detail.links | keyvalue">
+          <a
+            *ngIf="link.value"
+            class="cs_text_btn cs_mb_10"
+            [href]="link.value || '#'"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>{{ formatLabel(link.key) }}</span>
           </a>
-        </div>
-        <div>
-          <a href="#" class="cs_text_btn">
-            <span>Next Project</span>
-            <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z" fill="currentColor"/>
-            </svg>            
-          </a>
-        </div>
+        </ng-container>
       </div>
-    </div>
-    <div class="cs_height_150 cs_height_lg_100"></div>
-    <!-- End Video Block -->
+    </section>
+
+    <div class="cs_height_100 cs_height_lg_80"></div>
+  </ng-container>
+</ng-container>
+
+<ng-template #portfolioNotFound>
+  <section class="container text-center">
+    <h2 class="cs_mb_15">Project not found</h2>
+    <p class="cs_mb_30">The project you are looking for does not exist or is not published yet.</p>
+    <a routerLink="/portfolio" class="cs_btn cs_style_1"><span>Back to Portfolio</span></a>
+  </section>
+  <div class="cs_height_120 cs_height_lg_80"></div>
+</ng-template>

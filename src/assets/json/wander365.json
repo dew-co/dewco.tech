@@ -4,11 +4,9 @@
   "headline": "Wander365: Full-Stack Travel Experience Platform for Modern Explorers",
   "short_headline": "Wander365 – Smart Tours & Travel Booking Platform",
   "taglines": [
-    "Travel every day of the year, effortlessly.",
-    "From inspiration to itinerary – all in one place.",
-    "Where curated journeys meet intelligent automation.",
-    "Wander more, plan less.",
-    "Your 365-day companion for trips, treks, and tours."
+    "Curated trips with planning handled end-to-end.",
+    "From browse to itinerary in a single flow.",
+    "Built as Wander365 today, ready to evolve into WanderRest."
   ],
   "client": {
     "brand_name_current": "Wander365",
@@ -23,10 +21,9 @@
   },
   "snapshot": {
     "role": [
-      "Product Strategy",
-      "UX/UI Design",
-      "Full-Stack Engineering",
-      "Automation Architecture"
+      "Product roadmap and positioning",
+      "UX/UI for public site and admin CRM",
+      "Full-stack build with automation hooks"
     ],
     "platform": [
       "Public Website (Responsive)",
@@ -56,66 +53,55 @@
     "src": "/assets/portfolio/wander365.mp4"
   },
   "about": {
-    "short": "Wander365 is a full-stack travel experience platform that helps Indian travelers discover, customize, and book curated trips, while giving the travel team a powerful yet simple CRM to manage leads, packages, and itineraries. The brand is planned to evolve into ‘WanderRest’ as the product matures.",
-    "long": "Wander365 started as a passion project to simplify how Indian travelers discover and book curated trips, weekend getaways, treks, and experiences. The goal is to make trip planning feel less like a chore and more like a conversation with a trusted travel partner.\n\nUnder Dew & Company (DewCo), Wander365 is being built as a modern travel brand that combines clean design, smart automation, and human-curated itineraries. In the future, the brand identity and positioning are planned to evolve into **WanderRest**, while the underlying product and platform continue to expand.\n\nThe public website helps users explore destinations, view detailed packages, and submit enquiries. On the backend, an internal admin CRM + CMS lets the team manage packages, itineraries, leads, and follow-ups in one place. The platform is designed as a travel OS that can later be extended into a white-label, multi-tenant solution for other travel agencies."
+    "short": "Wander365 is a travel platform that helps people explore curated trips, send enquiries, and get a quick response while the team manages leads, packages, and itineraries from one CRM. The brand is set up to evolve into WanderRest without a rebuild.",
+    "long": "Wander365 makes planning Indian getaways feel guided instead of chaotic. The public site highlights destinations, day-wise plans, and enquiry flows so visitors can raise a trip request in minutes.\n\nBehind the site, an admin CRM tracks leads, packages, and itineraries so the team can reply faster and reuse templates. The product and brand are structured so it can rebrand to WanderRest smoothly or be white-labeled for other agencies."
   },
   "roles_and_responsibilities": [
-    "Defined product vision, feature scope, and roadmap from MVP to scalable platform.",
-    "Designed user journeys, wireframes, and high-fidelity UI for both public site and admin CRM.",
-    "Implemented front-end, back-end APIs, and database schema.",
-    "Set up lead capture flows, basic analytics, and SEO-ready content structures.",
-    "Planned the brand’s future evolution from Wander365 to WanderRest without breaking existing users.",
-    "Planned architecture to support future multi-tenant white-label use."
+    "Shaped the product direction and UX for both the customer site and the CRM.",
+    "Designed UI components and flows for enquiries, itineraries, and pricing.",
+    "Built the frontend, APIs, and data models for leads, packages, and quotes.",
+    "Set up SEO architecture, analytics hooks, and rebrand-ready assets."
   ],
   "objectives": [
-    "Build a modern, trustworthy online presence for a tours and travel brand under the name Wander365.",
-    "Create a conversion-focused website that turns visitors into qualified enquiries.",
-    "Centralize all leads, itineraries, and packages into one CRM instead of Excel/WhatsApp.",
-    "Design an internal system that is simple enough for daily use but scalable for multiple agencies.",
-    "Keep the brand and technical architecture flexible so Wander365 can later rebrand to WanderRest smoothly."
+    "Present Wander365 as a trustworthy travel brand with clear packages and itineraries.",
+    "Capture enquiries into a simple CRM instead of scattered chats and sheets.",
+    "Keep the platform flexible for a future WanderRest rebrand or white-label offering."
   ],
   "features": {
     "public_website": [
-      "Destination- and theme-based browsing (weekend getaways, treks, honeymoons, workations, etc.).",
-      "Detailed package pages with day-wise itinerary, inclusions, exclusions, FAQs, and gallery.",
-      "Smart enquiry forms connected to CRM with lead source and UTM tracking.",
-      "SEO-friendly blog section for travel guides, tips, and destination content.",
-      "Trust elements: testimonials, FAQs, safety notes, and brand story sections.",
-      "WhatsApp-ready share links for itineraries and packages."
+      "Browse by destination or theme with detailed package pages and FAQs.",
+      "Day-wise itineraries with inclusions/exclusions and gallery.",
+      "Enquiry forms tied to the CRM with source and UTM tracking.",
+      "SEO-friendly guides and shareable links for WhatsApp and email."
     ],
     "admin_crm": [
-      "Lead inbox with filters by source (website, WhatsApp, referral, campaigns).",
-      "Lead pipeline statuses: New, Contacted, Follow-up, Converted, Lost.",
-      "Package and itinerary management with reusable templates and day-wise breakdown.",
-      "Pricing matrix for seasonal pricing, per-person cost, and add-ons.",
-      "Quote and itinerary export (PDF/print-friendly) for sharing with clients.",
-      "Basic reporting for leads, conversion rate, top destinations, and channels."
+      "Lead inbox with simple status pipeline and filters by source.",
+      "Package and itinerary templates with seasonal pricing options.",
+      "Quote/export flow for quick responses and client-ready PDFs.",
+      "Light reporting on leads, destinations, and channels."
     ]
   },
   "tech_stack": {
     "frontend": [
-      "SPA framework (Angular/React – responsive, mobile-first).",
-      "Component-based UI with reusable sections for packages and itineraries.",
-      "TailwindCSS / SCSS for styling."
+      "Angular SPA with responsive blocks for packages and enquiries.",
+      "Reusable components styled with TailwindCSS/SCSS."
     ],
     "backend": [
-      "RESTful API (Node.js / Django / FastAPI – configurable as per deployment).",
-      "Role-based access control for admin users.",
+      "REST API (Node.js / Django / FastAPI) with role-based access.",
       "Structured models for leads, packages, itineraries, and pricing."
     ],
     "database": [
-      "Relational DB (PostgreSQL/MySQL) or Firestore (Firebase) depending on environment."
+      "Relational DB (PostgreSQL/MySQL) or Firestore depending on deployment."
     ],
     "integrations": [
-      "Google Business Profile strategy for reviews and local discovery.",
-      "WhatsApp deep links for sharing packages and quotes.",
-      "Email notifications via SMTP / transactional mail provider.",
-      "Google Analytics with UTM-based campaign tracking."
+      "WhatsApp-ready share links and email notifications.",
+      "Google Analytics with UTM-based campaign tracking.",
+      "Planned Google Business Profile focus for reviews and discovery."
     ],
     "hosting_devops": [
       "Frontend on Vercel/Netlify/Firebase Hosting.",
-      "Backend on VPS / Docker-based deployment.",
-      "Basic CI/CD pipeline for automated builds and deployments."
+      "Backend containerized on VPS/cloud with environment separation.",
+      "Basic CI/CD for automated builds and deployments."
     ]
   },
   "timeline": {
@@ -123,35 +109,35 @@
       "phase": "Discovery & Strategy",
       "start": "2024-12-01",
       "end": "2025-01-15",
-      "summary": "Requirement gathering, brand positioning for Wander365, feature scoping, and platform architecture planning."
+      "summary": "Positioned Wander365, scoped features, and set the platform architecture."
     },
     "design_and_ux": {
       "phase": "UX/UI Design",
       "start": "2025-01-16",
       "end": "2025-03-15",
-      "summary": "User flows, wireframes, component library, visual design for website and CRM under Wander365 brand."
+      "summary": "Created user flows, wireframes, and visual design for the site and CRM."
     },
     "development_v1": {
       "phase": "Development v1",
       "start": "2025-03-16",
       "end": "2025-08-14",
-      "summary": "Core feature development for public site, enquiry flow, and basic admin CRM leading up to the initial launch."
+      "summary": "Built the core website, enquiry flow, and admin CRM ahead of launch."
     },
     "launch_v1": {
       "phase": "Initial Launch of Wander365 v1.0",
       "date": "2025-08-15",
-      "summary": "Soft/initial launch of Wander365 with core booking enquiry flow and CRM live for real users."
+      "summary": "Soft launch with core booking enquiry and CRM live for real users."
     },
     "full_launch": {
       "phase": "Full Launch / Public Rollout",
       "date": "2025-08-31",
-      "summary": "Full public rollout of Wander365 with stabilized features, refined content, and marketing push."
+      "summary": "Public rollout with stabilized features and content push."
     },
     "future_rebrand": {
       "phase": "Planned evolution to WanderRest",
       "start": null,
       "end": null,
-      "summary": "Brand and UX evolution to WanderRest while retaining underlying platform, users, and data."
+      "summary": "Prepare brand and UX shifts to WanderRest without disrupting data or users."
     }
   },
   "budget": {
@@ -165,41 +151,38 @@
       15000,
       35000
     ],
-    "notes": "Values represent equivalent full project value including strategy, UX/UI, development, and initial SEO setup under Wander365, with flexibility to support later rebranding into WanderRest."
+    "notes": "Equivalent value for strategy, UX/UI, development, and initial SEO, with room to rebrand into WanderRest."
   },
   "challenges": [
-    "Client operations were spread across WhatsApp, Excel, and Google Docs, causing lost leads and inconsistent follow-ups.",
-    "Founders wanted an all-in-one system but had limited technical background.",
-    "Need to keep admin CRM extremely simple for daily use while being scalable for future multi-tenant rollouts.",
-    "Designing the brand identity and tech so that a later rebrand to WanderRest doesn’t require a full rebuild."
+    "Operations and follow-ups were scattered across chats and spreadsheets.",
+    "Team needed an easy CRM without technical overhead.",
+    "The platform had to allow a later WanderRest rebrand without a rebuild."
   ],
   "solutions": [
-    "Designed a minimal, focused CRM with clear stages and simple forms instead of overwhelming options.",
-    "Created structured data models for packages, itineraries, and pricing to reduce duplication and confusion.",
-    "Separated core platform logic from brand layer to allow future white-label/multi-tenant rollout.",
-    "Abstracted brand-specific assets and copy so the platform can move from Wander365 to WanderRest with minimal technical changes."
+    "Built a pared-down CRM with reusable templates and a simple status pipeline.",
+    "Abstracted brand assets and copy so Wander365 can evolve into WanderRest.",
+    "Structured data models and SEO-ready content to standardize responses."
   ],
   "outcomes": {
     "qualitative": [
-      "Centralized lead and package management in one system instead of scattered sheets and chats.",
-      "Enabled faster response to enquiries using reusable itineraries and quote templates.",
-      "Created a brand-ready, SEO-friendly website under Wander365, with a path to rebrand as WanderRest.",
-      "Laid the foundation for evolving the product into a white-label platform for other travel agencies."
+      "Centralized leads and packages in one system instead of chats and sheets.",
+      "Faster responses using templated itineraries and quote exports.",
+      "Brand and tech ready to evolve into WanderRest or a white-label offering."
     ],
-    "example_metrics_note": "Within the first few months after the August 2025 launches, the platform began handling regular enquiries and standardizing proposals under the Wander365 identity. Metrics and branding can later be updated when rebranded to WanderRest."
+    "example_metrics_note": "Early usage focuses on enquiry handling and response speed; public metrics can be added after the WanderRest rollout."
   },
   "portfolio_copy": {
-    "grid_card": "Wander365 – Travel experience platform for curated trips and tours, built end-to-end by DewCo (strategy, UX, full-stack, CRM), with a clear evolution path into WanderRest.",
-    "one_liner": "A full-stack travel experience platform launched as Wander365 in August 2025, architected to smoothly evolve into WanderRest as the brand and product grow."
+    "grid_card": "Travel experience platform with public site and CRM, built as Wander365 and ready to rebrand to WanderRest.",
+    "one_liner": "Curated travel site with enquiry CRM, architected to rebrand without starting over."
   },
   "links": {
-    "live_site": null,
+    "live_site": "https://wander365.in/",
     "admin_panel": null,
     "case_study_page": null,
     "behance_or_dribbble": null
   },
   "meta": {
-    "last_updated_for_portfolio": "2025-12-23",
-    "notes_for_future_edit": "Update start date if you want a more precise December 2024 day, and add real URLs and metrics once available."
+    "last_updated_for_portfolio": "2025-12-24",
+    "notes_for_future_edit": "Add real URLs, metrics, and final WanderRest brand decisions when available."
   }
 }

@@ -4,11 +4,9 @@
   "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
   "short_headline": "LAN-Cam – Local Network Camera & Screen Sync Tool",
   "taglines": [
-    "Turn any device into a low-latency camera over your own Wi-Fi.",
-    "Cinema mode, classroom mode, all on your local network.",
-    "No internet, no cloud – just pure LAN streaming.",
-    "Screen and camera sync for classrooms, offices, and home theatres.",
-    "Bring everyone onto the same screen, locally."
+    "Turn any device into a low-latency camera on your Wi-Fi.",
+    "No internet, no cloud – just LAN streaming.",
+    "Screen and camera sync for classrooms, offices, and homes."
   ],
   "client": {
     "brand_name_current": "LAN-Cam",
@@ -16,9 +14,8 @@
     "location": "India (LAN-first, globally usable)",
     "audience": [
       "Teachers and training institutes",
-      "Small offices and remote teams on same LAN",
-      "Home theatre / family streaming use-cases",
-      "Developers who need LAN-only demo streaming"
+      "Small offices and teams on the same LAN",
+      "Home theatre or quick demo setups"
     ]
   },
   "studio": {
@@ -28,10 +25,10 @@
   },
   "snapshot": {
     "role": [
-      "Product Concept & Strategy",
-      "System Architecture & Networking Design",
-      "Desktop & Web App Engineering",
-      "UX/UI Design"
+      "Product concept and use-case definition",
+      "System architecture and networking design",
+      "Desktop and web app engineering",
+      "UX/UI design"
     ],
     "platform": [
       "Desktop App (sender/receiver)",
@@ -60,80 +57,72 @@
     "src": ""
   },
   "about": {
-    "short": "LAN-Cam is a local-network-only camera and screen streaming tool that lets you broadcast your screen or camera feed to multiple devices over the same Wi-Fi, with low latency and zero internet dependency.",
-    "long": "LAN-Cam was designed to solve a recurring problem in classrooms, workshops, and small offices: how to share a live screen or camera feed with multiple nearby devices without relying on the internet, cloud services, or complex hardware setups.\n\nThe idea is simple: any laptop or phone on your local network can become a \"broadcaster\" or a \"viewer\". The broadcaster streams either its screen or camera feed; viewers join via auto-discovered sessions or a simple LAN URL/QR code. Everything stays inside the local network – making it faster, more private, and more reliable even when the internet is slow or unavailable.\n\nLAN-Cam supports multiple scenarios: a teacher projecting their tablet to all student devices, a trainer sharing code in a classroom, a home user mirroring a phone camera to a big screen, or a small team quickly demoing something without HDMI cables. The architecture focuses on low-latency streaming, simple device discovery, and a clean, no-friction UX that non-technical users can understand."
+    "short": "LAN-Cam is a LAN-only camera and screen streaming tool that broadcasts to multiple devices on the same Wi-Fi with low latency and zero internet dependency.",
+    "long": "LAN-Cam makes it simple to broadcast a screen or camera feed to nearby devices without cloud services or cables. Any laptop or phone can be a broadcaster; viewers join via discovery or a LAN URL/QR code, and everything stays inside your network for speed and privacy.\n\nIt works for classrooms, training rooms, quick demos, or home viewing. The focus is on low-latency streaming, straightforward discovery, and a frictionless UX for non-technical users."
   },
   "roles_and_responsibilities": [
-    "Defined the core product concept and identified key use-cases (classroom, office, home).",
-    "Designed the LAN-first architecture including discovery, signalling, and streaming paths.",
-    "Implemented the desktop sender app with screen capture and camera capture modes.",
-    "Built the web-based viewer interface for easy access via browser on LAN devices.",
-    "Created the UI flows for joining sessions via auto-discovery, PIN, or QR-based URL.",
-    "Handled packaging, configuration, and basic diagnostics/latency checks for users."
+    "Defined core use-cases and kept the product LAN-first.",
+    "Designed discovery, signalling, and streaming architecture.",
+    "Built the desktop sender with screen/camera capture modes and the browser viewer.",
+    "Created join flows via auto-discovery, PIN, or QR-based URL with basic diagnostics."
   ],
   "objectives": [
-    "Provide a lightweight, LAN-only alternative to screen-sharing tools that depend on the internet.",
-    "Make it extremely easy for non-technical users to share their screen or camera feed locally.",
-    "Support multiple viewers simultaneously with acceptable latency over typical Wi-Fi networks.",
-    "Ensure all data stays within the local network for privacy-sensitive environments like classrooms and offices.",
-    "Prepare the codebase for future extensions like recording, annotations, and multi-room support."
+    "Provide a lightweight LAN alternative to internet-dependent screen-sharing.",
+    "Make joining or broadcasting simple for non-technical users.",
+    "Keep all data on the local network for speed and privacy."
   ],
   "features": {
     "core_streaming": [
-      "Screen sharing from desktop/laptop to any browser on the same LAN.",
-      "Camera mode: turn the device’s webcam into a LAN camera feed.",
-      "Optional audio streaming for classes or explanation sessions.",
-      "Adaptive quality presets (Low/Medium/High) based on network conditions."
+      "Screen sharing from desktop to any browser on the same LAN.",
+      "Camera mode to turn the device webcam into a LAN camera.",
+      "Optional audio streaming for lessons or demos.",
+      "Quality presets based on network conditions."
     ],
     "session_management": [
-      "Create named sessions (e.g., CLASS-9A, MEETING-ROOM-1).",
-      "Auto-discovery of active sessions on the same LAN via broadcast/mDNS.",
-      "Join via simple URL or QR code for quick connection from phones and tablets.",
-      "Optional PIN/room-lock for access control."
+      "Named sessions for classrooms or rooms.",
+      "Auto-discovery on LAN with fallback manual join via URL/QR.",
+      "Optional PIN/room lock for access control."
     ],
     "viewing_experience": [
-      "Browser-based viewer – no installation needed for participants.",
-      "Full-screen mode with aspect-ratio handling for different devices.",
-      "Basic latency indicator (Good/OK/Poor) based on round-trip checks.",
-      "Auto-reconnect if Wi-Fi temporarily drops."
+      "Browser-based viewer with full-screen mode.",
+      "Latency indicator and auto-reconnect on brief drops.",
+      "Responsive layout for laptops, tablets, and phones."
     ],
     "modes_and_use_cases": [
-      "Classroom mode: one broadcaster, many viewers (students on laptops/phones).",
-      "Meeting mode: switch broadcaster between multiple devices (planned).",
-      "Home theatre mode: stream from laptop/phone to TV browser on same Wi-Fi."
+      "Classroom mode: one broadcaster, many viewers.",
+      "Meeting/demo mode with switchable broadcaster (planned).",
+      "Home theatre or quick mirroring to TV browser on Wi-Fi."
     ],
     "settings_and_admin": [
-      "Toggle between screen and camera mode.",
-      "Select which display or window to share (OS-permitting).",
-      "Quality and bandwidth settings per session.",
-      "Session stats: connected viewers count, approximate bandwidth, and uptime."
+      "Toggle screen or camera mode and choose source.",
+      "Quality/bandwidth presets per session.",
+      "Session stats like viewers count and basic bandwidth."
     ]
   },
   "tech_stack": {
     "core_technology": [
-      "WebRTC-based streaming for low-latency audio/video over LAN.",
-      "WebSockets / signalling server for session negotiation and control.",
-      "Local network discovery via broadcast/mDNS (where supported)."
+      "WebRTC for low-latency audio/video over LAN.",
+      "WebSockets/signalling server for negotiation and control.",
+      "Local discovery via broadcast/mDNS where available."
     ],
     "desktop_app": [
-      "Electron-based app (or similar framework) wrapping web technologies.",
-      "Native OS capture APIs for screen and window capture where needed.",
-      "Auto-update channel for pushing new builds."
+      "Electron-based app wrapping web technologies.",
+      "Native OS capture APIs for screen/window capture.",
+      "Auto-update channel for new builds."
     ],
     "web_client": [
-      "React / plain HTML+JS-based viewer.",
-      "Responsive layout optimized for laptops, tablets, and mobile phones.",
-      "Fallback modes for browsers with limited WebRTC support."
+      "React or plain HTML/JS viewer with responsive layout.",
+      "Fallback modes for limited WebRTC support."
     ],
     "backend_and_services": [
-      "Lightweight signalling server (Node.js/FastAPI) for peer coordination.",
-      "Option to run signalling on the same LAN machine or a small VPS.",
-      "No media relay by default – peers stream directly over LAN where possible."
+      "Lightweight signalling server (Node.js/FastAPI).",
+      "Option to host signalling on LAN or small VPS.",
+      "Direct peer streaming on LAN by default."
     ],
     "deployment_and_ops": [
-      "Self-hosted signalling server and controller (Docker-based deployment).",
-      "Desktop builds for major OSes (Windows first; macOS/Linux planned).",
-      "Configurable environment for local-only or mixed LAN/internet use."
+      "Self-hosted signalling/controller via Docker.",
+      "Desktop builds for major OSes (Windows first).",
+      "Configurable for local-only or mixed LAN/internet use."
     ]
   },
   "timeline": {
@@ -141,73 +130,71 @@
       "phase": "Concept & Use-Case Definition",
       "start": "2024-03-01",
       "end": "2024-03-20",
-      "summary": "Identified classroom and small-office pain points with existing screen-sharing tools and defined the LAN-only value proposition."
+      "summary": "Identified classroom and small-office gaps in existing tools."
     },
     "prototype_v1": {
       "phase": "Prototype v1 – Core Streaming",
       "start": "2024-03-21",
       "end": "2024-04-30",
-      "summary": "Built initial desktop sender and browser viewer with basic WebRTC streaming on LAN."
+      "summary": "Built initial sender and browser viewer with basic WebRTC streaming."
     },
     "lan_discovery_and_ux": {
       "phase": "LAN Discovery & UX Refinement",
       "start": "2024-05-01",
       "end": "2024-06-15",
-      "summary": "Implemented session discovery, QR-based join flow, simple configuration panel, and stabilised connectivity flows."
+      "summary": "Implemented discovery, QR join, and simple configuration panel."
     },
     "internal_beta": {
       "phase": "Internal Beta & Real-World Tests",
       "date": "2024-07-10",
-      "summary": "Used LAN-Cam in small internal/classroom-style setups to test latency, device compatibility, and user understanding."
+      "summary": "Tested latency, compatibility, and usability in small setups."
     },
     "ongoing_improvements": {
       "phase": "Ongoing Improvements & Public Beta Prep",
       "start": "2024-08-01",
       "end": null,
-      "summary": "Adding quality presets, better diagnostics, and preparing installers and documentation for wider release."
+      "summary": "Adding presets, diagnostics, and installers for wider release."
     }
   },
   "budget": {
     "currency": "INR",
     "internal_build_equivalent": 160000,
-    "internal_build_range": [140000, 200000],
-    "notes": "Represents equivalent project value (architecture, desktop app, web client, signalling server, testing). As an in-house product, primary cost is development time and testing devices."
+    "internal_build_range": [
+      140000,
+      200000
+    ],
+    "notes": "Equivalent value covering architecture, apps, signalling, and tests; primary cost is build time and devices."
   },
   "challenges": [
-    "Handling varying Wi-Fi quality and router configurations on different local networks.",
-    "Ensuring low latency without overcomplicating the UX with technical settings.",
-    "Dealing with OS-level screen capture permissions and browser compatibility.",
-    "Implementing LAN discovery that works across different OS and router setups.",
-    "Keeping everything local by default while still allowing optional remote signalling if needed."
+    "Varying Wi-Fi quality and router configs affect latency.",
+    "Need to keep UX simple while offering useful settings.",
+    "Permissions and compatibility differ across OSes and browsers."
   ],
   "solutions": [
-    "Introduced simple quality presets instead of exposing complex bitrate/codec settings.",
-    "Used WebRTC for peer-to-peer streaming where possible and kept the signalling layer minimal.",
-    "Added clear permission prompts and troubleshooting tips for screen and camera access.",
-    "Designed fallback join flows using manual IP/URL entry when auto-discovery fails.",
-    "Separated signalling and media layers so signalling can be local or remote, while video stays on LAN where possible."
+    "Used simple quality presets instead of complex bitrate controls.",
+    "Kept signalling minimal with WebRTC peer streaming by default.",
+    "Added clear permission prompts and fallback join flows when discovery fails."
   ],
   "outcomes": {
     "qualitative": [
-      "Created a practical LAN-first tool that removes dependence on internet-based screen-sharing for local sessions.",
-      "Enabled classroom-style broadcasting where all students can view the teacher’s screen on their own devices.",
-      "Simplified ad-hoc demo sharing in small teams without requiring cables or external services.",
-      "Laid the groundwork for a future paid/pro version with recording, multi-presenter, and annotation features."
+      "LAN-first tool removes dependence on internet-based screen sharing.",
+      "Classroom-style broadcasting where viewers use their own devices.",
+      "Foundation for a paid/pro version with recording and multi-presenter features."
     ],
-    "example_metrics_note": "As a prototype/early internal tool, outcomes are measured in latency stability, connection success rate, and user feedback in limited environments. Public usage metrics will be added post beta release."
+    "example_metrics_note": "Early success is measured in latency stability and connection success; public metrics will follow after beta."
   },
   "portfolio_copy": {
-    "grid_card": "LAN-Cam – Local network camera and screen sync tool for classrooms, teams, and homes, delivering low-latency streaming over your own Wi-Fi.",
-    "one_liner": "A LAN-only camera and screen streaming app that turns any device into a broadcaster or viewer, with low latency and zero internet dependency."
+    "grid_card": "LAN-Cam – Local network camera and screen sync tool with low-latency streaming over your own Wi-Fi.",
+    "one_liner": "A LAN-only camera and screen streaming app that keeps data local and setup simple."
   },
   "links": {
-    "landing_page": null,
-    "download_page": null,
-    "case_study_page": null,
+    "landing_page": "Coming soon.",
+    "download_page": "Coming soon.",
+    "case_study_page": "Coming soon.",
     "github_or_repo": null
   },
   "meta": {
-    "last_updated_for_portfolio": "2025-12-22",
-    "notes_for_future_edit": "Update with actual installer links, screenshots, and measured latency/connection metrics once public beta is released."
+    "last_updated_for_portfolio": "2025-12-24",
+    "notes_for_future_edit": "Add installer links, screenshots, and measured latency once public beta ships."
   }
 }

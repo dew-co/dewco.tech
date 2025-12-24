@@ -3,7 +3,7 @@
     "id": "wander365",
     "name": "Wander365",
     "headline": "Wander365: Full-Stack Travel Experience Platform for Modern Explorers",
-    "short_headline": "Wander365 – Smart Tours & Travel Booking Platform",
+    "short_headline": "Wander365 \u2013 Smart Tours & Travel Booking Platform",
     "tagline": "Wander more, plan less.",
     "category": "Travel / Hospitality",
     "image-1": {
@@ -20,7 +20,7 @@
     "id": "quantgrade_trading_bot",
     "name": "Quant-Grade Trading Bot",
     "headline": "Quant-Grade: Multi-Timeframe Algorithmic Trading Engine for Indian Markets & Crypto",
-    "short_headline": "Quant-Grade – AI-Assisted Trading Bot",
+    "short_headline": "Quant-Grade \u2013 AI-Assisted Trading Bot",
     "tagline": "Quant-grade analysis for non-quant traders.",
     "category": "FinTech / Trading",
     "image-1": {
@@ -37,7 +37,7 @@
     "id": "trac_app",
     "name": "TRAC App",
     "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
-    "short_headline": "TRAC App – Remote Activity Control",
+    "short_headline": "TRAC App \u2013 Remote Activity Control",
     "tagline": "Tracking Remote Activity Control",
     "category": "Productivity / IT Management",
     "image-1": {
@@ -54,7 +54,7 @@
     "id": "gloveflix_platform",
     "name": "GloVeFlix",
     "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
-    "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
+    "short_headline": "GloVeFlix \u2013 Public Movie Hub with Private VIP Club",
     "tagline": "Publicly discover, privately enjoy.",
     "category": "Media / Entertainment",
     "image-1": {
@@ -71,8 +71,8 @@
     "id": "lan_cam",
     "name": "LAN-Cam",
     "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
-    "short_headline": "LAN-Cam – Local Screen & Camera Streaming",
-    "tagline": "No internet, no cloud – just Local Network Camera & Screen Sync.",
+    "short_headline": "LAN-Cam \u2013 Local Screen & Camera Streaming",
+    "tagline": "No internet, no cloud \u2013 just Local Network Camera & Screen Sync.",
     "category": "Productivity / EdTech / Utilities",
     "image-1": {
       "src": "/assets/portfolio/cover/lan-cam-cover-2.png",
@@ -85,20 +85,20 @@
     "link": "/portfolio/lan-cam"
   },
   {
-  "id": "arceon_ai",
-  "name": "Arceon AI – Document Processing & Claim Automation",
-  "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
-  "short_headline": "Arceon AI – Claims Automation SaaS",
-  "tagline": "From documents to decisions — in seconds.",
-  "category": "AI SaaS / Enterprise Automation",
-  "image-1": {
-    "src": "assets/portfolio/cover/arceon-ai-cover-1.png",
-    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
-  },
-  "image-2": {
-    "src": "/assets/portfolio/cover/arceon-ai-cover-2.png",
-    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
-  },
-  "link": "/portfolio/arceon-ai"
-}
+    "id": "arceon_ai",
+    "name": "Arceon AI \u2013 Document Processing & Claim Automation",
+    "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
+    "short_headline": "Arceon AI \u2013 Claims Automation SaaS",
+    "tagline": "From documents to decisions \u2014 in seconds.",
+    "category": "AI SaaS / Enterprise Automation",
+    "image-1": {
+      "src": "assets/portfolio/cover/arceon-ai-cover-1.png",
+      "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+    },
+    "image-2": {
+      "src": "/assets/portfolio/cover/arceon-ai-cover-2.png",
+      "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+    },
+    "link": "/portfolio/arceon-ai"
+  }
 ]
