@@ -7,11 +7,11 @@
     "tagline": "Wander more, plan less.",
     "category": "Travel / Hospitality",
     "image-1": {
-      "src": "/assets/portfolio/wander365-cover-2.png",
+      "src": "/assets/portfolio/cover/wander365-cover-2.png",
       "alt": "Wander365 travel booking website shown on laptop and mobile screens"
     },
     "image-2": {
-      "src": "/assets/portfolio/wander365-cover-1.png",
+      "src": "/assets/portfolio/cover/wander365-cover-1.png",
       "alt": "Wander365 travel booking website shown on laptop and mobile screens"
     },
     "link": "/portfolio/wander365"
@@ -24,11 +24,11 @@
     "tagline": "Quant-grade analysis for non-quant traders.",
     "category": "FinTech / Trading",
     "image-1": {
-      "src": "/assets/portfolio/quantgrade-cover-1.png",
+      "src": "/assets/portfolio/cover/quantgrade-cover-1.png",
       "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
     "image-2": {
-      "src": "/assets/portfolio/quantgrade-cover-2.png",
+      "src": "/assets/portfolio/cover/quantgrade-cover-2.png",
       "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
     "link": "/portfolio/quantgrade-trading-bot"
@@ -41,11 +41,11 @@
     "tagline": "Tracking Remote Activity Control",
     "category": "Productivity / IT Management",
     "image-1": {
-      "src": "/assets/portfolio/trac-app-cover-1.png",
+      "src": "/assets/portfolio/cover/trac-app-cover-1.png",
       "alt": "TRAC App dashboard showing remote device activity and control actions"
     },
     "image-2": {
-      "src": "/assets/portfolio/trac-app-cover-2.png",
+      "src": "/assets/portfolio/cover/trac-app-cover-2.png",
       "alt": "TRAC App dashboard showing remote device activity and control actions"
     },
     "link": "/portfolio/trac-app"
@@ -58,11 +58,11 @@
     "tagline": "Publicly discover, privately enjoy.",
     "category": "Media / Entertainment",
     "image-1": {
-      "src": "/assets/portfolio/gloveflix-cover-1.png",
+      "src": "/assets/portfolio/cover/gloveflix-cover-1.png",
       "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     },
     "image-2": {
-      "src": "/assets/portfolio/gloveflix-cover-2.png",
+      "src": "/assets/portfolio/cover/gloveflix-cover-2.png",
       "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     },
     "link": "/portfolio/gloveflix"
@@ -75,11 +75,11 @@
     "tagline": "No internet, no cloud – just Local Network Camera & Screen Sync.",
     "category": "Productivity / EdTech / Utilities",
     "image-1": {
-      "src": "/assets/portfolio/lan-cam-cover-2.png",
+      "src": "/assets/portfolio/cover/lan-cam-cover-2.png",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "image-2": {
-      "src": "/assets/portfolio/lan-cam-cover-1.png",
+      "src": "/assets/portfolio/cover/lan-cam-cover-1.png",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "link": "/portfolio/lan-cam"
@@ -92,11 +92,11 @@
   "tagline": "From documents to decisions — in seconds.",
   "category": "AI SaaS / Enterprise Automation",
   "image-1": {
-    "src": "/assets/portfolio/arceon-ai-cover-1.png",
+    "src": "assets/portfolio/cover/arceon-ai-cover-1.png",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
   "image-2": {
-    "src": "/assets/portfolio/arceon-ai-cover-2.png",
+    "src": "/assets/portfolio/cover/arceon-ai-cover-2.png",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
   "link": "/portfolio/arceon-ai"

@@ -45,6 +45,21 @@
     "completed_date_v1": "2024-11-30",
     "engagement_model": "Internal product build with future SaaS/white-label plans"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/all-devices-trading_bot.png",
+    "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/trading_bot-1.png",
+    "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+  },
+  "body-image-2": {
+    "src": "/assets/portfolio/trading_bot-2.png",
+    "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+  },
+  "body-media": {
+    "src": ""
+  },
   "about": {
     "short": "Quant-Grade is an internal trading engine and analytics platform that performs multi-timeframe technical and quantitative analysis on Indian equities and crypto, generating clean, rule-based signals, risk levels, and optional automation hooks for execution.",
     "long": "Quant-Grade was built to bring structure and discipline to active trading in both Indian markets and crypto. Instead of relying on scattered indicators and discretionary decisions, the project focuses on rule-based, multi-timeframe analysis that can be executed consistently.\n\nThe system ingests price and market data for selected instruments, runs quant and technical models across multiple timeframes (1m, 15m, 1h, 2h, 4h, 1D, 1W), and outputs directional bias, key levels, and trade hypotheses. These are surfaced via a web dashboard and can be connected to broker APIs for semi-automated or fully automated strategies.\n\nQuant-Grade is designed as a modular engine: the core does data ingestion, feature engineering, and signal generation, while the UI, alerting, and execution layers sit on top. This separation makes it easier to test new strategies, plug in AI models for regime detection, and eventually expose the platform as a SaaS for traders and small trading desks."

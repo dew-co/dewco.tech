@@ -44,6 +44,21 @@
     "completed_date_v1": "2024-07-10",
     "engagement_model": "Internal product build; future paid/pro tier planned"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/all-devices-lan-cam.png",
+    "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/lan-cam-1.png",
+    "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+  },
+  "body-image-2": {
+    "src": "/assets/portfolio/lan-cam-2.png",
+    "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+  },
+  "body-media": {
+    "src": ""
+  },
   "about": {
     "short": "LAN-Cam is a local-network-only camera and screen streaming tool that lets you broadcast your screen or camera feed to multiple devices over the same Wi-Fi, with low latency and zero internet dependency.",
     "long": "LAN-Cam was designed to solve a recurring problem in classrooms, workshops, and small offices: how to share a live screen or camera feed with multiple nearby devices without relying on the internet, cloud services, or complex hardware setups.\n\nThe idea is simple: any laptop or phone on your local network can become a \"broadcaster\" or a \"viewer\". The broadcaster streams either its screen or camera feed; viewers join via auto-discovered sessions or a simple LAN URL/QR code. Everything stays inside the local network – making it faster, more private, and more reliable even when the internet is slow or unavailable.\n\nLAN-Cam supports multiple scenarios: a teacher projecting their tablet to all student devices, a trainer sharing code in a classroom, a home user mirroring a phone camera to a big screen, or a small team quickly demoing something without HDMI cables. The architecture focuses on low-latency streaming, simple device discovery, and a clean, no-friction UX that non-technical users can understand."

@@ -50,6 +50,21 @@
     "completed_date_v1": "2025-08-01",
     "engagement_model": "Internal product build with future B2B SaaS licensing"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/all-devices-arceon-ai.png",
+    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/arceon_ai-1.png",
+    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+  },
+  "body-image-2": {
+    "src": "/assets/portfolio/arceon_ai-2.png",
+    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+  },
+  "body-media": {
+    "src": ""
+  },
   "about": {
     "short": "Arceon AI is a SaaS platform that automates document processing and claim workflows. It extracts key entities from PDFs and images using OpenAI, validates them via configurable rules, routes cases for human review when needed, and maintains complete audit trails.",
     "long": "Arceon AI was created to eliminate the slow, manual work involved in processing claims and document-heavy workflows. Traditional processing requires human operators to read PDFs, copy values, verify details, and decide whether a claim should be approved, rejected, or escalated.\n\nArceon AI combines an AI extraction layer (OpenAI) with a robust enterprise backend (Django/DRF). The platform ingests documents (invoices, EOBs, claim forms, prescriptions, receipts, KYC proofs), converts them into structured data, applies policy and validation rules, flags anomalies, and sends uncertain cases into a guided review queue.\n\nThe result is a modern claims automation system: faster decisions, fewer errors, consistent rule application, and complete traceability through audit logs, role-based permissions, and workflow histories."

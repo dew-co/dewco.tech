@@ -46,6 +46,21 @@
     "completed_date_v1": "2024-05-10",
     "engagement_model": "Internal product build with multi-pillar monetization strategy"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/all-devices-gloveflix.png",
+    "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/gloveflix-1.png",
+    "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+  },
+  "body-image-2": {
+    "src": "/assets/portfolio/gloveflix-2.png",
+    "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+  },
+  "body-media": {
+    "src": ""
+  },
   "about": {
     "short": "GloVeFlix is a three-pillar entertainment platform: a public, SEO-optimized movie discovery site, a private VIP club on Telegram/WhatsApp, and a hidden streaming subdomain that serves curated content to paying members while keeping the brand’s public face clean and search-friendly.",
     "long": "GloVeFlix was designed as a hybrid model that combines SEO traffic, private communities, and a controlled streaming experience under a single brand. Instead of trying to be just another streaming site, GloVeFlix focuses on **three pillars**:\n\n1) **Public SEO Website (Legal & Open)** – A Google-friendly site that focuses on metadata: movie and series information, posters, descriptions, ratings, and recommendations. This layer is built to attract organic traffic and keep everything on the public site safe and indexable.\n\n2) **VIP Club (Telegram + WhatsApp)** – A private access community where the real monetization happens. Users who like the GloVeFlix experience can opt into VIP via forms and CTAs. The VIP club becomes the core for offers, early alerts, curated lists, and premium experiences.\n\n3) **Private Streaming Subdomain** – A hidden/unguessable subdomain that hosts the internal player experience and only surfaces for VIP members via controlled links. This separation keeps the public brand focused on discovery and SEO, while the private layer focuses on engagement and premium experiences, relying on integrations only where legally allowed.\n\nThe GloVeFlix 2.0 plan organizes all of this into a clear funnel: **SEO traffic → Engagement on the public site → VIP conversion → Private player access for members**, with Firebase and modern frontend tooling managing identity, access, and content flows."

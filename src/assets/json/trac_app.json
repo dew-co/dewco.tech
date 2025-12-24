@@ -47,6 +47,22 @@
     "completed_date_v1": "2024-10-15",
     "engagement_model": "Internal product build with future SaaS/seat-based licensing plan"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/trac-app-2.png",
+    "alt": "TRAC App dashboard showing remote device activity and control actions"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/trac-app-1.png",
+    "alt": "TRAC App dashboard showing remote device activity and control actions"
+  },
+  "body-image-2": {
+    "src": "",
+    "alt": ""
+  },
+  "body-media": {
+    "src": "",
+    "alt": ""
+  },
   "about": {
     "short": "TRAC App (Tracking Remote Activity Control) is a monitoring and control platform that lets you track the status, activity, and usage of remote devices from a single dashboard, with the ability to trigger safe remote actions like lock, restart, or app-level controls.",
     "long": "TRAC App was built to solve a recurring problem in distributed teams, computer labs, and shared work environments: once machines are remote, it becomes very hard to know who is doing what, which devices are idle, which are overloaded, and how to act quickly when something goes wrong.\n\nTRAC combines a lightweight endpoint/desktop agent with a central web dashboard. The agent runs on each machine, periodically sending status and activity signals (online/offline, active user, running apps, CPU/RAM load, optional screenshots or window titles). From the dashboard, admins can see all devices at a glance, drill into a specific machine, and execute safe remote actions such as lock screen, log out current user, restart, or trigger a pre-defined command.\n\nUnlike heavy enterprise tools, TRAC is designed to be simple, scriptable, and brandable. It can be used in offices, training centres, small labs, or within a founder’s own ecosystem of devices, making it a core utility for future automation and control workflows in the DewCo / Gloventis ecosystem."

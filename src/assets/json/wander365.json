@@ -40,6 +40,21 @@
     "planned_rebrand_target": "WanderRest (timeline flexible)",
     "engagement_model": "Fixed-scope build + ongoing retainer"
   },
+  "cover-image": {
+    "src": "/assets/portfolio/all-devices-wander365.png",
+    "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+  },
+  "body-image-1": {
+    "src": "/assets/portfolio/wander365-1.png",
+    "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+  },
+  "body-image-2": {
+    "src": "/assets/portfolio/wander365-2.png",
+    "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+  },
+  "body-media": {
+    "src": "/assets/portfolio/wander365.mp4"
+  },
   "about": {
     "short": "Wander365 is a full-stack travel experience platform that helps Indian travelers discover, customize, and book curated trips, while giving the travel team a powerful yet simple CRM to manage leads, packages, and itineraries. The brand is planned to evolve into ‘WanderRest’ as the product matures.",
     "long": "Wander365 started as a passion project to simplify how Indian travelers discover and book curated trips, weekend getaways, treks, and experiences. The goal is to make trip planning feel less like a chore and more like a conversation with a trusted travel partner.\n\nUnder Dew & Company (DewCo), Wander365 is being built as a modern travel brand that combines clean design, smart automation, and human-curated itineraries. In the future, the brand identity and positioning are planned to evolve into **WanderRest**, while the underlying product and platform continue to expand.\n\nThe public website helps users explore destinations, view detailed packages, and submit enquiries. On the backend, an internal admin CRM + CMS lets the team manage packages, itineraries, leads, and follow-ups in one place. The platform is designed as a travel OS that can later be extended into a white-label, multi-tenant solution for other travel agencies."
@@ -142,8 +157,14 @@
   "budget": {
     "currency": "INR",
     "initial_build_estimated": 200000,
-    "initial_build_range": [180000, 250000],
-    "retainer_monthly_range": [15000, 35000],
+    "initial_build_range": [
+      180000,
+      250000
+    ],
+    "retainer_monthly_range": [
+      15000,
+      35000
+    ],
     "notes": "Values represent equivalent full project value including strategy, UX/UI, development, and initial SEO setup under Wander365, with flexibility to support later rebranding into WanderRest."
   },
   "challenges": [
