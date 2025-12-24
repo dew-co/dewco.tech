@@ -279,16 +279,12 @@
         .trim();
 
       const normalized = slug || 'index';
+      const isDynamicRoute = normalized.includes('/');
 
-      if (!dewcoPages.has(normalized)) {
-        const li = $(this).closest('li');
-        if (li.length) {
-          li.remove();
-        } else {
-          $(this).remove();
-        }
+      if (!dewcoPages.has(normalized) && !isDynamicRoute) {
         return;
       }
+
       const targetPath = normalized === 'index' ? '/' : `/${normalized}`;
       $(this).attr('href', targetPath);
     });

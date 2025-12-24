@@ -35,10 +35,10 @@
   },
   {
     "id": "trac_app",
-    "name": "TRAC App – Tracking Remote Activity Control",
+    "name": "TRAC App",
     "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
     "short_headline": "TRAC App – Remote Activity Control",
-    "tagline": "Tracking. Remote access. Activity control. In one dashboard.",
+    "tagline": "Tracking Remote Activity Control",
     "category": "Productivity / IT Management",
     "image-1": {
       "src": "/assets/portfolio/trac-app-cover-1.png",
@@ -52,7 +52,7 @@
   },
   {
     "id": "gloveflix_platform",
-    "name": "GloVeFlix 2.0 – Hybrid Streaming & VIP Access Platform",
+    "name": "GloVeFlix",
     "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
     "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
     "tagline": "Publicly discover, privately enjoy.",
@@ -69,17 +69,17 @@
   },
   {
     "id": "lan_cam",
-    "name": "LAN-Cam – Local Network Camera & Screen Sync",
+    "name": "LAN-Cam",
     "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
     "short_headline": "LAN-Cam – Local Screen & Camera Streaming",
-    "tagline": "No internet, no cloud – just pure LAN streaming.",
+    "tagline": "No internet, no cloud – just Local Network Camera & Screen Sync.",
     "category": "Productivity / EdTech / Utilities",
     "image-1": {
-      "src": "/assets/portfolio/lan-cam-cover-1.png",
+      "src": "/assets/portfolio/lan-cam-cover-2.png",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "image-2": {
-      "src": "/assets/portfolio/lan-cam-cover-2.png",
+      "src": "/assets/portfolio/lan-cam-cover-1.png",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "link": "/portfolio/lan-cam"

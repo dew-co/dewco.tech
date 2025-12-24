@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'portfolio', component: PortfolioPageComponent },
+  { path: 'portfolio/:id', component: PortfolioDetailsPageComponent },
   { path: 'portfolio-details', component: PortfolioDetailsPageComponent },
   { path: 'stories', component: StoriesPageComponent },
   { path: 'story-details', component: StoryDetailsPageComponent },
