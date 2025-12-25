@@ -15,6 +15,9 @@ export const routes: Routes = [
   { path: 'portfolio/:id', component: PortfolioDetailsPageComponent },
   { path: 'portfolio-details', component: PortfolioDetailsPageComponent },
   { path: 'stories', component: StoriesPageComponent },
-  { path: 'story-details', component: StoryDetailsPageComponent },
+  { path: 'stories/:id', component: StoryDetailsPageComponent },
+  { path: 'story/:id', redirectTo: 'stories/:id', pathMatch: 'full' },
+  { path: 'story-details/:id', redirectTo: 'stories/:id', pathMatch: 'full' },
+  { path: 'story-details', redirectTo: 'stories', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];

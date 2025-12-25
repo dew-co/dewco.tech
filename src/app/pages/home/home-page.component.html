@@ -233,66 +233,34 @@
         </div>
         <div class="cs_height_85 cs_height_lg_50"></div>
         <div class="cs_right_full_width">
-          <div class="cs_slider cs_slider_3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="cs_post cs_style_1">
-                  <a routerLink="/portfolio-details" class="cs_post_thumb cs_bg" data-src="assets/img/post_thumb_1.jpeg"></a>
-                  <div class="cs_posted_by">
-                    <span class="cs_primary_font">10</span>
-                    <span>Apr <br>2023</span>
+          <ng-container *ngIf="featuredStories$ | async as stories">
+            <div
+              class="cs_slider cs_slider_3 wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay="0.1s"
+              *ngIf="stories.length; else noStoriesHome"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let story of stories; trackBy: trackByStoryId">
+                  <div class="cs_post cs_style_1">
+                    <a [routerLink]="story.link" class="cs_post_thumb cs_bg" [attr.data-src]="defaultStoryThumb"></a>
+                    <ng-container *ngIf="getDateParts(story.date) as date">
+                      <div class="cs_posted_by">
+                        <span class="cs_primary_font">{{ date.day }}</span>
+                        <span>{{ date.month }} <br>{{ date.year }}</span>
+                      </div>
+                    </ng-container>
+                    <h2 class="cs_post_title"><a [routerLink]="story.link">{{ story.title }}</a></h2>
+                    <div class="cs_post_subtitle">{{ story.excerpt }}</div>
                   </div>
-                  <h2 class="cs_post_title"><a routerLink="/portfolio-details">Diving into the fascinating planet of graphic design</a></h2>
-                  <div class="cs_post_subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ...</div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="cs_post cs_style_1">
-                  <a routerLink="/portfolio-details" class="cs_post_thumb cs_bg" data-src="assets/img/post_thumb_1.jpeg"></a>
-                  <div class="cs_posted_by">
-                    <span class="cs_primary_font">06</span>
-                    <span>Mar <br>2023</span>
-                  </div>
-                  <h2 class="cs_post_title"><a routerLink="/portfolio-details">Exploring the world of motion design</a></h2>
-                  <div class="cs_post_subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ...</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cs_post cs_style_1">
-                  <a routerLink="/portfolio-details" class="cs_post_thumb cs_bg" data-src="assets/img/post_thumb_1.jpeg"></a>
-                  <div class="cs_posted_by">
-                    <span class="cs_primary_font">15</span>
-                    <span>May <br>2023</span>
-                  </div>
-                  <h2 class="cs_post_title"><a routerLink="/portfolio-details">Mastering the art of video editing techniques</a></h2>
-                  <div class="cs_post_subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ...</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cs_post cs_style_1">
-                  <a routerLink="/portfolio-details" class="cs_post_thumb cs_bg" data-src="assets/img/post_thumb_1.jpeg"></a>
-                  <div class="cs_posted_by">
-                    <span class="cs_primary_font">20</span>
-                    <span>May <br>2023</span>
-                  </div>
-                  <h2 class="cs_post_title"><a routerLink="/portfolio-details">Diving into the fascinating planet of graphic design</a></h2>
-                  <div class="cs_post_subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ...</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cs_post cs_style_1">
-                  <a routerLink="/portfolio-details" class="cs_post_thumb cs_bg" data-src="assets/img/post_thumb_1.jpeg"></a>
-                  <div class="cs_posted_by">
-                    <span class="cs_primary_font">20</span>
-                    <span>Jun <br>2023</span>
-                  </div>
-                  <h2 class="cs_post_title"><a routerLink="/portfolio-details">Diving into the fascinating planet of graphic design</a></h2>
-                  <div class="cs_post_subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese ...</div>
-                </div>
-              </div>
+              <div class="cs_pagination"></div>
             </div>
-            <div class="cs_pagination"></div>
-          </div>
+            <ng-template #noStoriesHome>
+              <p class="text-center cs_primary_color">Stories coming soon.</p>
+            </ng-template>
+          </ng-container>
         </div>
       </div>
     </section>

@@ -1,124 +1,70 @@
-<!-- Start Post Details Section -->
-    <div class="cs_height_105 cs_height_lg_65"></div>
+<div class="cs_height_105 cs_height_lg_65"></div>
+
+<ng-container *ngIf="state$ | async as state">
+  <ng-container *ngIf="state.detail as detail; else storyNotFound">
     <div class="container">
-      <div class="cs_post_details">
-        <div class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-          <h1>Exploring the world of motion design</h1>
-          <div class="cs_post_meta cs_style_1 cs_semi_bold cs_primary_font">
-            <a href="#" class="cs_post_avatar">Motion Design</a>
-            <span class="cs_posted_by">07 Mar 2022</span>
+      <div
+        class="cs_radius_15 cs_overflow_hidden cs_shadow_1 cs_mb_40 cs_bg"
+        [style.backgroundImage]="'url(' + defaultThumb + ')'"
+        style="background-size: cover; background-position: center;"
+      >
+        <div class="cs_p_60 cs_p_lg_40 cs_p_md_30 cs_primary_color" style="backdrop-filter: blur(2px); background: rgba(0,0,0,0.45);">
+          <div class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.05s">
+            <h1 class="cs_color_1">{{ detail.title }}</h1>
+            <div class="cs_post_meta cs_style_1 cs_semi_bold cs_primary_font cs_color_1">
+              <a *ngIf="detail.tags?.[0] as firstTag" class="cs_post_avatar cs_color_1">{{ firstTag }}</a>
+              <span class="cs_posted_by cs_color_1">{{ formatDateLabel(detail.date) || 'Date coming soon' }}</span>
+            </div>
+            <p class="cs_mb_0" *ngIf="state.story?.excerpt as excerpt">{{ excerpt }}</p>
           </div>
         </div>
-        <img src="assets/img/blog_details_1.jpeg" alt="Details">
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <h2>With the ability to create visually striking designs that communicate a message, graphic designers can help your business stand out online and in print. Whether you need a logo, website, or marketing materials, a skilled graphic.</h2>
-            <div class="cs_height_5 cs_height_lg_0"></div>
-            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-            <p>When nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-          </div>
-        </div>
-        <div class="cs_height_35 cs_height_lg_0"></div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="assets/img/blog_details_2.jpeg" alt="Details">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/img/blog_details_3.jpeg" alt="Details">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/img/blog_details_4.jpeg" alt="Details">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <h2>Art is powerful and imaginary source</h2>
-            <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="cs_post_details cs_radius_10 cs_shadow_1 cs_p_30 cs_p_md_25 cs_p_sm_20">
             <div class="cs_height_10 cs_height_lg_0"></div>
-            <blockquote> But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, who expound the actual teachings of the great explorer of the truth, the master. <small>Loren Mulari</small>
-            </blockquote>
-            <p>Righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. </p>
-            <ul>
-              <li>In a free hour, when our power of choice is untrammelled </li>
-              <li>And when nothing prevents our being able to do what </li>
-              <li>We like best, every pleasure is to be welcomed and every pain avoided. </li>
-            </ul>
-          </div>
-          <div class="col-lg-10 offset-lg-1">
-            <div class="cs_height_60 cs_height_lg_50"></div>
-            <div class="cs_post_details_share_wrap">
-              <div>
-                <div class="cs_tags">
-                  <a href="" class="ca_tag">Motion</a>
-                  <a href="" class="ca_tag">Graphic</a>
-                  <a href="" class="ca_tag">Video</a>
-                </div>
-              </div>
-              <div>
-                <div class="cs_social_btns cs_primary_color">
-                  <ul>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  </ul>
-                  <p class="cs_social_title">Share This</p>
-                </div>
+            <p class="cs_primary_color" style="white-space: pre-line;" *ngIf="detail.content">{{ detail.content }}</p>
+
+            <div class="cs_height_25 cs_height_lg_15"></div>
+            <div *ngIf="detail.tags?.length">
+              <p class="cs_bold cs_mb_10">Tags</p>
+              <div class="cs_tags">
+                <span class="ca_tag" *ngFor="let tag of detail.tags; trackBy: trackByIndex">
+                  {{ tag }}
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cs_height_100 cs_height_lg_60"></div>
-      <div class="cs_author_card">
-        <img src="assets/img/avatar_1.png" alt="Aauthor">
-        <h3>Anthony Kuber</h3>
-        <p>Hi, my name is Anthony kuber. I am artist and motion graphic <br>designer. I love to travel and writing blogging.</p>
-        <div class="cs_social_btns cs_primary_color">
-          <ul>
-            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
+
+      <div class="cs_height_50 cs_height_lg_30"></div>
+
       <div class="cs_post_details_btns cs-primary_font">
-        <a href="" class="cs_text_btn cs_type_1">
+        <a *ngIf="state.prev" [routerLink]="state.prev.link" class="cs_text_btn cs_type_1">
           <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.292891 7.29289C-0.0976334 7.68342 -0.0976334 8.31658 0.292891 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292891 7.29289ZM31 7L0.999998 7V9L31 9V7Z" fill="currentColor"/>
-          </svg>            
-          <span>Previous Stories</span>
+          </svg>
+          <span>{{ state.prev.title }}</span>
         </a>
-        <a href="" class="cs_text_btn">
-          <span>Next Stories</span>
+        <a *ngIf="state.next" [routerLink]="state.next.link" class="cs_text_btn">
+          <span>{{ state.next.title }}</span>
           <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.0173 8.70711C27.4079 8.31658 27.4079 7.68342 27.0173 7.29289L20.6534 0.928932C20.2629 0.538408 19.6297 0.538408 19.2392 0.928932C18.8486 1.31946 18.8486 1.95262 19.2392 2.34315L24.896 8L19.2392 13.6569C18.8486 14.0474 18.8486 14.6805 19.2392 15.0711C19.6297 15.4616 20.2629 15.4616 20.6534 15.0711L27.0173 8.70711ZM0.967773 9H26.3102V7H0.967773V9Z" fill="currentColor"/>
-          </svg>            
+          </svg>
         </a>
       </div>
-      <div class="cs_height_80 cs_height_lg_60"></div>
-      <div class="cs_section_heading cs_style_1 text-center">
-        <h2 class="cs_section_title">Leave A Reply</h2>
-      </div>
-      <div class="cs_height_70 cs_height_lg_35"></div>
-      <form action="#" class="row">
-        <div class="col-lg-6">
-          <input type="text" class="cs_form_field" placeholder="What’s Your Name?">
-          <div class="cs_height_70 cs_height_lg_25"></div>
-        </div>
-        <div class="col-lg-6">
-          <input type="text" class="cs_form_field" placeholder="What’s Your Email?">
-          <div class="cs_height_70 cs_height_lg_25"></div>
-        </div>
-        <div class="col-lg-12">
-          <textarea cols="30" rows="7" class="cs_form_field" placeholder="Feel Free To Write Your Comment"></textarea>
-        </div>
-        <div class="col-lg-12 text-center">
-          <div class="cs_height_60 cs_height_lg_25"></div>
-          <button class="cs_btn cs_style_1">
-            <span>Post Comment</span>
-          </button>
-        </div>
-      </form>
     </div>
-    <div class="cs_height_150 cs_height_lg_100"></div>
-    <!-- End Post Details Section -->
+  </ng-container>
+</ng-container>
+
+<ng-template #storyNotFound>
+  <div class="container text-center">
+    <h2 class="cs_section_title">Story not found</h2>
+    <p class="cs_primary_color">Try another story from the list.</p>
+    <a routerLink="/stories" class="cs_btn cs_style_1"><span>Back to Stories</span></a>
+  </div>
+</ng-template>
+
+<div class="cs_height_150 cs_height_lg_100"></div>
