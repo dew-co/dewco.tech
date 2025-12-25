@@ -1,0 +1,255 @@
+[
+  {
+    "id": "story-2025-11-22-testimonials",
+    "title": "Client testimonials for Gloventis Solutions",
+    "excerpt": "Drafted multiple testimonial variants (short, Google Review, emotional) for past projects and clients.",
+    "date": "2025-11-22"
+  },
+  {
+    "id": "story-2025-11-26-zero-cost-product-ideas",
+    "title": "Zero-cost product ideas for DewCo + Gloventis ecosystem",
+    "excerpt": "Planned what to build with 0 marketing budget for organic growth, aligned with your skillset and India demand.",
+    "date": "2025-11-26"
+  },
+  {
+    "id": "story-2025-11-26-free-ai-tools-organic-growth",
+    "title": "Free AI tools roadmap for organic business growth",
+    "excerpt": "Identified free AI tools/products that users demand and can be built fast to start earning organically.",
+    "date": "2025-11-26"
+  },
+  {
+    "id": "story-2025-11-28-fastest-free-db-angular",
+    "title": "Fastest free database choice for Angular admin use",
+    "excerpt": "Compared JSON-file approach vs DB, discussed fastest free options and why Firestore fits your fast-track model.",
+    "date": "2025-11-28"
+  },
+  {
+    "id": "story-2025-11-28-iframe-click-watch-detection",
+    "title": "Iframe click + watch heartbeat detection for embeds",
+    "excerpt": "Built logic to detect real play vs error message, count clicks, and mark watching after a 3-minute heartbeat.",
+    "date": "2025-11-28"
+  },
+  {
+    "id": "story-2025-11-29-firestore-angular-setup",
+    "title": "Firestore setup with Angular direct CRUD",
+    "excerpt": "Configured Angular + Firestore for direct create/read/update/delete and clarified Firestore vs Realtime DB usage.",
+    "date": "2025-11-29"
+  },
+  {
+    "id": "story-2025-11-29-vscode-webview-serviceworker-fix",
+    "title": "VS Code WebView Service Worker error fix",
+    "excerpt": "Troubleshot “Could not register service worker: InvalidStateError” affecting VS Code webviews and Codex.",
+    "date": "2025-11-29"
+  },
+  {
+    "id": "story-2025-11-30-fast-track-pricing-addons",
+    "title": "Fast-track web pricing + add-on improvements",
+    "excerpt": "Refined add-on pricing structure and adjusted messaging for non-technical clients while keeping delivery fast.",
+    "date": "2025-11-30"
+  },
+  {
+    "id": "story-2025-12-01-knowrisk-db-schema-doc",
+    "title": "KnowRisk database schema documentation",
+    "excerpt": "Converted backend schema notes into clean doc-ready format covering tables, relationships, and multi-DB layout.",
+    "date": "2025-12-01"
+  },
+  {
+    "id": "story-2025-12-02-domain-godaddy-to-hostinger-vps",
+    "title": "Point GoDaddy domain to Hostinger VPS",
+    "excerpt": "Mapped DNS steps to route a GoDaddy domain to a Hostinger VPS setup for production deployment.",
+    "date": "2025-12-02"
+  },
+  {
+    "id": "story-2025-12-03-trailer-embed-source-research",
+    "title": "Trailer embed source for movies by name/IMDb",
+    "excerpt": "Explored options to fetch trailers via APIs and alternatives when direct trailer APIs aren’t available.",
+    "date": "2025-12-03"
+  },
+  {
+    "id": "story-2025-12-03-azera-nda-case-study-structure",
+    "title": "Azera NDA case study (process-only) outline",
+    "excerpt": "Structured a case study you can publish without visuals: approach, constraints, process, and learnings.",
+    "date": "2025-12-03"
+  },
+  {
+    "id": "story-2025-12-04-literature-notes-batch-1",
+    "title": "Literature notes: essays + poems (batch 1)",
+    "excerpt": "Created simplified, exam-focused summaries and analyses for multiple poems/essays you requested.",
+    "date": "2025-12-04"
+  },
+  {
+    "id": "story-2025-12-06-ssh-timeout-hostinger-vps",
+    "title": "Fix SSH timeout after failed login attempts",
+    "excerpt": "Diagnosed SSH connection timeout and discussed Hostinger-side fixes after repeated wrong password attempts.",
+    "date": "2025-12-06"
+  },
+  {
+    "id": "story-2025-12-06-restricted-ssh-project-folder",
+    "title": "Give safe SSH access limited to /var/www/project",
+    "excerpt": "Designed approach to grant a developer access without full sudo/root, restricted to a single project path.",
+    "date": "2025-12-06"
+  },
+  {
+    "id": "story-2025-12-07-google-form-embed-angular",
+    "title": "Embed Google Form into Angular site",
+    "excerpt": "Implemented a clean way to display Google Forms inside Angular while keeping layout responsive and safe.",
+    "date": "2025-12-07"
+  },
+  {
+    "id": "story-2025-12-07-kyc-sla-reply-privacy-terms",
+    "title": "KYC clarification + legal pages drafting",
+    "excerpt": "Prepared a short SLA clarification reply and drafted Privacy Policy + Terms & Conditions for Gloventis Solutions.",
+    "date": "2025-12-07"
+  },
+  {
+    "id": "story-2025-12-10-free-ai-models-crypto-timeframes",
+    "title": "Free AI models for crypto analysis across timeframes",
+    "excerpt": "Planned AI-driven multi-timeframe crypto analysis for CoinDCX and generated a Codex prompt for bot accuracy.",
+    "date": "2025-12-10"
+  },
+  {
+    "id": "story-2025-12-15-budget-first-proposal-template",
+    "title": "Budget-first proposal (1500 chars) for web services",
+    "excerpt": "Wrote a compact proposal offering Angular/Next.js/WordPress with Firebase hosting/auth/db for fast deployment.",
+    "date": "2025-12-15"
+  },
+  {
+    "id": "story-2025-12-20-free-ai-agent-like-codex-vscode",
+    "title": "Free AI agent alternatives to Codex for VS Code",
+    "excerpt": "Evaluated free/strong coding agents that can work inside VS Code for your workflow and fast-track builds.",
+    "date": "2025-12-20"
+  },
+  {
+    "id": "story-2025-12-20-gloveflix-2-build-plan",
+    "title": "GloveFlix 2.0 three-pillar business & build plan",
+    "excerpt": "Designed the full GloveFlix 2.0 strategy with SEO public site, VIP club, and private streaming subdomain.",
+    "date": "2025-12-20"
+  },
+  {
+    "id": "story-2025-12-22-wander365-dewco-stories-data",
+    "title": "Structuring DewCo stories timeline from Wander365 era",
+    "excerpt": "Planned how to extract, clean, and structure personal project stories for DewCo without collaborators’ entries.",
+    "date": "2025-12-22"
+  },
+  {
+    "id": "story-2025-12-24-software-rebuild-from-video",
+    "title": "Rebuilding software by reverse-engineering a full video",
+    "excerpt": "Reviewed a long product demo video and outlined scalable Django architecture before writing any code.",
+    "date": "2025-12-24"
+  },
+  {
+    "id": "story-2025-12-24-leads-module-addition",
+    "title": "Adding missing leads module after full video review",
+    "excerpt": "Identified and incorporated a missing leads feature after carefully re-checking the entire product flow.",
+    "date": "2025-12-24"
+  },
+  {
+    "id": "story-2025-12-24-solid-scalable-django-design",
+    "title": "SOLID-based, million-user-ready Django system design",
+    "excerpt": "Defined versioning, phases, and a high-level DB design capable of scaling to millions of users.",
+    "date": "2025-12-24"
+  },
+  {
+    "id": "story-2025-12-25-rising-bloom-foundation-project",
+    "title": "NGO website & admin panel plan for Rising Bloom Foundation",
+    "excerpt": "Planned Angular + Firebase stack, admin panel, roles, content management, and donation logging for an NGO.",
+    "date": "2025-12-25"
+  },
+  {
+    "id": "story-2025-12-25-admin-panel-mockup-prompts",
+    "title": "AI prompts for admin panel & public site mockups",
+    "excerpt": "Created Google AI Studio prompts to generate admin and public UI mockups with dark & light mode support.",
+    "date": "2025-12-25"
+  },
+  {
+    "id": "story-2025-12-25-vm-access-request-email",
+    "title": "Professional VM access request email drafting",
+    "excerpt": "Drafted a clean, formal email to request VM access using a private IP for infrastructure setup.",
+    "date": "2025-12-25"
+  },
+  {
+    "id": "story-2025-12-20-google-ads-cost-travel-agency",
+    "title": "Google Ads cost estimation for North India travel agency",
+    "excerpt": "Estimated setup and monthly spend for lead generation ads for a regional tours & travel business.",
+    "date": "2025-12-20"
+  },
+  {
+    "id": "story-2025-12-18-dsa-patterns-hinglish",
+    "title": "DSA patterns explained with examples in Hinglish",
+    "excerpt": "Explained 15 core DSA patterns with intuition, examples, and working code for interview preparation.",
+    "date": "2025-12-18"
+  },
+  {
+    "id": "story-2025-12-15-religion-politics-notes",
+    "title": "Religion, politics & regionalism exam notes",
+    "excerpt": "Prepared simplified, structured notes suitable for college-level political science exam answers.",
+    "date": "2025-12-15"
+  },
+  {
+    "id": "story-2025-12-12-existentialism-mh-abrams",
+    "title": "Existentialism explained via MH Abrams",
+    "excerpt": "Wrote a detailed yet simplified 10-mark answer on existentialism in post-WWII literature.",
+    "date": "2025-12-12"
+  },
+  {
+    "id": "story-2025-12-11-watermark-removal-project",
+    "title": "Python watermark removal project using Pillow",
+    "excerpt": "Designed an image watermark removal approach handling text and line-based watermarks in Python.",
+    "date": "2025-12-11"
+  },
+  {
+    "id": "story-2025-12-11-linkedin-ai-engineer-reply",
+    "title": "Professional LinkedIn reply for AI engineer outreach",
+    "excerpt": "Crafted a friendly, concise response highlighting Gloventis’ freelancer network and collaboration model.",
+    "date": "2025-12-11"
+  },
+  {
+    "id": "story-2025-12-08-poetry-analysis-batch",
+    "title": "Poetry summaries & critical analysis batch",
+    "excerpt": "Delivered detailed summaries and critical appreciations for multiple English poems.",
+    "date": "2025-12-08"
+  },
+  {
+    "id": "story-2025-12-07-wander365-linkedin-post",
+    "title": "LinkedIn post for Wander365 travel platform",
+    "excerpt": "Wrote a human-friendly promotional post highlighting destination maps, weather, distance, and planning tools.",
+    "date": "2025-12-07"
+  },
+  {
+    "id": "story-2024-06-gloventis-client-workflow-foundation",
+    "title": "Standardizing client workflow at Gloventis Solutions",
+    "excerpt": "Defined requirement intake, delivery phases, and support flow to handle multiple parallel client projects.",
+    "date": "2024-06-01"
+  },
+  {
+    "id": "story-2024-05-gloventis-fast-delivery-reputation",
+    "title": "Building Gloventis reputation for fast-track delivery",
+    "excerpt": "Focused on speed, reliability, and clarity to differentiate Gloventis from traditional agencies.",
+    "date": "2024-05-01"
+  },
+  {
+    "id": "story-2024-04-wander365-feature-expansion",
+    "title": "Expanding Wander365 beyond listings into planning tools",
+    "excerpt": "Introduced destination insights like distance, weather, alerts, and trip planning utilities.",
+    "date": "2024-04-01"
+  },
+  {
+    "id": "story-2024-03-wander365-map-based-exploration",
+    "title": "Map-based destination exploration in Wander365",
+    "excerpt": "Designed an interactive map experience to help users discover and plan travel visually.",
+    "date": "2024-03-01"
+  },
+  {
+    "id": "story-2024-02-wander365-production-launch",
+    "title": "First production-ready launch of Wander365",
+    "excerpt": "Moved Wander365 from idea to a working, publicly accessible travel platform.",
+    "date": "2024-02-01"
+  },
+  {
+    "id": "story-2024-01-wander365-architecture-decisions",
+    "title": "Core architecture decisions for Wander365",
+    "excerpt": "Chose stack, hosting, and data flow optimized for scalability with minimal operational cost.",
+    "date": "2024-01-01"
+  }
+]
+

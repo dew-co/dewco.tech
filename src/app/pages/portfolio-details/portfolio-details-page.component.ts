@@ -19,7 +19,16 @@ interface PortfolioDetailState {
   detail: PortfolioDetail | null;
   portfolio: Portfolio | null;
   slug: string;
+  prev?: PortfolioNav;
+  next?: PortfolioNav;
   error?: string;
+}
+
+interface PortfolioNav {
+  id: string;
+  name: string;
+  headline: string;
+  link: string;
 }
 
 @Component({
@@ -53,14 +62,23 @@ export class PortfolioDetailsPageComponent {
           switchMap(({ slug, portfolios }) => {
             const matched = this.findPortfolio(slug, portfolios);
             const detailId = matched?.id ?? slug.replace(/-/g, '_');
+            const { prev, next } = this.buildNav(matched, portfolios);
 
             return this.portfolioService.getPortfolioDetail(detailId).pipe(
-              map((detail) => ({ detail, portfolio: matched ?? null, slug })),
+              map((detail) => ({
+                detail,
+                portfolio: matched ?? null,
+                slug,
+                prev,
+                next,
+              })),
               catchError(() =>
                 of({
                   detail: null,
                   portfolio: matched ?? null,
                   slug,
+                  prev,
+                  next,
                   error: 'not-found',
                 })
               )
@@ -112,5 +130,35 @@ export class PortfolioDetailsPageComponent {
 
   private normalizeSlug(value: string): string {
     return value.trim().toLowerCase();
+  }
+
+  private buildNav(
+    current: Portfolio | null,
+    list: Portfolio[]
+  ): { prev?: PortfolioNav; next?: PortfolioNav } {
+    if (!current) return {};
+    const index = list.findIndex((item) => item.id === current.id);
+    if (index === -1) return {};
+
+    const prevItem = index > 0 ? list[index - 1] : undefined;
+    const nextItem = index < list.length - 1 ? list[index + 1] : undefined;
+
+    return {
+      prev: prevItem ? this.toNav(prevItem) : undefined,
+      next: nextItem ? this.toNav(nextItem) : undefined,
+    };
+  }
+
+  private toNav(item: Portfolio): PortfolioNav {
+    return {
+      id: item.id,
+      name: item.name,
+      headline: item.headline,
+      link: this.defaultLink(item),
+    };
+  }
+
+  private defaultLink(item: Portfolio): string {
+    return item.link || `/portfolio/${item.id.replace(/_/g, '-')}`;
   }
 }
