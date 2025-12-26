@@ -1,20 +1,20 @@
 [
   {
-    "id": "wander365",
-    "name": "Wander365",
-    "headline": "Wander365: Full-Stack Travel Experience Platform for Modern Explorers",
-    "short_headline": "Wander365 \u2013 Smart Tours & Travel Booking Platform",
+    "id": "wanderrest",
+    "name": "WanderRest (formerly Wander365)",
+    "headline": "Wander365 → WanderRest: Full-Stack Travel Experience Platform for Modern Explorers",
+    "short_headline": "WanderRest – Smart Tours & Travel Booking Platform",
     "tagline": "Wander more, plan less.",
     "category": "Travel / Hospitality",
     "image-1": {
-      "src": "/assets/portfolio/cover/wander365-cover-2.png",
-      "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+      "src": "/assets/portfolio/cover/wanderrest-cover-2.png",
+      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     },
     "image-2": {
-      "src": "/assets/portfolio/cover/wander365-cover-1.png",
-      "alt": "Wander365 travel booking website shown on laptop and mobile screens"
+      "src": "/assets/portfolio/cover/wanderrest-cover-1.png",
+      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     },
-    "link": "/portfolio/wander365"
+    "link": "/portfolio/wanderrest"
   },
   {
     "id": "quantgrade_trading_bot",
