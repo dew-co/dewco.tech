@@ -1915,6 +1915,66 @@ label {
   border-radius: 10px;
 }
 
+.cs_schedule_subtitle {
+  color: #ffffff;
+  max-width: 860px;
+  margin: 18px auto 0;
+  line-height: 1.7em;
+}
+
+.cs_schedule_embed {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  overflow: hidden;
+  -webkit-box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  padding: 36px 32px;
+}
+.cs_schedule_embed iframe {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+@media (max-width: 575px) {
+  .cs_schedule_embed {
+    padding: 28px 22px;
+  }
+}
+@media (max-width: 767px) {
+  .cs_schedule_embed iframe {
+    height: 520px;
+  }
+}
+
+.cs_schedule_card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cs_schedule_btn_target {
+  min-height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .cs_list.cs_style1 li:not(:last-child) {
   margin-bottom: 20px;
 }
