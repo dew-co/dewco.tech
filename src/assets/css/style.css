@@ -1918,7 +1918,7 @@ label {
 .cs_schedule_subtitle {
   color: #ffffff;
   max-width: 860px;
-  margin: 18px auto 0;
+  margin: 18px auto 24px;
   line-height: 1.7em;
 }
 
