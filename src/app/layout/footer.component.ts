@@ -1,27 +1,55 @@
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { PrivacyPolicyComponent } from '../pages/legal/privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from '../pages/legal/terms-of-service/terms-of-service.component';
+
+type LegalModalView = 'terms' | 'privacy' | null;
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, TermsOfServiceComponent, PrivacyPolicyComponent],
   templateUrl: './footer.component.html',
 })
 export class FooterComponent implements AfterViewInit {
   @ViewChild('footerCalendarButtonTarget', { static: true }) footerCalendarButtonTarget?: ElementRef<HTMLElement>;
   private schedulingButtonInitialized = false;
+  legalModalOpen = false;
+  activeLegal: LegalModalView = null;
 
   constructor(
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object
   ) {}
 
+  get legalModalTitle(): string {
+    if (this.activeLegal === 'terms') {
+      return 'Terms of Service';
+    }
+    if (this.activeLegal === 'privacy') {
+      return 'Privacy Policy';
+    }
+    return '';
+  }
+
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
     this.loadSchedulingButton();
+  }
+
+  openLegalModal(view: Exclude<LegalModalView, null>, event?: Event): void {
+    event?.preventDefault();
+    this.activeLegal = view;
+    this.setLegalModalOpen(true);
+  }
+
+  closeLegalModal(event?: Event): void {
+    event?.preventDefault();
+    this.setLegalModalOpen(false);
+    this.activeLegal = null;
   }
 
   private async loadSchedulingButton(): Promise<void> {
@@ -105,5 +133,14 @@ export class FooterComponent implements AfterViewInit {
         button.appendChild(span);
       }
     }
+  }
+
+  private setLegalModalOpen(open: boolean): void {
+    this.legalModalOpen = open;
+    if (open) {
+      this.document.body.classList.add('cs_modal_open');
+      return;
+    }
+    this.document.body.classList.remove('cs_modal_open');
   }
 }

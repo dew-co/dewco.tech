@@ -14,10 +14,10 @@
           <img src="assets/img/dewco-footer.png" alt="Logo" style="max-height: 180px; padding-bottom: 20px;">
           <p class="cs_social_title">Social follow:</p>
           <ul>
-            <li><a href="#" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.1s"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.15s"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.2s"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="#" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.25s"><i class="fa-brands fa-slack"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/dewco/" target="_blank" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.1s"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/dew-co" target="_blank" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.15s"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://dewco.bio.link/" target="_blank" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.2s"><i class="fa fa-link"></i></a></li>
+            <li><a href="https://www.instagram.com/dewcotech/" target="_blank" class="wow rubberBand" data-wow-duration="1s" data-wow-delay="0.25s"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
         </div>
         <ul class="cs_footer_menu cs_animo_links cs_primary_color">
@@ -31,9 +31,34 @@
     <div class="cs_bottom_footer">
       <div class="cs_copyright">Copyright © 2025 DewCo</div>
       <ul class="cs_copyright_nav">
-        <li><a href="">Terms of Service</a></li>
-        <li><a href="">Privacy Policy</a></li>
+        <li><a href="#" (click)="openLegalModal('terms', $event)">Terms of Service</a></li>
+        <li><a href="#" (click)="openLegalModal('privacy', $event)">Privacy Policy</a></li>
       </ul>
+    </div>
+    <div
+      class="cs_legal_modal"
+      [class.active]="legalModalOpen"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-hidden]="legalModalOpen ? 'false' : 'true'"
+      [attr.aria-labelledby]="legalModalOpen ? 'cs-legal-modal-title' : null"
+    >
+      <div class="cs_legal_modal_overlay" (click)="closeLegalModal($event)"></div>
+      <div class="cs_legal_modal_content" (click)="$event.stopPropagation()">
+        <div class="cs_legal_modal_header">
+          <h2 id="cs-legal-modal-title" class="cs_legal_modal_title">{{ legalModalTitle }}</h2>
+          <button
+            type="button"
+            class="cs_legal_modal_close"
+            aria-label="Close"
+            (click)="closeLegalModal($event)"
+          ></button>
+        </div>
+        <div class="cs_legal_modal_body">
+          <app-terms-of-service *ngIf="activeLegal === 'terms'"></app-terms-of-service>
+          <app-privacy-policy *ngIf="activeLegal === 'privacy'"></app-privacy-policy>
+        </div>
+      </div>
     </div>
   </div>
   <span class="cs_scrollup cs_primary_color">Back to top <span></span></span>

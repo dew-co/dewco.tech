@@ -1,1 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+
+body.cs_modal_open {
+  overflow: hidden;
+}
+
+.cs_legal_modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.cs_legal_modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cs_legal_modal_overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.cs_legal_modal_content {
+  position: relative;
+  background: #ffffff;
+  color: #5a5959;
+  width: min(920px, 100%);
+  max-height: 85vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.cs_legal_modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px 0;
+  gap: 16px;
+}
+
+.cs_legal_modal_title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.cs_legal_modal_close {
+  border: 0;
+  background: #191919;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.cs_legal_modal_close::before,
+.cs_legal_modal_close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: #ffffff;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cs_legal_modal_close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.cs_legal_modal_body {
+  padding: 12px 24px 24px;
+  overflow: auto;
+}
+
+.cs_legal_doc {
+  color: inherit;
+}
+
+.cs_legal_doc h3 {
+  margin: 18px 0 8px;
+}
+
+.cs_legal_updated {
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b7b7b7;
+}
+
+.cs_dark .cs_legal_modal_content {
+  background: #191919;
+  color: #b7b7b7;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.cs_dark .cs_legal_modal_close {
+  background: #ffffff;
+}
+
+.cs_dark .cs_legal_modal_close::before,
+.cs_dark .cs_legal_modal_close::after {
+  background: #191919;
+}
+
+.cs_dark .cs_legal_updated {
+  color: #5a5959;
+}
+
+@media (max-width: 600px) {
+  .cs_legal_modal {
+    padding: 16px;
+  }
+
+  .cs_legal_modal_title {
+    font-size: 24px;
+  }
+}
