@@ -305,7 +305,8 @@
         if (this.classList.contains('swiper-initialized')) {
           return;
         }
-        new Swiper(this, config);
+        const options = typeof config === 'function' ? config(this) : config;
+        new Swiper(this, options);
       });
     }
 
@@ -319,13 +320,20 @@
       },
     });
 
-    createSwiper('.cs_slider_2', {
-      loop: true,
-      speed: 1000,
-      navigation: {
-        nextEl: '.cs_swiper_next',
-        prevEl: '.cs_swiper_prev',
-      },
+    createSwiper('.cs_slider_2', function (el) {
+      return {
+        loop: true,
+        speed: 1000,
+        autoplay: true,
+        navigation: {
+          nextEl: el.querySelector('.cs_swiper_next'),
+          prevEl: el.querySelector('.cs_swiper_prev'),
+        },
+        pagination: {
+          el: el.querySelector('.cs_pagination'),
+          clickable: true,
+        },
+      };
     });
 
     createSwiper('.cs_slider_3', {

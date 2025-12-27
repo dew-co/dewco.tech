@@ -159,65 +159,42 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
-            <div class="cs_slider cs_slider_2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="cs_testimonial cs_style_1 text-center">
-                    <div class="cs_testimonial_icon">
-                      <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 40H16L24 24V0H0V24H12L4 40ZM36 40H48L56 24V0H32V24H44L36 40Z" fill="currentColor"/>
-                      </svg>            
-                    </div>
-                    <blockquote class="cs_testimonial_text cs_primary_color">Dewco Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.</blockquote>
-                    <div class="cs_testimonial_info">
-                      <h3>Ansari Patron</h3>
-                      <p>CEO at Delta</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="cs_testimonial cs_style_1 text-center">
-                    <div class="cs_testimonial_icon">
-                      <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 40H16L24 24V0H0V24H12L4 40ZM36 40H48L56 24V0H32V24H44L36 40Z" fill="currentColor"/>
-                      </svg>            
-                    </div>
-                    <blockquote class="cs_testimonial_text cs_primary_color">Dewco Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.</blockquote>
-                    <div class="cs_testimonial_info">
-                      <h3>Ansari Patron</h3>
-                      <p>CEO at Delta</p>
+            <ng-container *ngIf="testimonials$ | async as testimonials">
+              <div class="cs_slider cs_slider_2" *ngIf="testimonials.length; else noTestimonials">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" *ngFor="let testimonial of testimonials; trackBy: trackByTestimonialName">
+                    <div class="cs_testimonial cs_style_1 text-center">
+                      <div class="cs_testimonial_icon">
+                        <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4 40H16L24 24V0H0V24H12L4 40ZM36 40H48L56 24V0H32V24H44L36 40Z" fill="currentColor"/>
+                        </svg>            
+                      </div>
+                      <blockquote class="cs_testimonial_text cs_primary_color">{{ testimonial.text }}</blockquote>
+                      <div class="cs_testimonial_info">
+                        <h3>{{ testimonial.name }}</h3>
+                        <p>{{ testimonial.role }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="cs_testimonial cs_style_1 text-center">
-                    <div class="cs_testimonial_icon">
-                      <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 40H16L24 24V0H0V24H12L4 40ZM36 40H48L56 24V0H32V24H44L36 40Z" fill="currentColor"/>
-                      </svg>            
-                    </div>
-                    <blockquote class="cs_testimonial_text cs_primary_color">Dewco Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.</blockquote>
-                    <div class="cs_testimonial_info">
-                      <h3>Ansari Patron</h3>
-                      <p>CEO at Delta</p>
-                    </div>
+                <div class="cs_pagination"></div>
+                <div class="cs_swiper_navigation cs_style_1">
+                  <div class="cs_swiper_prev">
+                    <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM42 10.5L2 10.5V13.5L42 13.5V10.5Z" fill="currentColor"/>
+                    </svg>           
+                  </div>
+                  <div class="cs_swiper_next">
+                    <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M41.0607 13.0607C41.6464 12.4749 41.6464 11.5251 41.0607 10.9393L31.5147 1.3934C30.9289 0.807611 29.9792 0.807611 29.3934 1.3934C28.8076 1.97919 28.8076 2.92893 29.3934 3.51472L37.8787 12L29.3934 20.4853C28.8076 21.0711 28.8076 22.0208 29.3934 22.6066C29.9792 23.1924 30.9289 23.1924 31.5147 22.6066L41.0607 13.0607ZM0 13.5H40V10.5H0V13.5Z" fill="currentColor"/>
+                    </svg>  
                   </div>
                 </div>
               </div>
-              <div class="cs_pagination"></div>
-              <div class="cs_swiper_navigation cs_style_1">
-                <div class="cs_swiper_prev">
-                  <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM42 10.5L2 10.5V13.5L42 13.5V10.5Z" fill="currentColor"/>
-                  </svg>           
-                </div>
-                <div class="cs_swiper_next">
-                  <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M41.0607 13.0607C41.6464 12.4749 41.6464 11.5251 41.0607 10.9393L31.5147 1.3934C30.9289 0.807611 29.9792 0.807611 29.3934 1.3934C28.8076 1.97919 28.8076 2.92893 29.3934 3.51472L37.8787 12L29.3934 20.4853C28.8076 21.0711 28.8076 22.0208 29.3934 22.6066C29.9792 23.1924 30.9289 23.1924 31.5147 22.6066L41.0607 13.0607ZM0 13.5H40V10.5H0V13.5Z" fill="currentColor"/>
-                  </svg>  
-                </div>
-              </div>
-            </div>
+              <ng-template #noTestimonials>
+                <p class="text-center cs_primary_color">Testimonials coming soon.</p>
+              </ng-template>
+            </ng-container>
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { Portfolio, PortfolioService } from '../../services/portfolio.service';
 import { Story, StoryService } from '../../services/story.service';
+import { Testimonial, TestimonialService } from '../../services/testimonial.service';
 
 @Component({
   selector: 'app-home-page',
@@ -25,18 +26,21 @@ export class HomePageComponent implements AfterViewInit {
 
   readonly featuredPortfolios$: Observable<Portfolio[]>;
   readonly featuredStories$: Observable<Story[]>;
+  readonly testimonials$: Observable<Testimonial[]>;
   readonly defaultStoryThumb = 'assets/img/post_thumb_1.jpeg';
   private schedulingButtonInitialized = false;
 
   constructor(
     private readonly portfolioService: PortfolioService,
     private readonly storyService: StoryService,
+    private readonly testimonialService: TestimonialService,
     private readonly ngZone: NgZone,
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object
   ) {
     this.featuredPortfolios$ = this.portfolioService.getFeatured(4);
     this.featuredStories$ = this.storyService.getFeatured(8);
+    this.testimonials$ = this.testimonialService.getTestimonials();
   }
 
   ngAfterViewInit(): void {
@@ -45,6 +49,7 @@ export class HomePageComponent implements AfterViewInit {
     }
     this.loadSchedulingButton();
     this.ensureStoriesSliderInit();
+    this.ensureTestimonialsSliderInit();
   }
 
   trackByPortfolioId(index: number, portfolio: Portfolio): string {
@@ -53,6 +58,10 @@ export class HomePageComponent implements AfterViewInit {
 
   trackByStoryId(index: number, story: Story): string {
     return story.id;
+  }
+
+  trackByTestimonialName(index: number, testimonial: Testimonial): string {
+    return testimonial.name;
   }
 
   getDateParts(value?: string): { day: string; month: string; year: string } {
@@ -163,6 +172,26 @@ export class HomePageComponent implements AfterViewInit {
       this.ngZone.runOutsideAngular(() => {
         setTimeout(() => {
           const slider = this.document.querySelector('.cs_slider_3');
+          if (!slider || slider.classList.contains('swiper-initialized')) {
+            return;
+          }
+          const dewcoInit = (window as any).dewcoInit as
+            | ((options?: { runPreloader?: boolean }) => void)
+            | undefined;
+          dewcoInit?.({ runPreloader: false });
+        }, 0);
+      });
+    });
+  }
+
+  private ensureTestimonialsSliderInit(): void {
+    this.testimonials$.pipe(take(1)).subscribe((testimonials) => {
+      if (!testimonials.length || !isPlatformBrowser(this.platformId)) {
+        return;
+      }
+      this.ngZone.runOutsideAngular(() => {
+        setTimeout(() => {
+          const slider = this.document.querySelector('.cs_slider_2');
           if (!slider || slider.classList.contains('swiper-initialized')) {
             return;
           }
