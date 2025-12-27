@@ -1,10 +1,11 @@
 {
   "name": "dewco-portfolio",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run generate:sitemap && ng build",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
