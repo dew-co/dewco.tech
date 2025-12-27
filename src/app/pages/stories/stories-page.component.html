@@ -13,9 +13,13 @@
 
   <ng-container *ngIf="filteredStories$ | async as stories">
     <div class="row" *ngIf="stories.length; else noStories">
-      <div class="col-lg-4" *ngFor="let story of stories; trackBy: trackByStoryId">
+      <div class="col-lg-4" *ngFor="let story of stories | slice:0:visibleCount; trackBy: trackByStoryId">
         <div class="cs_post cs_style_1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.05s">
-          <a [routerLink]="story.link" class="cs_post_thumb cs_bg" [attr.data-src]="defaultThumb"></a>
+          <a
+            [routerLink]="story.link"
+            class="cs_post_thumb cs_bg"
+            [style.backgroundImage]="'url(' + defaultThumb + ')'"
+          ></a>
           <ng-container *ngIf="getDateParts(story.date) as date">
             <div class="cs_posted_by">
               <span class="cs_primary_font">{{ date.day }}</span>
@@ -31,11 +35,17 @@
     <ng-template #noStories>
       <p class="text-center cs_primary_color">Stories coming soon.</p>
     </ng-template>
+    <div class="cs_height_50 cs_height_lg_20"></div>
+    <div
+      class="text-center wow fadeInDown"
+      data-wow-duration="1s"
+      data-wow-delay="0.1s"
+      *ngIf="stories.length > visibleCount"
+    >
+      <button class="cs_btn cs_style_1" type="button" (click)="loadMore()">
+        <span>Load More</span>
+      </button>
+    </div>
   </ng-container>
-
-  <div class="cs_height_50 cs_height_lg_20"></div>
-  <div class="text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s">
-    <button class="cs_btn cs_style_1"><span>Load More</span></button>
-  </div>
 </div>
 <div class="cs_height_150 cs_height_lg_100"></div>

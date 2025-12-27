@@ -1,0 +1,39 @@
+{
+  "testimonials": [
+    {
+      "name": "Banasree",
+      "role": "Freelance Researcher & Assistant",
+      "text": "DewCo is where ideas are researched, validated, and shaped into real SaaS products from the very beginning."
+    },
+    {
+      "name": "Ayushi",
+      "role": "Social Media & Content Creator",
+      "text": "Working with DewCo means turning vision into stories — across content, branding, and product launches."
+    },
+    {
+      "name": "Nitish",
+      "role": "Business Development & SEO",
+      "text": "DewCo combines strategy and execution. We’ve delivered measurable SEO and growth results across multiple projects."
+    },
+    {
+      "name": "Kusum",
+      "role": "UI/UX Designer & Project Manager",
+      "text": "From design to delivery, DewCo builds products from scratch with clarity, structure, and creativity."
+    },
+    {
+      "name": "Sagar Paul",
+      "role": "Full-Stack Developer & Partner",
+      "text": "DewCo reflects years of shared vision — building Gloventis Solutions, WanderRest, and scalable SaaS products together."
+    },
+    {
+      "name": "Arnab",
+      "role": "Full-Stack Developer",
+      "text": "Clear architecture, strong product thinking, and smooth collaboration define working with DewCo."
+    },
+    {
+      "name": "Joydeb",
+      "role": "Senior Full-Stack Developer",
+      "text": "DewCo feels like peer-level collaboration — focused on architecture, scalability, and long-term product growth."
+    }
+  ]
+}

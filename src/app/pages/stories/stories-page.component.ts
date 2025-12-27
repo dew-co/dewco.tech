@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { combineLatest, Observable } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { map, startWith } from 'rxjs/operators';
 import { Story, StoryDetail, StoryService } from '../../services/story.service';
 
@@ -13,15 +14,18 @@ import { Story, StoryDetail, StoryService } from '../../services/story.service';
   templateUrl: './stories-page.component.html',
 })
 export class StoriesPageComponent {
+  private readonly destroyRef = inject(DestroyRef);
+  readonly pageSize = 9;
   readonly searchControl = new FormControl('', { nonNullable: true });
   readonly stories$: Observable<Story[]>;
   readonly filteredStories$: Observable<Story[]>;
   readonly defaultThumb = 'assets/img/post_thumb_1.jpeg';
+  visibleCount = this.pageSize;
 
   constructor(private readonly storyService: StoryService) {
     this.stories$ = this.storyService.getStories();
     this.filteredStories$ = combineLatest([
-      this.storyService.getStories(),
+      this.stories$,
       this.storyService.getStoryDetailsList(),
       this.searchControl.valueChanges.pipe(startWith('')),
     ]).pipe(
@@ -29,6 +33,10 @@ export class StoriesPageComponent {
         this.filterStories(stories, details, term || '')
       )
     );
+
+    this.searchControl.valueChanges
+      .pipe(startWith(''), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.resetVisible());
   }
 
   trackByStoryId(index: number, story: Story): string {
@@ -50,6 +58,14 @@ export class StoriesPageComponent {
       month: date.toLocaleDateString('en-US', { month: 'short' }),
       year: date.getFullYear().toString(),
     };
+  }
+
+  loadMore(): void {
+    this.visibleCount += this.pageSize;
+  }
+
+  private resetVisible(): void {
+    this.visibleCount = this.pageSize;
   }
 
   private filterStories(

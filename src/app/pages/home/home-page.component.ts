@@ -1,8 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild, AfterViewInit } from '@angular/core';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  NgZone,
+  PLATFORM_ID,
+  ViewChild,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { Portfolio, PortfolioService } from '../../services/portfolio.service';
 import { Story, StoryService } from '../../services/story.service';
 
@@ -23,6 +31,7 @@ export class HomePageComponent implements AfterViewInit {
   constructor(
     private readonly portfolioService: PortfolioService,
     private readonly storyService: StoryService,
+    private readonly ngZone: NgZone,
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object
   ) {
@@ -35,6 +44,7 @@ export class HomePageComponent implements AfterViewInit {
       return;
     }
     this.loadSchedulingButton();
+    this.ensureStoriesSliderInit();
   }
 
   trackByPortfolioId(index: number, portfolio: Portfolio): string {
@@ -143,5 +153,25 @@ export class HomePageComponent implements AfterViewInit {
         button.appendChild(span);
       }
     }
+  }
+
+  private ensureStoriesSliderInit(): void {
+    this.featuredStories$.pipe(take(1)).subscribe((stories) => {
+      if (!stories.length || !isPlatformBrowser(this.platformId)) {
+        return;
+      }
+      this.ngZone.runOutsideAngular(() => {
+        setTimeout(() => {
+          const slider = this.document.querySelector('.cs_slider_3');
+          if (!slider || slider.classList.contains('swiper-initialized')) {
+            return;
+          }
+          const dewcoInit = (window as any).dewcoInit as
+            | ((options?: { runPreloader?: boolean }) => void)
+            | undefined;
+          dewcoInit?.({ runPreloader: false });
+        }, 0);
+      });
+    });
   }
 }

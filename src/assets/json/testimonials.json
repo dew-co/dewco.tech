@@ -1,0 +1,53 @@
+{
+  "testimonials": [
+    {
+      "name": "Banasree",
+      "role": "Freelance Researcher & Assistant",
+      "association": "DewCo / Freelance",
+      "testimonial": "Working with DewCo means working at the idea stage — before things even exist. Dipankar constantly explores new concepts, and I help research, validate, and shape them into workable directions. From early-stage SaaS ideas to in-house product research, the collaboration is always creative, structured, and forward-thinking.",
+      "founder_note": "Banasree has been a constant support in research and ideation, especially while building and validating fresh SaaS concepts and internal products."
+    },
+    {
+      "name": "Ayushi",
+      "role": "Freelance Social Media & Content Creator",
+      "association": "DewCo / Freelance",
+      "testimonial": "DewCo is not just about execution, it’s about storytelling. I’ve worked closely with Dipankar on content strategy, social media, and branding — both for client projects and in-house SaaS products. The clarity of vision makes content creation meaningful and aligned.",
+      "founder_note": "Ayushi always stays by my side when it comes to content, social presence, and research for new ideas — across client work and DewCo’s own products."
+    },
+    {
+      "name": "Nitish",
+      "role": "Freelance Business Development, SEO & Marketing",
+      "association": "Gloventis Solutions",
+      "testimonial": "Through Gloventis Solutions and DewCo, I’ve worked on multiple SEO and marketing initiatives. Dipankar’s approach is very data-driven and practical. We’ve collaborated on multiple projects together, bringing real results for clients.",
+      "founder_note": "Nitish has helped bring in multiple projects and has worked extensively on SEO and marketing across many client engagements."
+    },
+    {
+      "name": "Kusum",
+      "role": "Freelance Product Development, Project Management & UI/UX Designer",
+      "association": "DewCo / Gloventis Solutions",
+      "testimonial": "With DewCo, I’ve worked end-to-end — from UI/UX design to managing client communication and delivery. We’ve built products from scratch, both for clients and internal SaaS ideas. The collaboration is highly structured yet creatively free.",
+      "founder_note": "Kusum plays a key role in design, project management, and client coordination — helping build products from zero to launch."
+    },
+    {
+      "name": "Sagar Paul",
+      "role": "Full-Stack Developer & Partner",
+      "association": "WanderRest / Gloventis Solutions",
+      "testimonial": "DewCo represents years of shared vision and execution. Dipankar and I started Gloventis Solutions and WanderRest together, and we continue building multiple products — including in-house SaaS like TRAC App. The journey has always been about long-term value, not shortcuts.",
+      "founder_note": "Sagar and I dreamed and built Gloventis Solutions and WanderRest together. We continue working as long-term partners on SaaS and client products."
+    },
+    {
+      "name": "Arnab",
+      "role": "Full-Stack Developer",
+      "association": "Freelance / DewCo",
+      "testimonial": "I’ve worked with Dipankar on several projects — both client-based and internal SaaS initiatives. His system-level thinking and product clarity make collaboration smooth and technically strong.",
+      "founder_note": "Arnab and I have worked together across freelance projects and in-house SaaS development, including collaborations from our previous company."
+    },
+    {
+      "name": "Joydeb",
+      "role": "Senior Full-Stack Developer (10+ Years Experience)",
+      "association": "Freelance / DewCo",
+      "testimonial": "DewCo feels like working with a peer, not a hierarchy. Dipankar and I collaborate as experienced engineers — discussing architecture, scalability, and long-term product direction. It’s always a knowledge-sharing environment.",
+      "founder_note": "Joydeb is a highly experienced developer who consistently guides, supports, and collaborates on complex projects and SaaS ideas."
+    }
+  ]
+}
