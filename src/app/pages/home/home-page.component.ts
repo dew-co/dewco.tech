@@ -5,6 +5,7 @@ import {
   ElementRef,
   Inject,
   NgZone,
+  OnInit,
   PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
@@ -12,6 +13,7 @@ import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { Portfolio, PortfolioService } from '../../services/portfolio.service';
+import { SeoService } from '../../services/seo.service';
 import { Story, StoryService } from '../../services/story.service';
 import { Testimonial, TestimonialService } from '../../services/testimonial.service';
 
@@ -21,7 +23,7 @@ import { Testimonial, TestimonialService } from '../../services/testimonial.serv
   imports: [CommonModule, RouterLink],
   templateUrl: './home-page.component.html',
 })
-export class HomePageComponent implements AfterViewInit {
+export class HomePageComponent implements OnInit, AfterViewInit {
   @ViewChild('calendarButtonTarget', { static: true }) calendarButtonTarget?: ElementRef<HTMLElement>;
 
   readonly featuredPortfolios$: Observable<Portfolio[]>;
@@ -34,6 +36,7 @@ export class HomePageComponent implements AfterViewInit {
     private readonly portfolioService: PortfolioService,
     private readonly storyService: StoryService,
     private readonly testimonialService: TestimonialService,
+    private readonly seo: SeoService,
     private readonly ngZone: NgZone,
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object
@@ -41,6 +44,43 @@ export class HomePageComponent implements AfterViewInit {
     this.featuredPortfolios$ = this.portfolioService.getFeatured(4);
     this.featuredStories$ = this.storyService.getFeatured(8);
     this.testimonials$ = this.testimonialService.getTestimonials();
+  }
+
+  ngOnInit(): void {
+    const description =
+      'Dew & Company (DewCo) is the personal innovation studio of Dipankar Chowdhury, building AI-driven products, automation systems, and full-stack web experiences for startups and founders.';
+    this.seo.setPageMeta({
+      title: 'DewCo | Product, Design & Automation Studio',
+      description,
+      url: '/',
+      keywords: [
+        'innovation studio',
+        'product strategy',
+        'automation architecture',
+        'full-stack engineering',
+        'UX/UI design',
+        'AI products',
+      ],
+    });
+
+    const url = this.seo.buildUrl('/');
+    const organization = this.seo.getOrganizationSchema();
+    const website = this.seo.getWebsiteSchema();
+    const page = {
+      '@type': 'HomePage',
+      '@id': `${url}#webpage`,
+      url,
+      name: this.seo.getSiteName(),
+      description,
+      isPartOf: { '@id': website['@id'] },
+      about: { '@id': organization['@id'] },
+      inLanguage: 'en',
+    };
+
+    this.seo.setJsonLd({
+      '@context': 'https://schema.org',
+      '@graph': [organization, website, page],
+    });
   }
 
   ngAfterViewInit(): void {

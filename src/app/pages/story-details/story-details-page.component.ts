@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import {
@@ -9,6 +9,8 @@ import {
   shareReplay,
   switchMap,
 } from 'rxjs/operators';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { SeoService } from '../../services/seo.service';
 import { Story, StoryDetail, StoryService } from '../../services/story.service';
 
 interface StoryDetailState {
@@ -34,12 +36,14 @@ interface StoryNav {
   templateUrl: './story-details-page.component.html',
 })
 export class StoryDetailsPageComponent {
+  private readonly destroyRef = inject(DestroyRef);
   readonly state$: Observable<StoryDetailState>;
   readonly defaultThumb = 'assets/img/post_thumb_1.jpeg';
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly storyService: StoryService
+    private readonly storyService: StoryService,
+    private readonly seo: SeoService
   ) {
     this.state$ = this.route.paramMap.pipe(
       map((params) => (params.get('id') ?? '').toLowerCase()),
@@ -86,6 +90,10 @@ export class StoryDetailsPageComponent {
       }),
       shareReplay(1)
     );
+
+    this.state$
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((state) => this.updateSeo(state));
   }
 
   trackByIndex(index: number): number {
@@ -152,5 +160,110 @@ export class StoryDetailsPageComponent {
       date: item.date,
       link: item.link,
     };
+  }
+
+  private updateSeo(state: StoryDetailState): void {
+    const fallbackDescription =
+      'Read DewCo stories and insights on product strategy, UX/UI, automation, and building SaaS experiences.';
+    const slugPath = state.slug ? `/stories/${state.slug}` : '/stories';
+
+    if (!state.detail) {
+      this.seo.setPageMeta({
+        title: 'Stories & Insights | DewCo',
+        description: fallbackDescription,
+        url: slugPath,
+      });
+
+      const url = this.seo.buildUrl(slugPath);
+      const organization = this.seo.getOrganizationSchema();
+      const website = this.seo.getWebsiteSchema();
+      const page = {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: 'DewCo Stories',
+        description: fallbackDescription,
+        isPartOf: { '@id': website['@id'] },
+        about: { '@id': organization['@id'] },
+        inLanguage: 'en',
+      };
+
+      this.seo.setJsonLd({
+        '@context': 'https://schema.org',
+        '@graph': [organization, website, page],
+      });
+      return;
+    }
+
+    const detail = state.detail;
+    const story = state.story;
+    const titleBase = detail.title || story?.title || 'DewCo Story';
+    const descriptionSource = story?.excerpt || detail.content || fallbackDescription;
+    const description = this.seo.truncate(descriptionSource);
+    const urlPath = story?.link || slugPath;
+    const publishedTime = detail.date || story?.date;
+    const tags = detail.tags || [];
+
+    this.seo.setPageMeta({
+      title: `${titleBase} | DewCo Stories`,
+      description,
+      url: urlPath,
+      image: this.defaultThumb,
+      type: 'article',
+      section: 'Stories',
+      publishedTime,
+      modifiedTime: publishedTime,
+      tags,
+      keywords: [titleBase, 'DewCo stories', ...tags],
+    });
+
+    const url = this.seo.buildUrl(urlPath);
+    const organization = this.seo.getOrganizationSchema();
+    const website = this.seo.getWebsiteSchema();
+    const blogUrl = this.seo.buildUrl('/stories');
+    const blogId = `${blogUrl}#blog`;
+    const blog = {
+      '@type': 'Blog',
+      '@id': blogId,
+      name: 'DewCo Stories',
+      url: blogUrl,
+      publisher: { '@id': organization['@id'] },
+      inLanguage: 'en',
+    };
+    const postId = `${url}#post`;
+    const blogPosting = {
+      '@type': 'BlogPosting',
+      '@id': postId,
+      headline: titleBase,
+      description,
+      url,
+      image: this.seo.buildUrl(this.defaultThumb),
+      datePublished: publishedTime,
+      dateModified: publishedTime,
+      author: {
+        '@type': 'Person',
+        name: 'Dipankar Chowdhury',
+      },
+      publisher: { '@id': organization['@id'] },
+      mainEntityOfPage: { '@id': `${url}#webpage` },
+      isPartOf: { '@id': blogId },
+      keywords: tags.length ? tags.join(', ') : undefined,
+    };
+    const page = {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: `${titleBase} | DewCo Stories`,
+      description,
+      isPartOf: { '@id': website['@id'] },
+      about: { '@id': organization['@id'] },
+      mainEntity: { '@id': postId },
+      inLanguage: 'en',
+    };
+
+    this.seo.setJsonLd({
+      '@context': 'https://schema.org',
+      '@graph': [organization, website, page, blog, blogPosting],
+    });
   }
 }

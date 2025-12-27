@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import {
@@ -9,11 +9,13 @@ import {
   shareReplay,
   switchMap,
 } from 'rxjs/operators';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   Portfolio,
   PortfolioDetail,
   PortfolioService,
 } from '../../services/portfolio.service';
+import { SeoService } from '../../services/seo.service';
 
 interface PortfolioDetailState {
   detail: PortfolioDetail | null;
@@ -38,11 +40,13 @@ interface PortfolioNav {
   templateUrl: './portfolio-details-page.component.html',
 })
 export class PortfolioDetailsPageComponent {
+  private readonly destroyRef = inject(DestroyRef);
   readonly state$: Observable<PortfolioDetailState>;
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly portfolioService: PortfolioService
+    private readonly portfolioService: PortfolioService,
+    private readonly seo: SeoService
   ) {
     this.state$ = this.route.paramMap.pipe(
       map((params) => (params.get('id') ?? '').toLowerCase()),
@@ -88,6 +92,10 @@ export class PortfolioDetailsPageComponent {
       }),
       shareReplay(1)
     );
+
+    this.state$
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((state) => this.updateSeo(state));
   }
 
   trackByIndex(index: number): number {
@@ -160,5 +168,128 @@ export class PortfolioDetailsPageComponent {
 
   private defaultLink(item: Portfolio): string {
     return item.link || `/portfolio/${item.id.replace(/_/g, '-')}`;
+  }
+
+  private updateSeo(state: PortfolioDetailState): void {
+    const fallbackDescription =
+      'Explore DewCo portfolio case studies in product strategy, UX/UI design, automation, and full-stack engineering.';
+    const slugPath = state.slug ? `/portfolio/${state.slug}` : '/portfolio';
+
+    if (!state.detail) {
+      this.seo.setPageMeta({
+        title: 'Portfolio | DewCo',
+        description: fallbackDescription,
+        url: slugPath,
+      });
+
+      const url = this.seo.buildUrl(slugPath);
+      const organization = this.seo.getOrganizationSchema();
+      const website = this.seo.getWebsiteSchema();
+      const page = {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: 'DewCo Portfolio',
+        description: fallbackDescription,
+        isPartOf: { '@id': website['@id'] },
+        about: { '@id': organization['@id'] },
+        inLanguage: 'en',
+      };
+
+      this.seo.setJsonLd({
+        '@context': 'https://schema.org',
+        '@graph': [organization, website, page],
+      });
+      return;
+    }
+
+    const detail = state.detail;
+    const portfolio = state.portfolio;
+    const titleBase = detail.project_name || portfolio?.name || 'Portfolio Case Study';
+    const descriptionSource =
+      detail.about?.short ||
+      detail.portfolio_copy?.one_liner ||
+      detail.short_headline ||
+      detail.headline ||
+      portfolio?.tagline ||
+      fallbackDescription;
+    const description = this.seo.truncate(descriptionSource);
+    const image =
+      detail['cover-image']?.src ||
+      detail['body-media']?.src ||
+      detail['body-image-1']?.src ||
+      portfolio?.image1?.src ||
+      this.seo.getDefaultImage();
+    const urlPath = portfolio?.link || slugPath;
+    const modifiedTime =
+      detail.meta?.['last_updated_for_portfolio'] ||
+      detail.snapshot?.completed_date_v1 ||
+      detail.snapshot?.initial_launch_date ||
+      detail.snapshot?.project_start_date;
+    const tags = [
+      ...(detail.snapshot?.platform || []),
+      ...(detail.snapshot?.role || []),
+      detail.client?.industry,
+      portfolio?.category,
+    ].filter(Boolean) as string[];
+
+    const keywords = [
+      titleBase,
+      detail.short_headline,
+      detail.headline,
+      detail.client?.industry,
+      detail.client?.location,
+      detail.snapshot?.project_type,
+      portfolio?.category,
+      'DewCo portfolio',
+      'case study',
+    ].filter(Boolean) as string[];
+
+    this.seo.setPageMeta({
+      title: `${titleBase} | DewCo Portfolio`,
+      description,
+      url: urlPath,
+      image,
+      type: 'article',
+      section: 'Portfolio',
+      modifiedTime,
+      tags,
+      keywords: keywords.length ? keywords : undefined,
+    });
+
+    const url = this.seo.buildUrl(urlPath);
+    const organization = this.seo.getOrganizationSchema();
+    const website = this.seo.getWebsiteSchema();
+    const creativeWorkId = `${url}#creativework`;
+    const creativeWork = {
+      '@type': 'CreativeWork',
+      '@id': creativeWorkId,
+      name: titleBase,
+      headline: detail.headline || detail.short_headline || titleBase,
+      description,
+      image: this.seo.buildUrl(image),
+      genre: portfolio?.category || detail.client?.industry,
+      keywords: tags.length ? tags.join(', ') : undefined,
+      url,
+      author: { '@id': organization['@id'] },
+      publisher: { '@id': organization['@id'] },
+      dateModified: modifiedTime,
+    };
+    const page = {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: `${titleBase} | DewCo Portfolio`,
+      description,
+      isPartOf: { '@id': website['@id'] },
+      about: { '@id': organization['@id'] },
+      mainEntity: { '@id': creativeWorkId },
+      inLanguage: 'en',
+    };
+
+    this.seo.setJsonLd({
+      '@context': 'https://schema.org',
+      '@graph': [organization, website, page, creativeWork],
+    });
   }
 }
