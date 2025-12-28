@@ -7,11 +7,11 @@
     "tagline": "Wander more, plan less.",
     "category": "Travel / Hospitality",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/wanderrest-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/wanderrest-cover-2.webp",
       "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/wanderrest-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/wanderrest-cover-1.webp",
       "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     },
     "link": "/portfolio/wanderrest"
@@ -24,11 +24,11 @@
     "tagline": "Quant-grade analysis for non-quant traders.",
     "category": "FinTech / Trading",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/quantgrade-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/quantgrade-cover-1.webp",
       "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/quantgrade-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/quantgrade-cover-2.webp",
       "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
     "link": "/portfolio/quantgrade-trading-bot"
@@ -41,11 +41,11 @@
     "tagline": "Tracking Remote Activity Control",
     "category": "Productivity / IT Management",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/trac-app-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/trac-app-cover-1.webp",
       "alt": "TRAC App dashboard showing remote device activity and control actions"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/trac-app-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/trac-app-cover-2.webp",
       "alt": "TRAC App dashboard showing remote device activity and control actions"
     },
     "link": "/portfolio/trac-app"
@@ -58,11 +58,11 @@
     "tagline": "Publicly discover, privately enjoy.",
     "category": "Media / Entertainment",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/gloveflix-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/gloveflix-cover-1.webp",
       "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/gloveflix-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/gloveflix-cover-2.webp",
       "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     },
     "link": "/portfolio/gloveflix"
@@ -75,11 +75,11 @@
     "tagline": "No internet, no cloud \u2013 just Local Network Camera & Screen Sync.",
     "category": "Productivity / EdTech / Utilities",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/lan-cam-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/lan-cam-cover-2.webp",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/lan-cam-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/lan-cam-cover-1.webp",
       "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
     "link": "/portfolio/lan-cam"
@@ -92,11 +92,11 @@
     "tagline": "From documents to decisions \u2014 in seconds.",
     "category": "AI SaaS / Enterprise Automation",
     "image-1": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/arceon-ai-cover-1.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/arceon-ai-cover-1.webp",
       "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
     },
     "image-2": {
-      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/cover/arceon-ai-cover-2.webp",
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/arceon-ai-cover-2.webp",
       "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
     },
     "link": "/portfolio/arceon-ai"
