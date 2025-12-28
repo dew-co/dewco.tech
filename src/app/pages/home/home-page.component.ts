@@ -29,7 +29,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   readonly featuredPortfolios$: Observable<Portfolio[]>;
   readonly featuredStories$: Observable<Story[]>;
   readonly testimonials$: Observable<Testimonial[]>;
-  readonly defaultStoryThumb = 'assets/img/post_thumb_1.jpeg';
+  readonly defaultStoryThumb = 'assets/img/post_thumb_1.webp';
   private schedulingButtonInitialized = false;
 
   constructor(

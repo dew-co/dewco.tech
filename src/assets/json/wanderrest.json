@@ -40,15 +40,15 @@
     "engagement_model": "Fixed-scope build + ongoing retainer"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-wanderrest.png",
+    "src": "/assets/portfolio/all-devices-wanderrest.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/wanderrest-1.png",
+    "src": "/assets/portfolio/wanderrest-1.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/wanderrest-2.png",
+    "src": "/assets/portfolio/wanderrest-2.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "about": {

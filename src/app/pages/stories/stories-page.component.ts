@@ -20,7 +20,7 @@ export class StoriesPageComponent implements OnInit {
   readonly searchControl = new FormControl('', { nonNullable: true });
   readonly stories$: Observable<Story[]>;
   readonly filteredStories$: Observable<Story[]>;
-  readonly defaultThumb = 'assets/img/post_thumb_1.jpeg';
+  readonly defaultThumb = 'assets/img/post_thumb_1.webp';
   visibleCount = this.pageSize;
 
   constructor(

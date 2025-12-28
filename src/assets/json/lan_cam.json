@@ -42,15 +42,15 @@
     "engagement_model": "Internal product build; future paid/pro tier planned"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-lan-cam.png",
+    "src": "/assets/portfolio/all-devices-lan-cam.webp",
     "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/lan-cam-1.png",
+    "src": "/assets/portfolio/lan-cam-1.webp",
     "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/lan-cam-2.png",
+    "src": "/assets/portfolio/lan-cam-2.webp",
     "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
   },
   "body-media": {

@@ -42,15 +42,15 @@
     "engagement_model": "Internal product build with future SaaS/white-label plans"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-trading_bot.png",
+    "src": "/assets/portfolio/all-devices-trading_bot.webp",
     "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/trading_bot-1.png",
+    "src": "/assets/portfolio/trading_bot-1.webp",
     "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/trading_bot-2.png",
+    "src": "/assets/portfolio/trading_bot-2.webp",
     "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
   },
   "body-media": {

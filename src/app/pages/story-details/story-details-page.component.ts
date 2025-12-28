@@ -38,7 +38,7 @@ interface StoryNav {
 export class StoryDetailsPageComponent {
   private readonly destroyRef = inject(DestroyRef);
   readonly state$: Observable<StoryDetailState>;
-  readonly defaultThumb = 'assets/img/post_thumb_1.jpeg';
+  readonly defaultThumb = 'assets/img/post_thumb_1.webp';
 
   constructor(
     private readonly route: ActivatedRoute,
