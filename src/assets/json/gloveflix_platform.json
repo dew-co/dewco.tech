@@ -44,15 +44,15 @@
     "engagement_model": "Internal product build with multi-pillar monetization strategy"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-gloveflix.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-gloveflix.webp",
     "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/gloveflix-1.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-1.webp",
     "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/gloveflix-2.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-2.webp",
     "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
   },
   "body-media": {

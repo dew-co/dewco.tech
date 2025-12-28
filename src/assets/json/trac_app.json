@@ -45,11 +45,11 @@
     "engagement_model": "Internal product build with future SaaS/seat-based licensing plan"
   },
   "cover-image": {
-    "src": "/assets/portfolio/trac-app-2.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-2.webp",
     "alt": "TRAC App dashboard showing remote device activity and control actions"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/trac-app-1.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-1.webp",
     "alt": "TRAC App dashboard showing remote device activity and control actions"
   },
   "body-image-2": {

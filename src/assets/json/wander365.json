@@ -38,19 +38,19 @@
     "engagement_model": "Fixed-scope build + ongoing retainer"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-wander365.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-wander365.webp",
     "alt": "Wander365 travel booking website shown on laptop and mobile screens"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/wander365-1.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wander365-1.webp",
     "alt": "Wander365 travel booking website shown on laptop and mobile screens"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/wander365-2.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wander365-2.webp",
     "alt": "Wander365 travel booking website shown on laptop and mobile screens"
   },
   "body-media": {
-    "src": "/assets/portfolio/wander365.mp4"
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wander365.mp4"
   },
   "about": {
     "short": "Wander365 is a travel platform that helps people explore curated trips, send enquiries, and get a quick response while the team manages leads, packages, and itineraries from one CRM. The brand is set up to evolve into WanderRest without a rebuild.",

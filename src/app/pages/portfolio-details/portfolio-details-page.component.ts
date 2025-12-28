@@ -112,6 +112,10 @@ export class PortfolioDetailsPageComponent {
     return Array.isArray(value);
   }
 
+  isHttpUrl(value: string | null | undefined): boolean {
+    return typeof value === 'string' && /^https?:\/\//i.test(value);
+  }
+
   private findPortfolio(slug: string, portfolios: Portfolio[]): Portfolio | null {
     const normalizedSlug = this.normalizeSlug(slug);
 

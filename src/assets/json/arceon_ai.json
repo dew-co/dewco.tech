@@ -46,15 +46,15 @@
     "engagement_model": "Internal product build with future B2B SaaS licensing"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-arceon-ai.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-arceon-ai.webp",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/arceon_ai-1.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-1.webp",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/arceon_ai-2.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-2.webp",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
   "body-media": {

@@ -26,7 +26,7 @@ export class SeoService {
   private readonly defaultTitle = 'DewCo | Product, Design & Automation Studio';
   private readonly defaultDescription =
     'Dew & Company (DewCo) is the personal innovation studio of Dipankar Chowdhury, building AI-driven products, automation systems, and full-stack web experiences for startups and founders.';
-  private readonly defaultImage = '/assets/img/dewco-footer.webp';
+  private readonly defaultImage = 'https://res.cloudinary.com/dewco/image/upload/assets/img/dewco-footer.webp';
   private readonly defaultKeywords = [
     'DewCo',
     'Dew & Company',

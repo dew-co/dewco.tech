@@ -267,17 +267,20 @@
 
     <section class="container" *ngIf="detail.links">
       <h3 class="cs_mb_15">Links</h3>
-      <div class="cs_text_btn_group cs_primary_color">
+      <div class="cs_tags cs_primary_color">
         <ng-container *ngFor="let link of detail.links | keyvalue">
           <a
-            *ngIf="link.value"
-            class="cs_text_btn cs_mb_10"
-            [href]="link.value || '#'"
+            *ngIf="isHttpUrl(link.value)"
+            class="ca_tag"
+            [href]="link.value"
             target="_blank"
             rel="noopener"
           >
-            <span>{{ formatLabel(link.key) }}</span>
+            {{ formatLabel(link.key) }}
           </a>
+          <span *ngIf="link.value && !isHttpUrl(link.value)" class="ca_tag" aria-disabled="true">
+            {{ formatLabel(link.key) }} - {{ link.value }}
+          </span>
         </ng-container>
       </div>
     </section>

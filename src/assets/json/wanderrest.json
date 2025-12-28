@@ -40,15 +40,15 @@
     "engagement_model": "Fixed-scope build + ongoing retainer"
   },
   "cover-image": {
-    "src": "/assets/portfolio/all-devices-wanderrest.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-wanderrest.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "body-image-1": {
-    "src": "/assets/portfolio/wanderrest-1.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-1.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "body-image-2": {
-    "src": "/assets/portfolio/wanderrest-2.webp",
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-2.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
   "about": {
@@ -183,7 +183,7 @@
     "one_liner": "A full-stack travel experience platform that turns scattered WhatsApp and Excel operations into a streamlined, brand-ready website + CRM."
   },
   "links": {
-    "live_site": null,
+    "live_site": "https://wanderrest.in/",
     "admin_panel": null,
     "case_study_page": null,
     "behance_or_dribbble": null
