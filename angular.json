@@ -39,7 +39,7 @@
             "styles": [
               "src/assets/css/plugins/bootstrap.min.css",
               "src/assets/css/plugins/fontawesome.min.css",
-              "src/assets/css/plugins/animate.css",
+              "src/assets/css/animations.css",
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
@@ -47,13 +47,9 @@
             "scripts": [
               "src/assets/js/plugins/jquery-3.6.0.min.js",
               "src/assets/js/plugins/gsap.min.js",
-              "src/assets/js/plugins/acroll-trigger.min.js",
-              "src/assets/js/plugins/scroll-smoother.min.js",
-              "src/assets/js/plugins/particles.min.js",
               "src/assets/js/plugins/swiper.min.js",
               "src/assets/js/plugins/wow.min.js",
               "src/assets/js/plugins/wait-for-images.js",
-              "src/assets/js/plugins/jquery.counter.min.js",
               "src/assets/js/main.js"
             ]
           },
@@ -119,7 +115,7 @@
             "styles": [
               "src/assets/css/plugins/bootstrap.min.css",
               "src/assets/css/plugins/fontawesome.min.css",
-              "src/assets/css/plugins/animate.css",
+              "src/assets/css/animations.css",
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
@@ -127,13 +123,9 @@
             "scripts": [
               "src/assets/js/plugins/jquery-3.6.0.min.js",
               "src/assets/js/plugins/gsap.min.js",
-              "src/assets/js/plugins/acroll-trigger.min.js",
-              "src/assets/js/plugins/scroll-smoother.min.js",
-              "src/assets/js/plugins/particles.min.js",
               "src/assets/js/plugins/swiper.min.js",
               "src/assets/js/plugins/wow.min.js",
               "src/assets/js/plugins/wait-for-images.js",
-              "src/assets/js/plugins/jquery.counter.min.js",
               "src/assets/js/main.js"
             ]
           }
