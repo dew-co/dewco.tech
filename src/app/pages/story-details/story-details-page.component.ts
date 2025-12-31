@@ -176,7 +176,13 @@ export class StoryDetailsPageComponent {
 
       const url = this.seo.buildUrl(slugPath);
       const organization = this.seo.getOrganizationSchema();
+      const person = this.seo.getPersonSchema();
       const website = this.seo.getWebsiteSchema();
+      const breadcrumbs = this.seo.buildBreadcrumbList([
+        { name: 'Home', url: '/' },
+        { name: 'Stories', url: '/stories' },
+        { name: 'Story', url: slugPath },
+      ]);
       const page = {
         '@type': 'WebPage',
         '@id': `${url}#webpage`,
@@ -188,9 +194,14 @@ export class StoryDetailsPageComponent {
         inLanguage: 'en',
       };
 
+      const graph: Array<Record<string, any>> = [organization, person, website, page];
+      if (breadcrumbs) {
+        graph.push(breadcrumbs);
+      }
+
       this.seo.setJsonLd({
         '@context': 'https://schema.org',
-        '@graph': [organization, website, page],
+        '@graph': graph,
       });
       return;
     }
@@ -219,7 +230,13 @@ export class StoryDetailsPageComponent {
 
     const url = this.seo.buildUrl(urlPath);
     const organization = this.seo.getOrganizationSchema();
+    const person = this.seo.getPersonSchema();
     const website = this.seo.getWebsiteSchema();
+    const breadcrumbs = this.seo.buildBreadcrumbList([
+      { name: 'Home', url: '/' },
+      { name: 'Stories', url: '/stories' },
+      { name: titleBase, url: urlPath },
+    ]);
     const blogUrl = this.seo.buildUrl('/stories');
     const blogId = `${blogUrl}#blog`;
     const blog = {
@@ -240,10 +257,7 @@ export class StoryDetailsPageComponent {
       image: this.seo.buildUrl(this.defaultThumb),
       datePublished: publishedTime,
       dateModified: publishedTime,
-      author: {
-        '@type': 'Person',
-        name: 'Dipankar Chowdhury',
-      },
+      author: { '@id': person['@id'] },
       publisher: { '@id': organization['@id'] },
       mainEntityOfPage: { '@id': `${url}#webpage` },
       isPartOf: { '@id': blogId },
@@ -261,9 +275,14 @@ export class StoryDetailsPageComponent {
       inLanguage: 'en',
     };
 
+    const graph: Array<Record<string, any>> = [organization, person, website, page, blog, blogPosting];
+    if (breadcrumbs) {
+      graph.push(breadcrumbs);
+    }
+
     this.seo.setJsonLd({
       '@context': 'https://schema.org',
-      '@graph': [organization, website, page, blog, blogPosting],
+      '@graph': graph,
     });
   }
 }

@@ -188,7 +188,13 @@ export class PortfolioDetailsPageComponent {
 
       const url = this.seo.buildUrl(slugPath);
       const organization = this.seo.getOrganizationSchema();
+      const person = this.seo.getPersonSchema();
       const website = this.seo.getWebsiteSchema();
+      const breadcrumbs = this.seo.buildBreadcrumbList([
+        { name: 'Home', url: '/' },
+        { name: 'Portfolio', url: '/portfolio' },
+        { name: 'Portfolio Case Study', url: slugPath },
+      ]);
       const page = {
         '@type': 'WebPage',
         '@id': `${url}#webpage`,
@@ -200,9 +206,14 @@ export class PortfolioDetailsPageComponent {
         inLanguage: 'en',
       };
 
+      const graph: Array<Record<string, any>> = [organization, person, website, page];
+      if (breadcrumbs) {
+        graph.push(breadcrumbs);
+      }
+
       this.seo.setJsonLd({
         '@context': 'https://schema.org',
-        '@graph': [organization, website, page],
+        '@graph': graph,
       });
       return;
     }
@@ -225,6 +236,8 @@ export class PortfolioDetailsPageComponent {
       portfolio?.image1?.src ||
       this.seo.getDefaultImage();
     const urlPath = portfolio?.link || slugPath;
+    const createdTime =
+      detail.snapshot?.project_start_date || detail.snapshot?.initial_launch_date;
     const modifiedTime =
       detail.meta?.['last_updated_for_portfolio'] ||
       detail.snapshot?.completed_date_v1 ||
@@ -236,6 +249,27 @@ export class PortfolioDetailsPageComponent {
       detail.client?.industry,
       portfolio?.category,
     ].filter(Boolean) as string[];
+    const aboutTopics = [
+      detail.client?.industry,
+      detail.snapshot?.project_type,
+      portfolio?.category,
+    ]
+      .map((value) => this.seo.normalizeText(value))
+      .filter(Boolean);
+    const mentions = this.collectMentions(detail);
+    const audience = (detail.client?.audience || [])
+      .map((value) => this.seo.normalizeText(value))
+      .filter(Boolean)
+      .map((name) => ({
+        '@type': 'Audience',
+        name,
+      }));
+    const spatialCoverage = detail.client?.location
+      ? {
+          '@type': 'Place',
+          name: this.seo.normalizeText(detail.client.location),
+        }
+      : undefined;
 
     const keywords = [
       titleBase,
@@ -263,7 +297,13 @@ export class PortfolioDetailsPageComponent {
 
     const url = this.seo.buildUrl(urlPath);
     const organization = this.seo.getOrganizationSchema();
+    const person = this.seo.getPersonSchema();
     const website = this.seo.getWebsiteSchema();
+    const breadcrumbs = this.seo.buildBreadcrumbList([
+      { name: 'Home', url: '/' },
+      { name: 'Portfolio', url: '/portfolio' },
+      { name: titleBase, url: urlPath },
+    ]);
     const creativeWorkId = `${url}#creativework`;
     const creativeWork = {
       '@type': 'CreativeWork',
@@ -277,6 +317,11 @@ export class PortfolioDetailsPageComponent {
       url,
       author: { '@id': organization['@id'] },
       publisher: { '@id': organization['@id'] },
+      about: aboutTopics.length ? aboutTopics : undefined,
+      mentions: this.toThingList(mentions),
+      audience: audience.length ? audience : undefined,
+      spatialCoverage,
+      dateCreated: createdTime,
       dateModified: modifiedTime,
     };
     const page = {
@@ -291,9 +336,48 @@ export class PortfolioDetailsPageComponent {
       inLanguage: 'en',
     };
 
+    const graph: Array<Record<string, any>> = [organization, person, website, page, creativeWork];
+    if (breadcrumbs) {
+      graph.push(breadcrumbs);
+    }
+
     this.seo.setJsonLd({
       '@context': 'https://schema.org',
-      '@graph': [organization, website, page, creativeWork],
+      '@graph': graph,
     });
+  }
+
+  private collectMentions(detail: PortfolioDetail): string[] {
+    const mentions = new Set<string>();
+    const add = (value?: string) => {
+      const normalized = this.seo.normalizeText(value);
+      if (normalized) {
+        mentions.add(normalized);
+      }
+    };
+    const addAll = (values?: string[]) => {
+      values?.forEach((value) => add(value));
+    };
+
+    addAll(detail.snapshot?.platform);
+    addAll(detail.snapshot?.role);
+    add(detail.snapshot?.project_type);
+    addAll(detail.client?.audience);
+
+    Object.values(detail.tech_stack || {}).forEach((values) => addAll(values));
+    Object.values(detail.features || {}).forEach((values) => addAll(values));
+
+    return Array.from(mentions);
+  }
+
+  private toThingList(values: string[]): Array<Record<string, any>> | undefined {
+    if (!values.length) {
+      return undefined;
+    }
+
+    return values.map((name) => ({
+      '@type': 'Thing',
+      name,
+    }));
   }
 }

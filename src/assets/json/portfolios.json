@@ -86,7 +86,7 @@
   },
   {
     "id": "arceon_ai",
-    "name": "Arceon AI \u2013 Document Processing & Claim Automation",
+    "name": "Arceon AI",
     "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
     "short_headline": "Arceon AI \u2013 Claims Automation SaaS",
     "tagline": "From documents to decisions \u2014 in seconds.",

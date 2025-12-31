@@ -42,7 +42,12 @@ export class PortfolioPageComponent implements OnInit {
     this.portfolios$.pipe(take(1)).subscribe((portfolios) => {
       const url = this.seo.buildUrl('/portfolio');
       const organization = this.seo.getOrganizationSchema();
+      const person = this.seo.getPersonSchema();
       const website = this.seo.getWebsiteSchema();
+      const breadcrumbs = this.seo.buildBreadcrumbList([
+        { name: 'Home', url: '/' },
+        { name: 'Portfolio', url: '/portfolio' },
+      ]);
       const itemListId = `${url}#itemlist`;
       const itemList = {
         '@type': 'ItemList',
@@ -66,9 +71,14 @@ export class PortfolioPageComponent implements OnInit {
         inLanguage: 'en',
       };
 
+      const graph: Array<Record<string, any>> = [organization, person, website, page, itemList];
+      if (breadcrumbs) {
+        graph.push(breadcrumbs);
+      }
+
       this.seo.setJsonLd({
         '@context': 'https://schema.org',
-        '@graph': [organization, website, page, itemList],
+        '@graph': graph,
       });
     });
   }

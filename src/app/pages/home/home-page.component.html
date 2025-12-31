@@ -26,7 +26,26 @@
     </section>
     <!-- End Hero -->
 
-    <div class="cs_height_125 cs_height_lg_70"></div>
+    <!-- Start Quick Answers -->
+    <section class="cs_faq_section">
+      <div class="container">
+        <div class="cs_section_heading cs_style_1 text-center">
+          <h2 class="cs_section_title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">Quick Answers</h2>
+          <p class="cs_faq_intro">Direct answers about DewCo for people and answer engines.</p>
+        </div>
+        <div class="cs_height_70 cs_height_lg_40"></div>
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let item of faqItems; trackBy: trackByFaqIndex">
+            <article class="cs_faq_card wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+              <h3 class="cs_faq_question">{{ item.question }}</h3>
+              <p class="cs_faq_answer">{{ item.answer }}</p>
+            </article>
+            <div class="cs_height_30 cs_height_lg_30"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Quick Answers -->
 
     <!-- Start Portfolio Section -->
     <div class="container">

@@ -31,6 +31,33 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   readonly featuredStories$: Observable<Story[]>;
   readonly testimonials$: Observable<Testimonial[]>;
   readonly defaultStoryThumb = 'https://res.cloudinary.com/dewco/image/upload/assets/img/post_thumb_1.webp';
+  readonly faqItems = [
+    {
+      question: 'What is DewCo?',
+      answer:
+        'DewCo is the personal innovation studio of Dipankar Chowdhury, focused on product strategy, UX/UI design, automation, and full-stack builds.',
+    },
+    {
+      question: 'Who runs DewCo?',
+      answer:
+        'Dipankar Chowdhury, a full-stack engineer and product designer with a decade of experience building AI-driven products and SaaS platforms.',
+    },
+    {
+      question: 'What services does DewCo provide?',
+      answer:
+        'Product and tech leadership, full-stack SaaS and web apps, AI and automation integrations, plus cloud, DevOps, and operations support.',
+    },
+    {
+      question: 'Who does DewCo work with?',
+      answer:
+        'Founders, startups, and teams that need end-to-end product build support or rapid execution.',
+    },
+    {
+      question: 'How do I start a project?',
+      answer:
+        'Share your goals through the contact form or book a meeting, and we will map scope, timeline, and next steps.',
+    },
+  ];
   private schedulingButtonInitialized = false;
 
   constructor(
@@ -67,21 +94,33 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
     const url = this.seo.buildUrl('/');
     const organization = this.seo.getOrganizationSchema();
+    const person = this.seo.getPersonSchema();
     const website = this.seo.getWebsiteSchema();
+    const services = this.seo.getServiceSchemas();
+    const faqMainEntity = this.seo.buildFaqMainEntity(this.faqItems);
+    const breadcrumbs = this.seo.buildBreadcrumbList([
+      { name: 'Home', url: '/' },
+    ]);
     const page = {
-      '@type': 'HomePage',
+      '@type': faqMainEntity.length ? ['HomePage', 'FAQPage'] : 'HomePage',
       '@id': `${url}#webpage`,
       url,
       name: this.seo.getSiteName(),
       description,
       isPartOf: { '@id': website['@id'] },
       about: { '@id': organization['@id'] },
+      mainEntity: faqMainEntity.length ? faqMainEntity : undefined,
       inLanguage: 'en',
     };
 
+    const graph: Array<Record<string, any>> = [organization, person, website, page, ...services];
+    if (breadcrumbs) {
+      graph.push(breadcrumbs);
+    }
+
     this.seo.setJsonLd({
       '@context': 'https://schema.org',
-      '@graph': [organization, website, page],
+      '@graph': graph,
     });
   }
 
@@ -104,6 +143,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   trackByTestimonialName(index: number, testimonial: Testimonial): string {
     return testimonial.name;
+  }
+
+  trackByFaqIndex(index: number): number {
+    return index;
   }
 
   getDateParts(value?: string): { day: string; month: string; year: string } {

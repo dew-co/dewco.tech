@@ -63,7 +63,12 @@ export class StoriesPageComponent implements OnInit {
     this.stories$.pipe(take(1)).subscribe((stories) => {
       const url = this.seo.buildUrl('/stories');
       const organization = this.seo.getOrganizationSchema();
+      const person = this.seo.getPersonSchema();
       const website = this.seo.getWebsiteSchema();
+      const breadcrumbs = this.seo.buildBreadcrumbList([
+        { name: 'Home', url: '/' },
+        { name: 'Stories', url: '/stories' },
+      ]);
       const itemListId = `${url}#itemlist`;
       const itemList = {
         '@type': 'ItemList',
@@ -87,9 +92,14 @@ export class StoriesPageComponent implements OnInit {
         inLanguage: 'en',
       };
 
+      const graph: Array<Record<string, any>> = [organization, person, website, page, itemList];
+      if (breadcrumbs) {
+        graph.push(breadcrumbs);
+      }
+
       this.seo.setJsonLd({
         '@context': 'https://schema.org',
-        '@graph': [organization, website, page, itemList],
+        '@graph': graph,
       });
     });
   }

@@ -39,7 +39,12 @@ export class ContactPageComponent implements OnInit, AfterViewInit {
 
     const url = this.seo.buildUrl('/contact');
     const organization = this.seo.getOrganizationSchema();
+    const person = this.seo.getPersonSchema();
     const website = this.seo.getWebsiteSchema();
+    const breadcrumbs = this.seo.buildBreadcrumbList([
+      { name: 'Home', url: '/' },
+      { name: 'Contact', url: '/contact' },
+    ]);
     const page = {
       '@type': 'ContactPage',
       '@id': `${url}#webpage`,
@@ -48,6 +53,7 @@ export class ContactPageComponent implements OnInit, AfterViewInit {
       description,
       isPartOf: { '@id': website['@id'] },
       about: { '@id': organization['@id'] },
+      mainEntity: { '@id': organization['@id'] },
       inLanguage: 'en',
       contactPoint: [
         {
@@ -58,9 +64,14 @@ export class ContactPageComponent implements OnInit, AfterViewInit {
       ],
     };
 
+    const graph: Array<Record<string, any>> = [organization, person, website, page];
+    if (breadcrumbs) {
+      graph.push(breadcrumbs);
+    }
+
     this.seo.setJsonLd({
       '@context': 'https://schema.org',
-      '@graph': [organization, website, page],
+      '@graph': graph,
     });
   }
 

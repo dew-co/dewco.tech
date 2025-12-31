@@ -44,6 +44,53 @@ export class SeoService {
     'dewco.tech',
   ];
   private readonly defaultAuthor = 'Dipankar Chowdhury';
+  private readonly defaultPersonImage = 'https://res.cloudinary.com/dewco/image/upload/assets/img/dew-me.webp';
+  private readonly socialProfiles = [
+    'https://www.linkedin.com/in/dewco/',
+    'https://dewco.bio.link/',
+    'https://www.instagram.com/dewcotech/',
+  ];
+  private readonly knowledgeAreas = [
+    'Product strategy',
+    'UX/UI design',
+    'Full-stack development',
+    'Automation',
+    'AI products',
+    'SaaS engineering',
+    'Branding',
+  ];
+  private readonly primaryAddress = {
+    '@type': 'PostalAddress',
+    addressLocality: 'Siliguri',
+    addressRegion: 'West Bengal',
+    addressCountry: 'India',
+  };
+  private readonly serviceCatalog = [
+    {
+      id: 'product-tech-leadership',
+      name: 'Product & Tech Leadership',
+      description:
+        'I lead cross-functional teams from discovery to delivery, define roadmaps, and set workflows, documentation, CI/CD, and QA to ship with confidence.',
+    },
+    {
+      id: 'full-stack-saas-web-apps',
+      name: 'Full-Stack SaaS & Web Apps',
+      description:
+        'End-to-end build of scalable platforms using Python/Django, Angular, and modern APIs, from MVP to production for startups and SMEs.',
+    },
+    {
+      id: 'ai-automation-integrations',
+      name: 'AI, Automation & Integrations',
+      description:
+        'ChatGPT/OpenAI integrations, workflow automation, and data pipelines that reduce operational load and unlock new digital products.',
+    },
+    {
+      id: 'cloud-devops-operations',
+      name: 'Cloud, DevOps & Operations',
+      description:
+        'AWS/GCP/Firebase infrastructure, Docker, Nginx, and CI/CD pipelines to keep systems reliable, secure, and cost-efficient, plus hands-on IT and operations support.',
+    },
+  ];
 
   constructor(
     private readonly title: Title,
@@ -128,7 +175,8 @@ export class SeoService {
 
   getOrganizationSchema(): Record<string, any> {
     const origin = this.getOrigin();
-    const orgId = origin ? `${origin}/#organization` : '#organization';
+    const orgId = this.buildId('organization');
+    const personId = this.buildId('person');
 
     return {
       '@type': 'CreativeAgency',
@@ -137,25 +185,13 @@ export class SeoService {
       url: origin || undefined,
       logo: this.resolveUrl(this.defaultImage),
       description: this.defaultDescription,
+      address: this.primaryAddress,
       email: 'hello@dewco.tech',
       founder: {
-        '@type': 'Person',
-        name: this.defaultAuthor,
+        '@id': personId,
       },
-      sameAs: [
-        'https://www.linkedin.com/in/dewco/',
-        'https://dewco.bio.link/',
-        'https://www.instagram.com/dewcotech/',
-      ],
-      knowsAbout: [
-        'Product strategy',
-        'UX/UI design',
-        'Full-stack development',
-        'Automation',
-        'AI products',
-        'SaaS engineering',
-        'Branding',
-      ],
+      sameAs: this.socialProfiles,
+      knowsAbout: this.knowledgeAreas,
       contactPoint: [
         {
           '@type': 'ContactPoint',
@@ -168,7 +204,7 @@ export class SeoService {
 
   getWebsiteSchema(): Record<string, any> {
     const origin = this.getOrigin();
-    const websiteId = origin ? `${origin}/#website` : '#website';
+    const websiteId = this.buildId('website');
 
     return {
       '@type': 'WebSite',
@@ -177,9 +213,88 @@ export class SeoService {
       url: origin || undefined,
       description: this.defaultDescription,
       publisher: {
-        '@id': origin ? `${origin}/#organization` : '#organization',
+        '@id': this.buildId('organization'),
       },
       inLanguage: 'en',
+    };
+  }
+
+  getPersonSchema(): Record<string, any> {
+    const origin = this.getOrigin();
+    const personId = this.buildId('person');
+
+    return {
+      '@type': 'Person',
+      '@id': personId,
+      name: this.defaultAuthor,
+      url: origin || undefined,
+      image: this.resolveUrl(this.defaultPersonImage),
+      jobTitle: 'Founder, Dew & Company (DewCo)',
+      worksFor: {
+        '@id': this.buildId('organization'),
+      },
+      sameAs: this.socialProfiles,
+      knowsAbout: this.knowledgeAreas,
+    };
+  }
+
+  getServiceSchemas(): Array<Record<string, any>> {
+    const provider = { '@id': this.buildId('organization') };
+
+    return this.serviceCatalog.map((service) => ({
+      '@type': 'Service',
+      '@id': this.buildId(`service-${service.id}`),
+      name: service.name,
+      description: service.description,
+      serviceType: service.name,
+      provider,
+    }));
+  }
+
+  buildFaqMainEntity(items: Array<{ question: string; answer: string }>): Array<Record<string, any>> {
+    return items
+      .map((item) => ({
+        question: this.normalizeText(item.question),
+        answer: this.normalizeText(item.answer),
+      }))
+      .filter((item) => item.question && item.answer)
+      .map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      }));
+  }
+
+  buildBreadcrumbList(items: Array<{ name: string; url?: string }>): Record<string, any> | null {
+    const list = items
+      .map((item) => ({
+        name: this.normalizeText(item.name),
+        url: item.url ? this.resolveUrl(item.url) : '',
+      }))
+      .filter((item) => item.name);
+
+    if (!list.length) {
+      return null;
+    }
+
+    return {
+      '@type': 'BreadcrumbList',
+      itemListElement: list.map((item, index) => {
+        const entry: Record<string, any> = {
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name,
+        };
+
+        if (item.url) {
+          entry['item'] = item.url;
+        }
+
+        return entry;
+      }),
     };
   }
 
@@ -331,6 +446,11 @@ export class SeoService {
     } catch {
       return value || origin;
     }
+  }
+
+  private buildId(fragment: string): string {
+    const origin = this.getOrigin();
+    return origin ? `${origin}/#${fragment}` : `#${fragment}`;
   }
 
   private getOrigin(): string {
