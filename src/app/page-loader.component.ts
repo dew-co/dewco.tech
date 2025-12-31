@@ -186,7 +186,7 @@ export class PageLoaderComponent implements OnInit, OnDestroy {
           (window as any).dewcoInit({ runPreloader: true });
         }
       })
-      .catch((err) => console.error('Failed to load theme scripts', err));
+      .catch((err) => console.error('Failed to load theme assets', err));
   }
 
   private removeExistingPreloader(): void {

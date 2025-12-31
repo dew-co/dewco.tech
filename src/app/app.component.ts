@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.document.body.classList.add('cs_dark');
     void this.themeScripts.loadWhenIdle()
-      .catch((err) => console.error('Failed to load theme scripts', err));
+      .catch((err) => console.error('Failed to load theme assets', err));
     this.navigationSub = this.router.events
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(() => this.runThemeScripts(true));
@@ -55,6 +55,6 @@ export class AppComponent implements OnInit, OnDestroy {
           setTimeout(() => window.dewcoInit?.({ runPreloader }));
         });
       })
-      .catch((err) => console.error('Failed to load theme scripts', err));
+      .catch((err) => console.error('Failed to load theme assets', err));
   }
 }

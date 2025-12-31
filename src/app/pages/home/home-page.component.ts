@@ -226,7 +226,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
             }, 0);
           });
         })
-        .catch((err) => console.error('Failed to load theme scripts', err));
+        .catch((err) => console.error('Failed to load theme assets', err));
     });
   }
 
@@ -250,7 +250,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
             }, 0);
           });
         })
-        .catch((err) => console.error('Failed to load theme scripts', err));
+        .catch((err) => console.error('Failed to load theme assets', err));
     });
   }
 }

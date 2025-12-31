@@ -26,7 +26,7 @@ export class ThemeScriptLoaderService {
 
     this.loadingPromise = new Promise((resolve, reject) => {
       const schedule = () => {
-        this.loadScripts()
+        this.loadAssets()
           .then(() => {
             this.loaded = true;
             resolve();
@@ -63,7 +63,7 @@ export class ThemeScriptLoaderService {
       return this.loadingPromise;
     }
 
-    this.loadingPromise = this.loadScripts()
+    this.loadingPromise = this.loadAssets()
       .then(() => {
         this.loaded = true;
       })
@@ -73,6 +73,23 @@ export class ThemeScriptLoaderService {
       });
 
     return this.loadingPromise;
+  }
+
+  private loadAssets(): Promise<void> {
+    return this.loadStyles()
+      .then(() => this.loadScripts());
+  }
+
+  private loadStyles(): Promise<void> {
+    const styles = [
+      'assets/css/plugins/fontawesome.min.css',
+      'assets/css/animations.css',
+    ];
+
+    return styles.reduce(
+      (chain, href) => chain.then(() => this.appendStyle(href)),
+      Promise.resolve(),
+    );
   }
 
   private loadScripts(): Promise<void> {
@@ -89,6 +106,45 @@ export class ThemeScriptLoaderService {
       (chain, src) => chain.then(() => this.appendScript(src)),
       Promise.resolve(),
     );
+  }
+
+  private appendStyle(href: string): Promise<void> {
+    const selector = `link[data-dewco-style="${href}"]`;
+    const existing = this.document.querySelector<HTMLLinkElement>(selector);
+    if (existing) {
+      if (existing.dataset['loaded'] === 'true') {
+        return Promise.resolve();
+      }
+      return new Promise((resolve, reject) => {
+        existing.addEventListener('load', () => resolve(), { once: true });
+        existing.addEventListener(
+          'error',
+          () => reject(new Error(`Failed to load ${href}`)),
+          { once: true },
+        );
+      });
+    }
+
+    return new Promise((resolve, reject) => {
+      const link = this.document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      link.setAttribute('data-dewco-style', href);
+      link.addEventListener(
+        'load',
+        () => {
+          link.dataset['loaded'] = 'true';
+          resolve();
+        },
+        { once: true },
+      );
+      link.addEventListener(
+        'error',
+        () => reject(new Error(`Failed to load ${href}`)),
+        { once: true },
+      );
+      this.document.head.appendChild(link);
+    });
   }
 
   private appendScript(src: string): Promise<void> {

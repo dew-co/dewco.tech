@@ -38,8 +38,6 @@
             ],
             "styles": [
               "src/assets/css/plugins/bootstrap.min.css",
-              "src/assets/css/plugins/fontawesome.min.css",
-              "src/assets/css/animations.css",
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
@@ -106,8 +104,6 @@
             ],
             "styles": [
               "src/assets/css/plugins/bootstrap.min.css",
-              "src/assets/css/plugins/fontawesome.min.css",
-              "src/assets/css/animations.css",
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
