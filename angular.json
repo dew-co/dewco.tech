@@ -43,14 +43,6 @@
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
-            ],
-            "scripts": [
-              "src/assets/js/plugins/jquery-3.6.0.min.js",
-              "src/assets/js/plugins/gsap.min.js",
-              "src/assets/js/plugins/swiper.min.js",
-              "src/assets/js/plugins/wow.min.js",
-              "src/assets/js/plugins/wait-for-images.js",
-              "src/assets/js/main.js"
             ]
           },
           "configurations": {
@@ -119,14 +111,6 @@
               "src/assets/css/plugins/swiper.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
-            ],
-            "scripts": [
-              "src/assets/js/plugins/jquery-3.6.0.min.js",
-              "src/assets/js/plugins/gsap.min.js",
-              "src/assets/js/plugins/swiper.min.js",
-              "src/assets/js/plugins/wow.min.js",
-              "src/assets/js/plugins/wait-for-images.js",
-              "src/assets/js/main.js"
             ]
           }
         }

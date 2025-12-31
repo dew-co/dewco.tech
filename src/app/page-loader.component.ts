@@ -13,6 +13,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { ThemeScriptLoaderService } from './services/theme-script-loader.service';
 
 @Component({
   selector: 'app-page-loader',
@@ -48,6 +49,7 @@ export class PageLoaderComponent implements OnInit, OnDestroy {
     private router: Router,
     private sanitizer: DomSanitizer,
     private renderer: Renderer2,
+    private themeScripts: ThemeScriptLoaderService,
     @Inject(DOCUMENT) private document: Document,
   ) {}
 
@@ -178,9 +180,13 @@ export class PageLoaderComponent implements OnInit, OnDestroy {
   }
 
   private runThemeScripts(): void {
-    if (typeof window !== 'undefined' && typeof (window as any).dewcoInit === 'function') {
-      (window as any).dewcoInit({ runPreloader: true });
-    }
+    void this.themeScripts.loadWhenIdle()
+      .then(() => {
+        if (typeof window !== 'undefined' && typeof (window as any).dewcoInit === 'function') {
+          (window as any).dewcoInit({ runPreloader: true });
+        }
+      })
+      .catch((err) => console.error('Failed to load theme scripts', err));
   }
 
   private removeExistingPreloader(): void {

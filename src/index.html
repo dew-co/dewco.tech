@@ -2,13 +2,38 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T36T268FLW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function () {
+      var gtagId = 'G-T36T268FLW';
+      function loadGtag() {
+        if (document.querySelector('script[data-gtag]')) {
+          return;
+        }
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gtagId;
+        script.setAttribute('data-gtag', 'true');
+        document.head.appendChild(script);
+        gtag('js', new Date());
+        gtag('config', gtagId);
+      }
 
-    gtag('config', 'G-T36T268FLW');
+      function scheduleLoad() {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadGtag, { timeout: 2000 });
+          return;
+        }
+        setTimeout(loadGtag, 2000);
+      }
+
+      if (document.readyState === 'complete') {
+        scheduleLoad();
+        return;
+      }
+      window.addEventListener('load', scheduleLoad, { once: true });
+    })();
   </script>
   <meta charset="utf-8">
   <title>DewCo | Product, Design & Automation Studio</title>

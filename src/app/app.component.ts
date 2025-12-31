@@ -6,6 +6,7 @@ import { filter } from 'rxjs/operators';
 import { FooterComponent } from './layout/footer.component';
 import { HeaderComponent } from './layout/header.component';
 import { PreloaderComponent } from './layout/preloader.component';
+import { ThemeScriptLoaderService } from './services/theme-script-loader.service';
 
 declare global {
   interface Window {
@@ -27,10 +28,13 @@ export class AppComponent implements OnInit, OnDestroy {
     private router: Router,
     private ngZone: NgZone,
     @Inject(DOCUMENT) private document: Document,
+    private themeScripts: ThemeScriptLoaderService,
   ) {}
 
   ngOnInit(): void {
     this.document.body.classList.add('cs_dark');
+    void this.themeScripts.loadWhenIdle()
+      .catch((err) => console.error('Failed to load theme scripts', err));
     this.navigationSub = this.router.events
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe(() => this.runThemeScripts(true));
@@ -42,11 +46,15 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private runThemeScripts(runPreloader = false): void {
-    if (typeof window === 'undefined' || typeof window.dewcoInit !== 'function') {
-      return;
-    }
-    this.ngZone.runOutsideAngular(() => {
-      setTimeout(() => window.dewcoInit?.({ runPreloader }));
-    });
+    void this.themeScripts.loadWhenIdle()
+      .then(() => {
+        if (typeof window === 'undefined' || typeof window.dewcoInit !== 'function') {
+          return;
+        }
+        this.ngZone.runOutsideAngular(() => {
+          setTimeout(() => window.dewcoInit?.({ runPreloader }));
+        });
+      })
+      .catch((err) => console.error('Failed to load theme scripts', err));
   }
 }

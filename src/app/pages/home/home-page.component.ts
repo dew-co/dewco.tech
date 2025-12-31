@@ -16,6 +16,7 @@ import { Portfolio, PortfolioService } from '../../services/portfolio.service';
 import { SeoService } from '../../services/seo.service';
 import { Story, StoryService } from '../../services/story.service';
 import { Testimonial, TestimonialService } from '../../services/testimonial.service';
+import { ThemeScriptLoaderService } from '../../services/theme-script-loader.service';
 
 @Component({
   selector: 'app-home-page',
@@ -38,6 +39,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     private readonly testimonialService: TestimonialService,
     private readonly seo: SeoService,
     private readonly ngZone: NgZone,
+    private readonly themeScripts: ThemeScriptLoaderService,
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(PLATFORM_ID) private readonly platformId: object
   ) {
@@ -209,18 +211,22 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       if (!stories.length || !isPlatformBrowser(this.platformId)) {
         return;
       }
-      this.ngZone.runOutsideAngular(() => {
-        setTimeout(() => {
-          const slider = this.document.querySelector('.cs_slider_3');
-          if (!slider || slider.classList.contains('swiper-initialized')) {
-            return;
-          }
-          const dewcoInit = (window as any).dewcoInit as
-            | ((options?: { runPreloader?: boolean }) => void)
-            | undefined;
-          dewcoInit?.({ runPreloader: false });
-        }, 0);
-      });
+      void this.themeScripts.loadWhenIdle()
+        .then(() => {
+          this.ngZone.runOutsideAngular(() => {
+            setTimeout(() => {
+              const slider = this.document.querySelector('.cs_slider_3');
+              if (!slider || slider.classList.contains('swiper-initialized')) {
+                return;
+              }
+              const dewcoInit = (window as any).dewcoInit as
+                | ((options?: { runPreloader?: boolean }) => void)
+                | undefined;
+              dewcoInit?.({ runPreloader: false });
+            }, 0);
+          });
+        })
+        .catch((err) => console.error('Failed to load theme scripts', err));
     });
   }
 
@@ -229,18 +235,22 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       if (!testimonials.length || !isPlatformBrowser(this.platformId)) {
         return;
       }
-      this.ngZone.runOutsideAngular(() => {
-        setTimeout(() => {
-          const slider = this.document.querySelector('.cs_slider_2');
-          if (!slider || slider.classList.contains('swiper-initialized')) {
-            return;
-          }
-          const dewcoInit = (window as any).dewcoInit as
-            | ((options?: { runPreloader?: boolean }) => void)
-            | undefined;
-          dewcoInit?.({ runPreloader: false });
-        }, 0);
-      });
+      void this.themeScripts.loadWhenIdle()
+        .then(() => {
+          this.ngZone.runOutsideAngular(() => {
+            setTimeout(() => {
+              const slider = this.document.querySelector('.cs_slider_2');
+              if (!slider || slider.classList.contains('swiper-initialized')) {
+                return;
+              }
+              const dewcoInit = (window as any).dewcoInit as
+                | ((options?: { runPreloader?: boolean }) => void)
+                | undefined;
+              dewcoInit?.({ runPreloader: false });
+            }, 0);
+          });
+        })
+        .catch((err) => console.error('Failed to load theme scripts', err));
     });
   }
 }
