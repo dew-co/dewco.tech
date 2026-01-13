@@ -24,27 +24,14 @@
 
       <div class="cs_height_30"></div>
 
-      <div class="row">
-        <div class="col-lg-7">
-          <p class="cs_medium" style="white-space: pre-line;">
-            {{ detail.about?.short || detail.about?.long }}
-          </p>
+      <div class="cs_portfolio_info_grid">
+        <div *ngIf="detail.project_type" class="cs_portfolio_info_1">
+          <p>Project Type</p>
+          <h3 class="cs_mb_0">{{ detail.project_type }}</h3>
         </div>
-        <div class="col-lg-5">
-          <div class="cs_portfolio_info_grid">
-            <div *ngIf="detail.client" class="cs_portfolio_info_1">
-              <p>Client</p>
-              <h3 class="cs_mb_10">{{ detail.client.brand_name_current || detail.project_name }}</h3>
-              <p *ngIf="detail.client.industry">{{ detail.client.industry }}</p>
-              <p *ngIf="detail.client.location">{{ detail.client.location }}</p>
-            </div>
-            <div *ngIf="detail.snapshot" class="cs_portfolio_info_1">
-              <p>Status</p>
-              <h3 class="cs_mb_10">{{ detail.snapshot.status || 'In progress' }}</h3>
-              <p *ngIf="detail.snapshot.project_type">{{ detail.snapshot.project_type }}</p>
-              <p *ngIf="detail.snapshot.engagement_model">{{ detail.snapshot.engagement_model }}</p>
-            </div>
-          </div>
+        <div *ngIf="detail.meta?.['last_updated_for_portfolio']" class="cs_portfolio_info_1">
+          <p>Last Updated</p>
+          <h3 class="cs_mb_0">{{ detail.meta?.['last_updated_for_portfolio'] }}</h3>
         </div>
       </div>
     </section>
@@ -61,79 +48,52 @@
       </div>
     </section>
 
-    <section class="container" *ngIf="detail.about?.long">
+    <section class="container" *ngIf="detail.content?.paragraphs?.length || detail.content?.bullets?.length">
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8" *ngIf="detail.content?.paragraphs?.length">
           <h3 class="cs_mb_20">Project Overview</h3>
-          <p style="white-space: pre-line;">{{ detail.about?.long }}</p>
+          <p
+            class="cs_medium"
+            *ngFor="let paragraph of detail.content?.paragraphs; trackBy: trackByIndex"
+            style="white-space: pre-line;"
+          >
+            {{ paragraph }}
+          </p>
         </div>
-        <div class="col-lg-4">
-          <div class="cs_portfolio_info_1 cs_mb_25" *ngIf="detail.client">
-            <p class="cs_bold">Client & Audience</p>
-            <ng-container *ngFor="let entry of detail.client | keyvalue">
-              <div class="cs_text_muted cs_mb_5" *ngIf="!isArray(entry.value)">
-                <strong>{{ formatLabel(entry.key) }}:</strong> {{ entry.value }}
-              </div>
-              <ul class="cs_list cs_mb_5" *ngIf="isArray(entry.value)">
-                <li *ngFor="let item of entry.value; trackBy: trackByIndex">{{ item }}</li>
-              </ul>
-            </ng-container>
-          </div>
-
-          <div class="cs_portfolio_info_1 cs_mb_25" *ngIf="detail.snapshot">
-            <p class="cs_bold">Snapshot</p>
-            <ng-container *ngFor="let entry of detail.snapshot | keyvalue">
-              <div class="cs_text_muted cs_mb_5" *ngIf="!isArray(entry.value)">
-                <strong>{{ formatLabel(entry.key) }}:</strong> {{ entry.value }}
-              </div>
-              <ul class="cs_list cs_mb_5" *ngIf="isArray(entry.value)">
-                <li *ngFor="let item of entry.value; trackBy: trackByIndex">{{ item }}</li>
-              </ul>
-            </ng-container>
+        <div class="col-lg-4" *ngIf="detail.content?.bullets?.length">
+          <div class="cs_portfolio_info_1">
+            <p class="cs_bold cs_mb_10">Highlights</p>
+            <ul class="cs_list cs_mb_0">
+              <li *ngFor="let bullet of detail.content?.bullets; trackBy: trackByIndex">{{ bullet }}</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="cs_height_60 cs_height_lg_40"></div>
+    <div
+      class="cs_height_60 cs_height_lg_40"
+      *ngIf="detail.content?.paragraphs?.length || detail.content?.bullets?.length"
+    ></div>
 
-    <section class="container" *ngIf="detail['body-image-2']?.src">
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <h3 class="cs_mb_15">Gallery Highlight</h3>
-          <div class="cs_radius_10 cs_overflow_hidden cs_mb_15 cs_shadow_1">
+    <section class="container" *ngIf="detail.body_images?.length">
+      <h3 class="cs_mb_20">Gallery</h3>
+      <div class="row">
+        <div class="col-lg-6 cs_mb_25" *ngFor="let image of detail.body_images; trackBy: trackByIndex">
+          <div class="cs_radius_10 cs_overflow_hidden cs_shadow_1">
             <img
               class="cs_w100"
-              [src]="detail['body-image-2']?.src"
-              [alt]="detail['body-image-2']?.alt || detail.project_name"
+              [src]="image.src"
+              [alt]="image.alt || detail.project_name"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <div class="cs_height_60 cs_height_lg_40"></div>
+    <div class="cs_height_60 cs_height_lg_40" *ngIf="detail.body_images?.length"></div>
 
-    <section class="container" *ngIf="detail.roles_and_responsibilities?.length || detail.objectives?.length">
-      <div class="row">
-        <div class="col-lg-6" *ngIf="detail.roles_and_responsibilities?.length">
-          <h3 class="cs_mb_15">Roles & Responsibilities</h3>
-          <ul class="cs_list cs_mb_30">
-            <li *ngFor="let item of detail.roles_and_responsibilities; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" *ngIf="detail.objectives?.length">
-          <h3 class="cs_mb_15">Objectives</h3>
-          <ul class="cs_list cs_mb_30">
-            <li *ngFor="let item of detail.objectives; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail['body-media']?.src">
+    <section class="container" *ngIf="detail.body_media?.src">
       <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-8">
           <div class="cs_mb_10 d-flex align-items-center justify-content-between">
@@ -145,125 +105,23 @@
               class="cs_w100"
               style="display: block; max-height: 460px; object-fit: cover;"
               controls
-              [src]="detail['body-media']?.src"
+              [src]="detail.body_media?.src"
             ></video>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="cs_height_60 cs_height_lg_40"></div>
+    <div class="cs_height_60 cs_height_lg_40" *ngIf="detail.body_media?.src"></div>
 
-    <section class="container" *ngIf="detail.features">
-      <h3 class="cs_mb_20">Features</h3>
-      <div class="row">
-        <div class="col-lg-6 cs_mb_25" *ngFor="let feature of detail.features | keyvalue">
-          <h4 class="cs_mb_10">{{ formatLabel(feature.key) }}</h4>
-          <ul class="cs_list">
-            <li *ngFor="let item of feature.value; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail.tech_stack">
+    <section class="container" *ngIf="detail.tech_stack?.length">
       <h3 class="cs_mb_20">Tech Stack</h3>
-      <div class="row">
-        <div class="col-lg-6 cs_mb_25" *ngFor="let stack of detail.tech_stack | keyvalue">
-          <h4 class="cs_mb_10">{{ formatLabel(stack.key) }}</h4>
-          <ul class="cs_list">
-            <li *ngFor="let item of stack.value; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail.timeline">
-      <h3 class="cs_mb_20">Timeline</h3>
-      <div class="row">
-        <div class="col-lg-6 cs_mb_25" *ngFor="let phase of detail.timeline | keyvalue">
-          <div class="cs_portfolio_info_1">
-            <p class="cs_text_muted">{{ formatLabel(phase.key) }}</p>
-            <h4 class="cs_mb_5">{{ phase.value['phase'] || phase.value['date'] }}</h4>
-            <p class="cs_mb_5" *ngIf="phase.value['start'] || phase.value['end']">
-              {{ phase.value['start'] || phase.value['date'] }} <span *ngIf="phase.value['end']">- {{ phase.value['end'] }}</span>
-            </p>
-            <p>{{ phase.value['summary'] }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail.challenges?.length || detail.solutions?.length">
-      <div class="row">
-        <div class="col-lg-6" *ngIf="detail.challenges?.length">
-          <h3 class="cs_mb_15">Challenges</h3>
-          <ul class="cs_list cs_mb_30">
-            <li *ngFor="let item of detail.challenges; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" *ngIf="detail.solutions?.length">
-          <h3 class="cs_mb_15">Solutions</h3>
-          <ul class="cs_list cs_mb_30">
-            <li *ngFor="let item of detail.solutions; trackBy: trackByIndex">{{ item }}</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail.outcomes">
-      <h3 class="cs_mb_15">Outcomes</h3>
-      <ul class="cs_list cs_mb_20" *ngIf="detail.outcomes.qualitative?.length">
-        <li *ngFor="let item of detail.outcomes.qualitative; trackBy: trackByIndex">{{ item }}</li>
+      <ul class="cs_list">
+        <li *ngFor="let item of detail.tech_stack; trackBy: trackByIndex">{{ item }}</li>
       </ul>
-      <p class="cs_text_muted" *ngIf="detail.outcomes.example_metrics_note">{{ detail.outcomes.example_metrics_note }}</p>
     </section>
 
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail.budget">
-      <h3 class="cs_mb_15">Budget (Approx)</h3>
-      <div class="cs_portfolio_info_1">
-        <p class="cs_mb_5">
-          <strong>Currency:</strong> {{ detail.budget.currency }}
-        </p>
-        <p class="cs_mb_5" *ngIf="detail.budget.initial_build_estimated">
-          <strong>Initial Build:</strong> {{ detail.budget.initial_build_estimated }}
-        </p>
-        <p class="cs_mb_5" *ngIf="detail.budget.internal_build_equivalent">
-          <strong>Internal Build:</strong> {{ detail.budget.internal_build_equivalent }}
-        </p>
-        <p class="cs_mb_5" *ngIf="detail.budget.internal_build_range">
-          <strong>Range:</strong> {{ detail.budget.internal_build_range[0] }} - {{ detail.budget.internal_build_range[1] }}
-        </p>
-        <p *ngIf="detail.budget.notes">{{ detail.budget.notes }}</p>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
-
-    <section class="container" *ngIf="detail['body-image-1']?.src">
-      <div class="row">
-        <div class="col-lg-6 cs_mb_25">
-          <h3 class="cs_mb_15">Additional View</h3>
-          <img
-            class="cs_w100 cs_radius_10 cs_shadow_1"
-            [src]="detail['body-image-1']?.src"
-            [alt]="detail['body-image-1']?.alt || detail.project_name"
-          />
-        </div>
-      </div>
-    </section>
-
-    <div class="cs_height_60 cs_height_lg_40"></div>
+    <div class="cs_height_60 cs_height_lg_40" *ngIf="detail.tech_stack?.length"></div>
 
     <section class="container" *ngIf="detail.links">
       <h3 class="cs_mb_15">Links</h3>

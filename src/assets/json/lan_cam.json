@@ -8,184 +8,32 @@
     "No internet, no cloud – just LAN streaming.",
     "Screen and camera sync for classrooms, offices, and homes."
   ],
-  "client": {
-    "brand_name_current": "LAN-Cam",
-    "industry": "Productivity / EdTech / Media Streaming",
-    "location": "India (LAN-first, globally usable)",
-    "audience": [
-      "Teachers and training institutes",
-      "Small offices and teams on the same LAN",
-      "Home theatre or quick demo setups"
-    ]
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product concept and use-case definition",
-      "System architecture and networking design",
-      "Desktop and web app engineering",
-      "UX/UI design"
-    ],
-    "platform": [
-      "Desktop App (sender/receiver)",
-      "Web Client (browser-based viewer)",
-      "LAN Discovery & Signalling Service"
-    ],
-    "project_type": "In-house utility product (LAN-only streaming & screen sync)",
-    "status": "Active prototype / internal tool with roadmap for public beta",
-    "initial_launch_date": "2024-06-15",
-    "completed_date_v1": "2024-07-10",
-    "engagement_model": "Internal product build; future paid/pro tier planned"
-  },
+  "project_type": "In-house utility product (LAN-only streaming & screen sync)",
+  "tech_stack": [
+    "WebRTC streaming over local Wi-Fi",
+    "WebSockets/signalling service with LAN discovery (mDNS/broadcast)",
+    "Electron desktop sender with screen and camera capture modes",
+    "Browser-based viewer optimized for laptops, tablets, and phones",
+    "Node.js/FastAPI signalling that can run on LAN or small VPS",
+    "Dockerized deployments with optional auto-update channel"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-lan-cam.webp",
     "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-1.webp",
-    "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
-  },
-  "body-image-2": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-2.webp",
-    "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
-  },
-  "body-media": {
-    "src": ""
-  },
-  "about": {
-    "short": "LAN-Cam is a LAN-only camera and screen streaming tool that broadcasts to multiple devices on the same Wi-Fi with low latency and zero internet dependency.",
-    "long": "LAN-Cam makes it simple to broadcast a screen or camera feed to nearby devices without cloud services or cables. Any laptop or phone can be a broadcaster; viewers join via discovery or a LAN URL/QR code, and everything stays inside your network for speed and privacy.\n\nIt works for classrooms, training rooms, quick demos, or home viewing. The focus is on low-latency streaming, straightforward discovery, and a frictionless UX for non-technical users."
-  },
-  "roles_and_responsibilities": [
-    "Defined core use-cases and kept the product LAN-first.",
-    "Designed discovery, signalling, and streaming architecture.",
-    "Built the desktop sender with screen/camera capture modes and the browser viewer.",
-    "Created join flows via auto-discovery, PIN, or QR-based URL with basic diagnostics."
-  ],
-  "objectives": [
-    "Provide a lightweight LAN alternative to internet-dependent screen-sharing.",
-    "Make joining or broadcasting simple for non-technical users.",
-    "Keep all data on the local network for speed and privacy."
-  ],
-  "features": {
-    "core_streaming": [
-      "Screen sharing from desktop to any browser on the same LAN.",
-      "Camera mode to turn the device webcam into a LAN camera.",
-      "Optional audio streaming for lessons or demos.",
-      "Quality presets based on network conditions."
-    ],
-    "session_management": [
-      "Named sessions for classrooms or rooms.",
-      "Auto-discovery on LAN with fallback manual join via URL/QR.",
-      "Optional PIN/room lock for access control."
-    ],
-    "viewing_experience": [
-      "Browser-based viewer with full-screen mode.",
-      "Latency indicator and auto-reconnect on brief drops.",
-      "Responsive layout for laptops, tablets, and phones."
-    ],
-    "modes_and_use_cases": [
-      "Classroom mode: one broadcaster, many viewers.",
-      "Meeting/demo mode with switchable broadcaster (planned).",
-      "Home theatre or quick mirroring to TV browser on Wi-Fi."
-    ],
-    "settings_and_admin": [
-      "Toggle screen or camera mode and choose source.",
-      "Quality/bandwidth presets per session.",
-      "Session stats like viewers count and basic bandwidth."
-    ]
-  },
-  "tech_stack": {
-    "core_technology": [
-      "WebRTC for low-latency audio/video over LAN.",
-      "WebSockets/signalling server for negotiation and control.",
-      "Local discovery via broadcast/mDNS where available."
-    ],
-    "desktop_app": [
-      "Electron-based app wrapping web technologies.",
-      "Native OS capture APIs for screen/window capture.",
-      "Auto-update channel for new builds."
-    ],
-    "web_client": [
-      "React or plain HTML/JS viewer with responsive layout.",
-      "Fallback modes for limited WebRTC support."
-    ],
-    "backend_and_services": [
-      "Lightweight signalling server (Node.js/FastAPI).",
-      "Option to host signalling on LAN or small VPS.",
-      "Direct peer streaming on LAN by default."
-    ],
-    "deployment_and_ops": [
-      "Self-hosted signalling/controller via Docker.",
-      "Desktop builds for major OSes (Windows first).",
-      "Configurable for local-only or mixed LAN/internet use."
-    ]
-  },
-  "timeline": {
-    "concept_and_planning": {
-      "phase": "Concept & Use-Case Definition",
-      "start": "2024-03-01",
-      "end": "2024-03-20",
-      "summary": "Identified classroom and small-office gaps in existing tools."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-1.webp",
+      "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     },
-    "prototype_v1": {
-      "phase": "Prototype v1 – Core Streaming",
-      "start": "2024-03-21",
-      "end": "2024-04-30",
-      "summary": "Built initial sender and browser viewer with basic WebRTC streaming."
-    },
-    "lan_discovery_and_ux": {
-      "phase": "LAN Discovery & UX Refinement",
-      "start": "2024-05-01",
-      "end": "2024-06-15",
-      "summary": "Implemented discovery, QR join, and simple configuration panel."
-    },
-    "internal_beta": {
-      "phase": "Internal Beta & Real-World Tests",
-      "date": "2024-07-10",
-      "summary": "Tested latency, compatibility, and usability in small setups."
-    },
-    "ongoing_improvements": {
-      "phase": "Ongoing Improvements & Public Beta Prep",
-      "start": "2024-08-01",
-      "end": null,
-      "summary": "Adding presets, diagnostics, and installers for wider release."
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-2.webp",
+      "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "internal_build_equivalent": 160000,
-    "internal_build_range": [
-      140000,
-      200000
-    ],
-    "notes": "Equivalent value covering architecture, apps, signalling, and tests; primary cost is build time and devices."
-  },
-  "challenges": [
-    "Varying Wi-Fi quality and router configs affect latency.",
-    "Need to keep UX simple while offering useful settings.",
-    "Permissions and compatibility differ across OSes and browsers."
   ],
-  "solutions": [
-    "Used simple quality presets instead of complex bitrate controls.",
-    "Kept signalling minimal with WebRTC peer streaming by default.",
-    "Added clear permission prompts and fallback join flows when discovery fails."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "LAN-first tool removes dependence on internet-based screen sharing.",
-      "Classroom-style broadcasting where viewers use their own devices.",
-      "Foundation for a paid/pro version with recording and multi-presenter features."
-    ],
-    "example_metrics_note": "Early success is measured in latency stability and connection success; public metrics will follow after beta."
-  },
-  "portfolio_copy": {
-    "grid_card": "LAN-Cam – Local network camera and screen sync tool with low-latency streaming over your own Wi-Fi.",
-    "one_liner": "A LAN-only camera and screen streaming app that keeps data local and setup simple."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "landing_page": "Coming soon.",
@@ -194,7 +42,32 @@
     "github_or_repo": null
   },
   "meta": {
+    "seo_title": "LAN-Cam | Local Wi-Fi Camera & Screen Streaming | DewCo Portfolio",
+    "seo_description": "LAN-only camera and screen streaming tool with WebRTC, LAN discovery, and browser viewers for classrooms, offices, and homes.",
+    "seo_keywords": [
+      "LAN-Cam",
+      "local streaming",
+      "LAN screen share",
+      "WebRTC",
+      "LAN discovery",
+      "Electron sender",
+      "low latency"
+    ],
     "last_updated_for_portfolio": "2025-12-24",
     "notes_for_future_edit": "Add installer links, screenshots, and measured latency once public beta ships."
+  },
+  "content": {
+    "paragraphs": [
+      "LAN-Cam is a LAN-only camera and screen streaming tool that broadcasts to multiple devices on the same Wi-Fi with low latency and zero internet dependency. By keeping traffic local, it avoids cloud lag, bandwidth bills, and privacy concerns.",
+      "It is built for classrooms, small offices, and at-home setups that need quick sharing without cloud complexity—simple discovery, QR/PIN joins, and a frictionless viewer keep the focus on the content. Broadcasters can switch between screen or webcam modes in seconds.",
+      "Admins get predictable performance because the signalling layer is lightweight and can run entirely on-prem. Diagnostics, quality presets, and optional PIN/locks make it practical for teachers, trainers, and demo rooms that need a reliable local broadcast."
+    ],
+    "bullets": [
+      "Screen or webcam mode with quality presets and optional audio for lessons or demos.",
+      "Auto-discovery on LAN with URL/QR/PIN fallback when networks are locked down.",
+      "Browser viewer with full-screen mode, latency indicator, and responsive layout.",
+      "Session controls for named rooms, PIN/locks, and basic viewer stats.",
+      "Local-first architecture with lightweight signalling that can stay on-prem or a small VPS."
+    ]
   }
 }

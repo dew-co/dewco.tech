@@ -72,24 +72,15 @@ export interface PortfolioDetail {
   headline: string;
   short_headline: string;
   taglines?: string[];
-  client?: PortfolioClient;
-  studio?: Record<string, any>;
-  snapshot?: PortfolioSnapshot;
+  project_type?: string;
+  tech_stack?: string[];
   'cover-image'?: PortfolioImage;
-  'body-image-1'?: PortfolioImage;
-  'body-image-2'?: PortfolioImage;
-  'body-media'?: { src: string; alt?: string };
-  about?: { short?: string; long?: string };
-  roles_and_responsibilities?: string[];
-  objectives?: string[];
-  features?: Record<string, string[]>;
-  tech_stack?: Record<string, string[]>;
-  timeline?: Record<string, Record<string, string | null>>;
-  budget?: PortfolioBudget;
-  challenges?: string[];
-  solutions?: string[];
-  outcomes?: { qualitative?: string[]; example_metrics_note?: string };
-  portfolio_copy?: { grid_card?: string; one_liner?: string };
+  body_images?: PortfolioImage[];
+  body_media?: { src: string; alt?: string };
+  content?: {
+    paragraphs?: string[];
+    bullets?: string[];
+  };
   links?: Record<string, string | null>;
   meta?: Record<string, any>;
 }

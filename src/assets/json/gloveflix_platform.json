@@ -8,186 +8,33 @@
     "SEO traffic that converts into a VIP community.",
     "One brand, three pillars: SEO site, VIP club, private player."
   ],
-  "client": {
-    "brand_name_current": "GloVeFlix",
-    "industry": "Media / Entertainment / Content Discovery",
-    "location": "India (global audience-ready)",
-    "audience": [
-      "Movie and series enthusiasts",
-      "Community owners on Telegram/WhatsApp",
-      "Creators who curate watchlists"
-    ]
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product strategy and funnel design",
-      "UX/UI design",
-      "Frontend engineering",
-      "Integration and automation architecture",
-      "SEO architecture"
-    ],
-    "platform": [
-      "Public SEO Website",
-      "Private VIP Club (Telegram + WhatsApp)",
-      "Hidden Streaming Subdomain / Player",
-      "Admin & Content Management Tools"
-    ],
-    "project_type": "In-house product (SEO + community + streaming funnel)",
-    "status": "Active – GloVeFlix 2.0 in build/iteration mode",
-    "initial_launch_date": "2024-04-15",
-    "completed_date_v1": "2024-05-10",
-    "engagement_model": "Internal product build with multi-pillar monetization strategy"
-  },
+  "project_type": "In-house product (SEO + community + streaming funnel)",
+  "tech_stack": [
+    "Angular SPA for public discovery and VIP flows",
+    "Firebase Hosting with Firestore and Authentication",
+    "Guarded VIP/player subdomain with route-level gating",
+    "Telegram/WhatsApp deep links for community onboarding",
+    "Schema-driven SEO structure and performance tuning",
+    "Feature flags and CI/CD via Firebase CLI",
+    "Optional Cloud Functions for secure operations"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-gloveflix.webp",
     "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-1.webp",
-    "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
-  },
-  "body-image-2": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-2.webp",
-    "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
-  },
-  "body-media": {
-    "src": ""
-  },
-  "about": {
-    "short": "GloVeFlix mixes an SEO-optimized public discovery site with a private VIP club on Telegram/WhatsApp and a hidden streaming subdomain for members.",
-    "long": "GloVeFlix 2.0 is structured around a clear funnel: SEO traffic lands on the public site, engages with collections and guides, then converts into a VIP community, which unlocks a controlled player experience on a hidden subdomain.\n\nThe public layer stays clean and search-friendly, while the private layers handle offers, curated drops, and member-only viewing. Firebase and Angular manage identity, access, and content without exposing the private player to search engines."
-  },
-  "roles_and_responsibilities": [
-    "Framed the three-pillar strategy and conversion flow.",
-    "Designed UX for public discovery, VIP access, and private player states.",
-    "Implemented the Angular frontend and Firebase integrations.",
-    "Set up SEO structure, schema markup, and community automation hooks."
-  ],
-  "objectives": [
-    "Attract SEO traffic through movie and series metadata.",
-    "Convert a portion of visitors into VIP members with clear value.",
-    "Deliver a controlled private viewing experience without exposing it publicly."
-  ],
-  "features": {
-    "pillar_1_public_seo_site": [
-      "SEO-friendly movie/series pages with structured data.",
-      "Search and filter by genre, language, year, and tags.",
-      "Collections like Trending, Top Rated, and editorial lists."
-    ],
-    "pillar_2_vip_club": [
-      "VIP landing with benefits, forms, and CTAs tied to Firestore.",
-      "Onboarding flows into Telegram/WhatsApp communities.",
-      "Segmentation for free visitors, VIP, and prospects with automation hooks."
-    ],
-    "pillar_3_private_streaming_subdomain": [
-      "Hidden subdomain for the player, not indexable from search.",
-      "VIP-only access via guarded routes and optional expiring links.",
-      "Unified player UI that can integrate allowed third-party embeds."
-    ],
-    "admin_and_operations": [
-      "Firestore models for users, VIP flags, and content metadata.",
-      "Early admin tools for updating metadata and feature flags.",
-      "Scripts/endpoints to sync external data sources when needed."
-    ],
-    "growth_and_seo": [
-      "Keyword-driven URL patterns and internal linking.",
-      "Angular + Firebase performance tuned for mobile and SEO.",
-      "Analytics hooks to watch funnels and conversions."
-    ]
-  },
-  "tech_stack": {
-    "frontend": [
-      "Angular SPA for public site and VIP experience.",
-      "Reusable, mobile-first components for cards, lists, and detail pages."
-    ],
-    "backend_and_services": [
-      "Firebase Hosting for the Angular app and assets.",
-      "Firebase Authentication and Firestore for users, VIP status, and content.",
-      "Optional Cloud Functions for secure operations like token generation."
-    ],
-    "private_player_layer": [
-      "Separate private subdomain with guarded routes based on auth + VIP flags.",
-      "Embed-ready player modules that can swap sources based on legality/partners.",
-      "Access tokens or invite links for tighter control."
-    ],
-    "integrations": [
-      "Telegram and WhatsApp deep links for VIP club access.",
-      "Google Analytics (or equivalent) for funnel tracking.",
-      "Payment gateway hooks planned for direct VIP subscriptions."
-    ],
-    "hosting_devops": [
-      "Firebase Hosting targets per environment (dev/stage/prod).",
-      "Environment-based configuration for API keys and feature flags.",
-      "CI/CD via Firebase CLI and Git-based workflows."
-    ]
-  },
-  "timeline": {
-    "concept_and_funnel_design": {
-      "phase": "Concept & Funnel Design (3 Pillars)",
-      "start": "2024-02-01",
-      "end": "2024-03-10",
-      "summary": "Defined the public/VIP/player model and revenue approach."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-1.webp",
+      "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     },
-    "v1_public_site": {
-      "phase": "GloVeFlix v1 – Public Site + Basic Metadata",
-      "start": "2024-03-11",
-      "end": "2024-04-15",
-      "summary": "Launched first Angular + Firebase public site with metadata pages."
-    },
-    "vip_flow_and_club": {
-      "phase": "VIP Flow & Community Setup",
-      "start": "2024-04-16",
-      "end": "2024-05-10",
-      "summary": "Added VIP landing, forms, and Telegram/WhatsApp community hooks."
-    },
-    "private_player_v1": {
-      "phase": "Private Player Subdomain v1",
-      "start": "2024-05-11",
-      "end": "2024-06-20",
-      "summary": "Set up hidden subdomain, guarded routes, and initial player UI."
-    },
-    "gloveflix_2_0_plan": {
-      "phase": "GloVeFlix 2.0 Planning & Refactor",
-      "start": "2024-09-01",
-      "end": null,
-      "summary": "Improving performance, VIP segmentation, and admin tooling."
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-2.webp",
+      "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "internal_build_equivalent": 220000,
-    "internal_build_range": [
-      200000,
-      300000
-    ],
-    "notes": "Equivalent value for research, UX, Angular + Firebase build, SEO setup, and VIP funnel design; primarily internal time and cloud services."
-  },
-  "challenges": [
-    "Balancing SEO-friendly public pages with private streaming needs.",
-    "Designing a smooth journey from visitor to VIP without feeling pushy.",
-    "Maintaining performance while serving rich visuals and metadata."
   ],
-  "solutions": [
-    "Kept streaming isolated to authenticated VIP flows while the public site stays metadata-first.",
-    "Designed the VIP funnel as value-first with clear benefits and community hooks.",
-    "Used Firebase + Angular optimizations (lazy loading, code splitting) to stay fast."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "Three-layer architecture instead of a monolithic streaming site.",
-      "Positioned GloVeFlix as an SEO-first discovery brand with strong community angle.",
-      "Technical base ready to be reused for other niche content brands."
-    ],
-    "example_metrics_note": "Key metrics are SEO growth, VIP conversions, and engagement; exact numbers can be added after GloVeFlix 2.0 stabilizes."
-  },
-  "portfolio_copy": {
-    "grid_card": "GloVeFlix – SEO-first discovery site that funnels visitors into a VIP community and a controlled private player.",
-    "one_liner": "A three-pillar entertainment platform turning search traffic into VIP members with a guarded viewing experience."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "public_site": "https://gloveflix.com/",
@@ -196,7 +43,32 @@
     "case_study_page": null
   },
   "meta": {
+    "seo_title": "GloVeFlix | SEO Discovery & VIP Streaming Funnel | DewCo Portfolio",
+    "seo_description": "SEO-first movie discovery platform with VIP community onboarding and a hidden, gated streaming subdomain built on Angular + Firebase.",
+    "seo_keywords": [
+      "GloVeFlix",
+      "movie discovery SEO",
+      "VIP streaming",
+      "Angular Firebase",
+      "Telegram community",
+      "WhatsApp community",
+      "private player"
+    ],
     "last_updated_for_portfolio": "2025-12-24",
     "notes_for_future_edit": "Insert real URLs, analytics highlights, and compliance notes as 2.0 ships."
+  },
+  "content": {
+    "paragraphs": [
+      "GloVeFlix is built as an SEO-first discovery experience that turns search traffic into VIP members and unlocks a hidden streaming player only for the community. Metadata-rich pages, schema markup, and fast Angular rendering drive organic reach without exposing the player.",
+      "The funnel relies on three layers: a public discovery site for growth, a VIP onboarding layer through Telegram/WhatsApp, and a guarded player subdomain controlled by Firebase access and feature flags. Visitors see collections and guides, opt into the VIP club, and then get directed to a private, non-indexed player.",
+      "Admins can refresh metadata, toggle VIP perks, and roll out new drops without touching code, while analytics watch conversion from search to VIP. The architecture keeps compliance and takedown risk low by isolating streaming behind authentication and role flags."
+    ],
+    "bullets": [
+      "Metadata-driven movie/series pages with search, filters, and editorial collections.",
+      "VIP landing with benefits and Firestore-powered segmentation for onboarding.",
+      "Hidden player subdomain gated by authentication, VIP flags, and optional expiring links.",
+      "Admin-friendly controls for metadata updates, feature flags, and future drops.",
+      "SEO markup, analytics, and performance tuning to watch conversions across the funnel."
+    ]
   }
 }

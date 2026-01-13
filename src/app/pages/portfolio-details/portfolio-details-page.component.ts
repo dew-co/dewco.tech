@@ -108,10 +108,6 @@ export class PortfolioDetailsPageComponent {
       .replace(/\b\w/g, (char) => char.toUpperCase());
   }
 
-  isArray(value: unknown): value is any[] {
-    return Array.isArray(value);
-  }
-
   isHttpUrl(value: string | null | undefined): boolean {
     return typeof value === 'string' && /^https?:\/\//i.test(value);
   }
@@ -221,9 +217,19 @@ export class PortfolioDetailsPageComponent {
     const detail = state.detail;
     const portfolio = state.portfolio;
     const titleBase = detail.project_name || portfolio?.name || 'Portfolio Case Study';
+    const metaKeywords = Array.isArray(detail.meta?.['seo_keywords'])
+      ? (detail.meta?.['seo_keywords'] as string[])
+      : detail.meta?.['seo_keywords']
+      ? String(detail.meta['seo_keywords'])
+          .split(',')
+          .map((value) => value.trim())
+          .filter(Boolean)
+      : [];
+    const seoTitle = detail.meta?.['seo_title'] || `${titleBase} | DewCo Portfolio`;
     const descriptionSource =
-      detail.about?.short ||
-      detail.portfolio_copy?.one_liner ||
+      detail.meta?.['seo_description'] ||
+      detail.content?.paragraphs?.[0] ||
+      detail.taglines?.[0] ||
       detail.short_headline ||
       detail.headline ||
       portfolio?.tagline ||
@@ -231,60 +237,39 @@ export class PortfolioDetailsPageComponent {
     const description = this.seo.truncate(descriptionSource);
     const image =
       detail['cover-image']?.src ||
-      detail['body-media']?.src ||
-      detail['body-image-1']?.src ||
+      detail.body_media?.src ||
+      detail.body_images?.[0]?.src ||
       portfolio?.image1?.src ||
       this.seo.getDefaultImage();
     const urlPath = portfolio?.link || slugPath;
-    const createdTime =
-      detail.snapshot?.project_start_date || detail.snapshot?.initial_launch_date;
-    const modifiedTime =
-      detail.meta?.['last_updated_for_portfolio'] ||
-      detail.snapshot?.completed_date_v1 ||
-      detail.snapshot?.initial_launch_date ||
-      detail.snapshot?.project_start_date;
+    const modifiedTime = detail.meta?.['last_updated_for_portfolio'];
     const tags = [
-      ...(detail.snapshot?.platform || []),
-      ...(detail.snapshot?.role || []),
-      detail.client?.industry,
+      detail.project_type,
+      ...(detail.tech_stack || []),
+      ...(detail.taglines || []),
+      ...metaKeywords,
       portfolio?.category,
     ].filter(Boolean) as string[];
-    const aboutTopics = [
-      detail.client?.industry,
-      detail.snapshot?.project_type,
-      portfolio?.category,
-    ]
+    const aboutTopics = [detail.project_type, portfolio?.category]
       .map((value) => this.seo.normalizeText(value))
       .filter(Boolean);
     const mentions = this.collectMentions(detail);
-    const audience = (detail.client?.audience || [])
-      .map((value) => this.seo.normalizeText(value))
-      .filter(Boolean)
-      .map((name) => ({
-        '@type': 'Audience',
-        name,
-      }));
-    const spatialCoverage = detail.client?.location
-      ? {
-          '@type': 'Place',
-          name: this.seo.normalizeText(detail.client.location),
-        }
-      : undefined;
 
     const keywords = [
       titleBase,
       detail.short_headline,
       detail.headline,
-      detail.client?.industry,
-      detail.client?.location,
-      detail.snapshot?.project_type,
+      detail.project_type,
       portfolio?.category,
       'DewCo portfolio',
       'case study',
-    ].filter(Boolean) as string[];
+      ...metaKeywords,
+    ]
+      .filter(Boolean)
+      .map((value) => (value ?? '').toString());
 
     this.seo.setPageMeta({
-      title: `${titleBase} | DewCo Portfolio`,
+      title: seoTitle,
       description,
       url: urlPath,
       image,
@@ -308,20 +293,17 @@ export class PortfolioDetailsPageComponent {
     const creativeWork = {
       '@type': 'CreativeWork',
       '@id': creativeWorkId,
-      name: titleBase,
-      headline: detail.headline || detail.short_headline || titleBase,
-      description,
+      name: seoTitle,
+      headline: detail.meta?.['seo_title'] || detail.headline || detail.short_headline || titleBase,
+      description: detail.meta?.['seo_description'] || description,
       image: this.seo.buildUrl(image),
-      genre: portfolio?.category || detail.client?.industry,
+      genre: portfolio?.category || detail.project_type,
       keywords: tags.length ? tags.join(', ') : undefined,
       url,
       author: { '@id': organization['@id'] },
       publisher: { '@id': organization['@id'] },
       about: aboutTopics.length ? aboutTopics : undefined,
       mentions: this.toThingList(mentions),
-      audience: audience.length ? audience : undefined,
-      spatialCoverage,
-      dateCreated: createdTime,
       dateModified: modifiedTime,
     };
     const page = {
@@ -359,13 +341,10 @@ export class PortfolioDetailsPageComponent {
       values?.forEach((value) => add(value));
     };
 
-    addAll(detail.snapshot?.platform);
-    addAll(detail.snapshot?.role);
-    add(detail.snapshot?.project_type);
-    addAll(detail.client?.audience);
-
-    Object.values(detail.tech_stack || {}).forEach((values) => addAll(values));
-    Object.values(detail.features || {}).forEach((values) => addAll(values));
+    add(detail.project_type);
+    addAll(detail.taglines);
+    addAll(detail.tech_stack);
+    addAll(detail.content?.bullets);
 
     return Array.from(mentions);
   }

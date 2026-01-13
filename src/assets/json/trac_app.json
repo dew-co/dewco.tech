@@ -8,203 +8,28 @@
     "Safe remote actions for classrooms, labs, and teams.",
     "Lightweight agent plus simple admin UI."
   ],
-  "client": {
-    "brand_name_current": "TRAC App",
-    "full_form": "Tracking Remote Activity Control",
-    "industry": "Productivity / IT Management / Remote Monitoring",
-    "location": "India (remote-friendly, global use-case)",
-    "audience": [
-      "Teams with remote devices",
-      "IT admins and operations",
-      "Labs, training centres, classrooms",
-      "Founders needing visibility into distributed machines"
-    ]
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product concept and system design",
-      "UX/UI for dashboard and controls",
-      "Backend/API engineering",
-      "Desktop agent architecture"
-    ],
-    "platform": [
-      "Web Dashboard (Admin & Monitoring)",
-      "Desktop/Endpoint Agent",
-      "API Layer & Notification Channel"
-    ],
-    "project_type": "In-house product (remote activity tracking & control platform)",
-    "status": "Active – internal deployment & ongoing refinement",
-    "project_start_date": "2024-04-01",
-    "initial_launch_date": "2024-09-15",
-    "completed_date_v1": "2024-10-15",
-    "engagement_model": "Internal product build with future SaaS/seat-based licensing plan"
-  },
+  "project_type": "In-house product (remote activity tracking & control platform)",
+  "tech_stack": [
+    "FastAPI/Django-style backend for device and action APIs",
+    "Lightweight desktop agent service for heartbeats and commands",
+    "React/Next.js admin dashboard for monitoring and controls",
+    "PostgreSQL plus Redis for device state, actions, and logs",
+    "WebSockets/cron workers for alerts and notifications",
+    "Containerized deployment with environment-based configuration"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-2.webp",
     "alt": "TRAC App dashboard showing remote device activity and control actions"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-1.webp",
-    "alt": "TRAC App dashboard showing remote device activity and control actions"
-  },
-  "body-image-2": {
-    "src": "",
-    "alt": ""
-  },
-  "body-media": {
-    "src": "",
-    "alt": ""
-  },
-  "about": {
-    "short": "TRAC App tracks remote devices in real time and lets admins trigger safe actions like lock, restart, or scripted commands from a single dashboard.",
-    "long": "TRAC App tackles the visibility gap that appears once machines leave the office or classroom. A lightweight agent sends heartbeat, status, and optional activity hints, while the dashboard shows which devices are online, who is using them, and what actions are available.\n\nAdmins can drill into a machine, run safe remote actions, and review recent events without heavy enterprise tooling. The system stays modular so privacy-sensitive deployments can enable only the data and controls they need."
-  },
-  "roles_and_responsibilities": [
-    "Scoped a lightweight, scriptable tracking and control tool for distributed devices.",
-    "Designed information architecture and UX for the TRAC dashboard.",
-    "Implemented backend APIs and data models for devices, heartbeats, and actions.",
-    "Defined the desktop agent approach and alert/notification pipeline."
-  ],
-  "objectives": [
-    "Provide a single view of all critical devices with online/offline clarity.",
-    "Offer safe, auditable remote actions without complex tooling.",
-    "Keep the architecture modular for future integrations and SaaS packaging."
-  ],
-  "features": {
-    "device_and_activity_tracking": [
-      "Device registration with IDs, hostnames, and tags.",
-      "Online/offline status with last-seen timestamps and basic metrics.",
-      "Optional activity hints such as active window titles or app lists.",
-      "Configurable privacy levels per device or policy."
-    ],
-    "remote_control_actions": [
-      "Remote lock or sign out where OS supports it.",
-      "Safe restart/shutdown with confirmation.",
-      "Custom admin-defined commands for quick fixes.",
-      "All actions logged with user and timestamp."
-    ],
-    "dashboard_and_ux": [
-      "Global list with search and filters for status, tag, or location.",
-      "Device detail view with timeline of status and actions.",
-      "Color-coded health indicators and quick actions."
-    ],
-    "alerts_and_reporting": [
-      "Configurable alerts for offline devices or high resource usage.",
-      "Notifications for unusual activity windows.",
-      "Summaries of uptime, incidents, and actions executed."
-    ],
-    "security_and_privacy_controls": [
-      "Agent authentication via API keys or tokens.",
-      "Role-based access for dashboard users.",
-      "Granular toggles for screenshots or app-level tracking."
-    ],
-    "admin_and_configuration": [
-      "Group devices by department, project, or location.",
-      "Policy profiles to enable/disable features per group.",
-      "Export logs for compliance or troubleshooting."
-    ]
-  },
-  "tech_stack": {
-    "backend": [
-      "Python backend using FastAPI / Django REST Framework for APIs.",
-      "Workers/cron jobs for heartbeats and alerts.",
-      "Optional WebSockets or long-poll for real-time updates."
-    ],
-    "agent_side": [
-      "Lightweight desktop agent running as a background service.",
-      "OS integrations for metrics and remote commands.",
-      "Config-based provisioning for registration and server URL."
-    ],
-    "frontend": [
-      "React / Next.js-based admin dashboard.",
-      "Reusable components for device tables and activity timelines."
-    ],
-    "data_and_storage": [
-      "PostgreSQL for devices, users, actions, and logs.",
-      "Redis for caching current device states."
-    ],
-    "integrations": [
-      "Email provider or webhook endpoints for alerts.",
-      "Pluggable channels (Slack/Telegram-style webhooks on roadmap)."
-    ],
-    "hosting_devops": [
-      "Containerized services (Docker) for backend, dashboard, and workers.",
-      "Deployed on VPS/cloud with environment-based configuration.",
-      "Health checks and log aggregation for the TRAC backend."
-    ]
-  },
-  "timeline": {
-    "ideation_and_need_validation": {
-      "phase": "Ideation & Need Validation",
-      "start": "2024-04-01",
-      "end": "2024-04-30",
-      "summary": "Identified the need for lightweight remote activity and control."
-    },
-    "architecture_and_design": {
-      "phase": "Architecture & UX Design",
-      "start": "2024-05-01",
-      "end": "2024-06-15",
-      "summary": "Designed agent–server–dashboard architecture and UI patterns."
-    },
-    "development_v1": {
-      "phase": "Core Development v1",
-      "start": "2024-06-16",
-      "end": "2024-09-14",
-      "summary": "Built APIs, basic agent, and initial dashboard for internal use."
-    },
-    "internal_launch": {
-      "phase": "Internal Launch / Dogfooding",
-      "date": "2024-09-15",
-      "summary": "Deployed on a small set of machines to test stability and control actions."
-    },
-    "v1_hardening": {
-      "phase": "Stabilization & Logging/Alerting Enhancements",
-      "start": "2024-09-16",
-      "end": "2024-10-15",
-      "summary": "Improved logging, alerts, and safety checks based on feedback."
-    },
-    "ongoing_improvements": {
-      "phase": "Ongoing Enhancements & SaaS Readiness",
-      "start": "2024-10-16",
-      "end": null,
-      "summary": "Preparing multi-tenant support, RBAC refinements, and reporting."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-1.webp",
+      "alt": "TRAC App dashboard showing remote device activity and control actions"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "internal_build_equivalent": 190000,
-    "internal_build_range": [
-      160000,
-      230000
-    ],
-    "notes": "Equivalent commercial value covering design, backend, agent, dashboard, and alerting; primary cost is internal engineering and infra."
-  },
-  "challenges": [
-    "Balancing visibility with privacy and trust requirements.",
-    "Making remote actions safe and auditable for admins.",
-    "Keeping the agent lightweight but reliable for always-on use."
   ],
-  "solutions": [
-    "Made agent modules toggleable so deployments choose the data they collect.",
-    "Logged every action with confirmations for sensitive operations.",
-    "Kept the dashboard clean with filters and detail views for deeper dives."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "Clear real-time view of internal machines reduces guesswork.",
-      "Centralized responses like lock or restart without physical access.",
-      "Foundation for future automation and SaaS packaging within DewCo/Gloventis."
-    ],
-    "example_metrics_note": "Success is measured in reduced manual checks and faster responses; public metrics can be added after wider rollout."
-  },
-  "portfolio_copy": {
-    "grid_card": "TRAC App – Remote activity tracking and safe control from a single dashboard.",
-    "one_liner": "A remote tracking and control app that monitors distributed devices and lets admins act quickly and safely."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "live_dashboard": "Coming soon.",
@@ -212,7 +37,32 @@
     "case_study_page": "Coming soon."
   },
   "meta": {
+    "seo_title": "TRAC App | Remote Activity Tracking & Control | DewCo Portfolio",
+    "seo_description": "Remote device visibility and safe control via lightweight agents, React dashboard, and FastAPI/Django backend with audit trails.",
+    "seo_keywords": [
+      "TRAC App",
+      "remote activity tracking",
+      "device monitoring",
+      "remote control actions",
+      "FastAPI",
+      "React dashboard",
+      "audit logging"
+    ],
     "last_updated_for_portfolio": "2025-12-24",
     "notes_for_future_edit": "Replace placeholder dates and add real URLs/screenshots before going public."
+  },
+  "content": {
+    "paragraphs": [
+      "TRAC App gives teams a real-time view of distributed devices and lets admins trigger safe actions like lock, restart, or custom scripts from a single dashboard. Heartbeats and activity hints surface which machines need attention without intrusive monitoring.",
+      "A lightweight agent plus clear APIs keep the system modular and privacy-friendly, making it useful for classrooms, labs, and remote teams that need auditability without heavy enterprise tooling. Actions are logged with user, timestamp, and optional notes for compliance.",
+      "Policies, tags, and webhook-style alerts make it adaptable to different environments—from labs that want quick lockdowns to teams that just need uptime visibility. The architecture is small enough for internal deployments but can scale into a SaaS seat model."
+    ],
+    "bullets": [
+      "Device registry with tags, online/offline status, and optional activity hints.",
+      "Remote actions such as lock, restart, or admin-defined commands with audit trails.",
+      "Search, filters, and detail views to triage devices quickly from the dashboard.",
+      "Alerts for offline or unusual activity with webhook/email-style notifications.",
+      "Privacy and safety controls through API-keyed agents, role-based access, and toggleable modules."
+    ]
   }
 }

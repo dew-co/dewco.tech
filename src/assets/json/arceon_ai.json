@@ -8,209 +8,33 @@
     "From documents to decisions — fast and auditable.",
     "Built for speed, accuracy, and compliance."
   ],
-  "client": {
-    "brand_name_current": "Arceon AI",
-    "industry": "InsurTech / HealthTech / FinTech / Enterprise Automation",
-    "location": "India (global-ready SaaS)",
-    "audience": [
-      "Insurance claims teams",
-      "Healthcare/finance back offices",
-      "Enterprises processing high-volume documents"
-    ]
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product strategy and system architecture",
-      "UX/UI design",
-      "Backend engineering (Django/DRF)",
-      "LLM integration (OpenAI)",
-      "Workflow and automation design"
-    ],
-    "platform": [
-      "SaaS Web App (Admin Console)",
-      "REST API (Integrations)",
-      "Document Processing Pipeline",
-      "Rule Engine + Review Workflow",
-      "Reporting & Audit Logs"
-    ],
-    "project_type": "In-house SaaS product / enterprise automation platform",
-    "status": "Active – product build and iteration",
-    "project_start_date": "2025-01-10",
-    "initial_launch_date": "2025-06-15",
-    "completed_date_v1": "2025-08-01",
-    "engagement_model": "Internal product build with future B2B SaaS licensing"
-  },
+  "project_type": "In-house SaaS product / enterprise automation platform",
+  "tech_stack": [
+    "Django + DRF APIs backed by PostgreSQL",
+    "Redis/Celery queues for extraction, validation, and routing jobs",
+    "OpenAI structured prompts for document field capture",
+    "React/Next.js-style admin and reviewer UI",
+    "S3-compatible object storage for documents and assets",
+    "Dockerized services with CI/CD and observability hooks",
+    "RBAC, audit logging, and webhooks for integrations"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-arceon-ai.webp",
     "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-1.webp",
-    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
-  },
-  "body-image-2": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-2.webp",
-    "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
-  },
-  "body-media": {
-    "src": ""
-  },
-  "about": {
-    "short": "Arceon AI is a SaaS platform that extracts data from PDFs/images using OpenAI, validates it with rules, routes uncertain cases to reviewers, and keeps full audit trails for claims teams.",
-    "long": "Arceon AI removes the manual grind of reading claims documents. The platform ingests files, converts them into structured data, applies policy checks, flags anomalies, and hands reviewers a guided queue for anything that needs human judgment.\n\nIt blends AI extraction with a Django/DRF backend, role-based access, and audit logs so enterprises get faster decisions without losing control or traceability."
-  },
-  "objectives": [
-    "Automate structured data extraction from unstructured documents.",
-    "Cut claim processing time with AI + rules + human-in-the-loop review.",
-    "Stay compliance-ready through audit logs, RBAC, and change history."
-  ],
-  "key_modules": {
-    "document_ingestion": [
-      "Upload portal with batch and API/email ingest options.",
-      "Supports PDF and image inputs with versioning.",
-      "Re-processing flow when better data is needed."
-    ],
-    "ai_extraction": [
-      "LLM-driven field extraction with confidence scoring.",
-      "Template-free prompts with structured JSON output.",
-      "Normalization for dates, amounts, and codes."
-    ],
-    "validation_and_rules": [
-      "Configurable checks for required fields and thresholds.",
-      "Duplicate/mismatch detection and fraud flags.",
-      "Auto-approve/reject or send-to-review routing."
-    ],
-    "human_review_queue": [
-      "Inbox with filters and priorities.",
-      "Side-by-side doc viewer with editable fields.",
-      "Actions to approve, reject, escalate, or request info."
-    ],
-    "claims_workflow": [
-      "Status pipeline from New to Approved/Rejected.",
-      "Assignments, SLAs, and timers for throughput.",
-      "Role-based visibility and permissions."
-    ],
-    "audit_and_compliance": [
-      "Full audit trail for every change and decision.",
-      "Who/when/what tracking for system and users.",
-      "Exportable logs and reports."
-    ],
-    "analytics_and_reporting": [
-      "Volumes, approval/review rates, and turnaround times.",
-      "Top failure reasons and rule-trigger frequency.",
-      "Dashboards by team, client, or department."
-    ]
-  },
-  "features": {
-    "core": [
-      "Ingest documents in bulk and extract fields via AI.",
-      "Apply rules for validation and routing.",
-      "Human-in-the-loop review UI with audit logs."
-    ],
-    "enterprise_ready": [
-      "RBAC with roles for admin, supervisor, reviewer, viewer.",
-      "Multi-tenant-ready structure for org/workspace separation.",
-      "API keys, webhooks, and configurable retention policies (planned)."
-    ],
-    "security": [
-      "TLS in transit and secure storage with access controls.",
-      "Token-based authentication with rate limiting and logging.",
-      "Session and request auditing for compliance."
-    ]
-  },
-  "tech_stack": {
-    "backend": [
-      "Django and Django REST Framework (DRF) for APIs.",
-      "PostgreSQL with Redis/Celery for queues and caching.",
-      "Object storage (S3-compatible) for documents."
-    ],
-    "ai": [
-      "OpenAI API for extraction and classification.",
-      "Prompt templates with structured outputs and fallbacks.",
-      "Batching/caching to control cost and latency."
-    ],
-    "frontend": [
-      "Admin dashboard (React/Next.js or Django templates).",
-      "Responsive reviewer UI with document viewer and field mapping."
-    ],
-    "devops": [
-      "Dockerized services with CI/CD for deploys.",
-      "Environment separation (dev/stage/prod).",
-      "Observability via logs and metrics for the pipeline."
-    ]
-  },
-  "timeline": {
-    "discovery_and_requirements": {
-      "phase": "Discovery & Requirements",
-      "start": "2025-01-10",
-      "end": "2025-02-05",
-      "summary": "Mapped core document types, workflows, and compliance needs."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-1.webp",
+      "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
     },
-    "ux_and_prototyping": {
-      "phase": "UX/UI Design & Prototyping",
-      "start": "2025-02-06",
-      "end": "2025-03-10",
-      "summary": "Designed ingestion, reviewer experience, dashboards, and audit views."
-    },
-    "backend_and_pipeline_build": {
-      "phase": "Backend + Processing Pipeline",
-      "start": "2025-03-11",
-      "end": "2025-06-14",
-      "summary": "Built APIs, models, extraction service, and rules engine foundation."
-    },
-    "initial_launch": {
-      "phase": "Initial Launch",
-      "date": "2025-06-15",
-      "summary": "Limited release with ingestion, extraction, validation, and review flows."
-    },
-    "v1_hardening": {
-      "phase": "Stabilization & v1 Completion",
-      "start": "2025-06-16",
-      "end": "2025-08-01",
-      "summary": "Improved accuracy, audit logs, RBAC, analytics, and error handling."
-    },
-    "ongoing": {
-      "phase": "Ongoing Enhancements",
-      "start": "2025-08-02",
-      "end": null,
-      "summary": "Advanced rule builder, integrations, and scalability improvements."
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-2.webp",
+      "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "internal_build_equivalent": 350000,
-    "internal_build_range": [
-      300000,
-      550000
-    ],
-    "notes": "Equivalent value for extraction pipeline, review UI, rules, security, and deployment; costs are mainly engineering, infra, and OpenAI usage."
-  },
-  "challenges": [
-    "Extraction accuracy varies across layouts and scan quality.",
-    "Decisions must be explainable and auditable for compliance.",
-    "Rule engine needs to flex across industries without heavy rework."
   ],
-  "solutions": [
-    "Used structured outputs with confidence scores to guide reviewers instead of guessing.",
-    "Tracked every field change and decision in audit logs with role controls.",
-    "Separated extraction, validation, and workflow services to scale independently."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "Reduces manual copy-paste work from PDFs into systems.",
-      "Speeds up claim decisions while keeping traceability intact.",
-      "Standardizes validation with configurable rules and routing."
-    ],
-    "example_metrics_note": "Operational metrics like extraction time and automation rate will be added after production analytics stabilize."
-  },
-  "portfolio_copy": {
-    "grid_card": "Arceon AI – AI-powered document processing and claim automation SaaS using OpenAI + Django/DRF for fast, auditable decisions.",
-    "one_liner": "A SaaS platform that extracts data with AI, applies rules, routes reviewers, and records every decision."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "live_app": "Coming soon.",
@@ -219,7 +43,33 @@
     "github_or_repo": null
   },
   "meta": {
+    "seo_title": "Arceon AI | Claims Automation SaaS | DewCo Portfolio",
+    "seo_description": "AI-powered claims automation using OpenAI + Django/DRF with rule-based validation, reviewer queues, and audit-ready decisions.",
+    "seo_keywords": [
+      "Arceon AI",
+      "claims automation",
+      "AI document processing",
+      "OpenAI structured extraction",
+      "Django DRF",
+      "rule engine",
+      "human in the loop",
+      "audit logs"
+    ],
     "last_updated_for_portfolio": "2025-12-24",
     "notes_for_future_edit": "Replace placeholder dates with exact milestones and add real links/screenshots before publishing the case study."
+  },
+  "content": {
+    "paragraphs": [
+      "Arceon AI ingests PDFs and images, extracts structured fields with OpenAI, validates them against configurable rules, and routes uncertain claims to human reviewers without breaking auditability. It is designed to replace copy-paste workflows with auditable, explainable automation for claims, reimbursements, and policy checks.",
+      "The platform blends AI extraction with a Django/DRF backbone, reviewer queues, and analytics so operations teams get speed without losing control. Every document, field change, and decision is captured with RBAC and audit logs to stay compliance-ready.",
+      "Rule packs, webhooks, and modular queues make it easy to tailor Arceon AI to different lines of business or regions while keeping a single, scalable codebase. Dashboards surface throughput, accuracy, and SLA performance so leaders can measure automation impact."
+    ],
+    "bullets": [
+      "Multiple ingest options (upload, batch, email/API) with versioning and re-processing.",
+      "Confidence-scored AI extraction plus rule engine for auto-approve, reject, or send-to-review paths.",
+      "Reviewer inbox with side-by-side document viewer, edit/override actions, and complete audit trails.",
+      "Role-based access with exportable logs and reports for compliance teams.",
+      "Dashboards that track volumes, throughput, and SLA-friendly accuracy metrics."
+    ]
   }
 }

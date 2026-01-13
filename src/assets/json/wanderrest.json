@@ -10,177 +10,32 @@
     "Wander more, plan less.",
     "Your 365-day companion for trips, treks, and tours."
   ],
-  "client": {
-    "brand_name_current": "WanderRest",
-    "brand_name_former": "Wander365",
-    "industry": "Tours & Travel / Experiences / Hospitality",
-    "location": "India (Pan-India focus, future global expansion)"
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product Strategy",
-      "UX/UI Design",
-      "Full-Stack Engineering",
-      "Automation Architecture"
-    ],
-    "platform": [
-      "Public Website (Responsive)",
-      "Admin CRM / CMS"
-    ],
-    "project_type": "End-to-end product (branding + website + CRM)",
-    "status": "Ongoing",
-    "initial_launch_date": "2024-08-15",
-    "rebrand_date": "2025-05-10",
-    "completed_date_v1": "2024-08-31",
-    "engagement_model": "Fixed-scope build + ongoing retainer"
-  },
+  "project_type": "End-to-end product (branding + website + CRM)",
+  "tech_stack": [
+    "Angular/React SPA with Tailwind/SCSS for the public site",
+    "REST API (Node/Django/FastAPI) with RBAC for the admin CRM",
+    "PostgreSQL/MySQL or Firestore for packages, itineraries, and leads",
+    "Lead capture with analytics/UTM tracking plus email/WhatsApp integrations",
+    "Frontend hosting on Vercel/Netlify/Firebase; backend on VPS/Docker",
+    "CI/CD pipelines and environment-based configuration for deployments"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-wanderrest.webp",
     "alt": "WanderRest travel booking website shown on laptop and mobile screens"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-1.webp",
-    "alt": "WanderRest travel booking website shown on laptop and mobile screens"
-  },
-  "body-image-2": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-2.webp",
-    "alt": "WanderRest travel booking website shown on laptop and mobile screens"
-  },
-  "about": {
-    "short": "WanderRest (ex-Wander365) is a full-stack travel experience platform that helps Indian travelers discover, customize, and book curated trips, while giving the travel team a powerful yet simple CRM to manage leads, packages, and itineraries.",
-    "long": "WanderRest started as a passion project to simplify how Indian travelers discover and book curated trips, weekend getaways, treks, and experiences. The goal was to make trip planning feel less like a chore and more like a conversation with a trusted travel partner. Under Dew & Company (DewCo), Wander365 evolved into WanderRest – a modern travel brand that combines clean design, smart automation, and human-curated itineraries.\n\nThe public website helps users explore destinations, view detailed packages, and submit enquiries. On the backend, an internal admin CRM + CMS lets the team manage packages, itineraries, leads, and follow-ups in one place. The platform is designed as a travel OS that can later be extended into a white-label, multi-tenant solution for other travel agencies."
-  },
-  "roles_and_responsibilities": [
-    "Defined product vision, feature scope, and roadmap from MVP to scalable platform.",
-    "Designed user journeys, wireframes, and high-fidelity UI for both public site and admin CRM.",
-    "Implemented front-end, back-end APIs, and database schema.",
-    "Set up lead capture flows, basic analytics, and SEO-ready content structures.",
-    "Planned architecture to support future multi-tenant white-label use."
-  ],
-  "objectives": [
-    "Build a modern, trustworthy online presence for a tours and travel brand.",
-    "Create a conversion-focused website that turns visitors into qualified enquiries.",
-    "Centralize all leads, itineraries, and packages into one CRM instead of Excel/WhatsApp.",
-    "Design an internal system that is simple enough for daily use but scalable for multiple agencies.",
-    "Lay the foundation for a future multi-tenant, white-label travel platform."
-  ],
-  "features": {
-    "public_website": [
-      "Destination- and theme-based browsing (weekend getaways, treks, honeymoons, workations, etc.)",
-      "Detailed package pages with day-wise itinerary, inclusions, exclusions, FAQs, and gallery.",
-      "Smart enquiry forms connected to CRM with lead source and UTM tracking.",
-      "SEO-friendly blog section for travel guides, tips, and destination content.",
-      "Trust elements: testimonials, FAQs, safety notes, and brand story sections.",
-      "WhatsApp-ready share links for itineraries and packages."
-    ],
-    "admin_crm": [
-      "Lead inbox with filters by source (website, WhatsApp, referral, campaigns).",
-      "Lead pipeline statuses: New, Contacted, Follow-up, Converted, Lost.",
-      "Package and itinerary management with reusable templates and day-wise breakdown.",
-      "Pricing matrix for seasonal pricing, per-person cost, and add-ons.",
-      "Quote and itinerary export (PDF/print-friendly) for sharing with clients.",
-      "Basic reporting for leads, conversion rate, top destinations, and channels."
-    ]
-  },
-  "tech_stack": {
-    "frontend": [
-      "SPA framework (Angular/React – responsive, mobile-first)",
-      "Component-based UI with reusable sections for packages and itineraries",
-      "TailwindCSS / SCSS for styling"
-    ],
-    "backend": [
-      "RESTful API (Node.js / Django / FastAPI – configurable as per deployment)",
-      "Role-based access control for admin users",
-      "Structured models for leads, packages, itineraries, and pricing"
-    ],
-    "database": [
-      "Relational DB (PostgreSQL/MySQL) or Firestore (Firebase) depending on environment"
-    ],
-    "integrations": [
-      "Google Business Profile strategy for reviews and local discovery",
-      "WhatsApp deep links for sharing packages and quotes",
-      "Email notifications via SMTP / transactional mail provider",
-      "Google Analytics with UTM-based campaign tracking"
-    ],
-    "hosting_devops": [
-      "Frontend on Vercel/Netlify/Firebase Hosting",
-      "Backend on VPS / Docker-based deployment",
-      "Basic CI/CD pipeline for automated builds and deployments"
-    ]
-  },
-  "timeline": {
-    "discovery_and_strategy": {
-      "phase": "Discovery & Strategy",
-      "start": "2024-05-01",
-      "end": "2024-06-15",
-      "summary": "Requirement gathering, brand positioning, feature scoping, and platform architecture planning."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-1.webp",
+      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     },
-    "design_and_ux": {
-      "phase": "UX/UI Design",
-      "start": "2024-06-16",
-      "end": "2024-07-15",
-      "summary": "User flows, wireframes, component library, visual design for website and CRM."
-    },
-    "development_v1": {
-      "phase": "Development v1",
-      "start": "2024-07-16",
-      "end": "2024-08-31",
-      "summary": "Core feature development for public site, enquiry flow, and basic admin CRM."
-    },
-    "launch_v1": {
-      "phase": "Launch of Wander365 v1.0",
-      "date": "2024-08-31",
-      "summary": "Production release with core booking enquiry flow and CRM."
-    },
-    "rebrand_and_expansion": {
-      "phase": "Rebrand to WanderRest + Feature Expansion",
-      "start": "2025-03-01",
-      "end": "2025-05-10",
-      "summary": "Brand refresh, UI polish, improved CRM features, and platform positioning as WanderRest."
-    },
-    "ongoing": {
-      "phase": "Ongoing Improvements",
-      "start": "2025-06-01",
-      "end": null,
-      "summary": "Continuous enhancements, SEO content, and preparations for multi-tenant support."
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-2.webp",
+      "alt": "WanderRest travel booking website shown on laptop and mobile screens"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "initial_build_estimated": 200000,
-    "initial_build_range": [180000, 250000],
-    "retainer_monthly_range": [15000, 35000],
-    "notes": "Values represent equivalent full project value including strategy, UX/UI, development, and initial SEO setup."
-  },
-  "challenges": [
-    "Client operations were spread across WhatsApp, Excel, and Google Docs, causing lost leads and inconsistent follow-ups.",
-    "The founders wanted an all-in-one system but had limited technical background.",
-    "Need to keep admin CRM extremely simple for daily use while secretly being scalable for multi-tenant future use.",
-    "Standardizing itineraries, pricing, and add-ons without making content creation heavy for the team."
   ],
-  "solutions": [
-    "Designed a minimal, focused CRM with clear stages and simple forms instead of overwhelming options.",
-    "Created structured data models for packages, itineraries, and pricing to reduce duplication and confusion.",
-    "Separated core platform logic from brand layer to allow future white-label/multi-tenant rollout.",
-    "Built reusable itinerary and quote templates to speed up client responses and follow-ups."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "Centralized lead and package management in one system instead of scattered sheets and chats.",
-      "Enabled faster response to enquiries using reusable itineraries and quote templates.",
-      "Created a brand-ready, SEO-friendly website suitable for both organic traffic and future paid campaigns.",
-      "Laid the foundation for evolving the product into a white-label platform for other travel agencies."
-    ],
-    "example_metrics_note": "Within the first few months, the platform started handling regular enquiries and standardized proposal workflows, making follow-ups faster and more professional. Exact numbers can be updated later with real analytics."
-  },
-  "portfolio_copy": {
-    "grid_card": "WanderRest (ex-Wander365) – Travel experience platform for curated trips and tours, built end-to-end by DewCo (strategy, UX, full-stack, CRM).",
-    "one_liner": "A full-stack travel experience platform that turns scattered WhatsApp and Excel operations into a streamlined, brand-ready website + CRM."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "live_site": "https://wanderrest.in/",
@@ -189,7 +44,32 @@
     "behance_or_dribbble": null
   },
   "meta": {
+    "seo_title": "WanderRest | Travel Booking Platform & CRM | DewCo Portfolio",
+    "seo_description": "Full-stack travel platform with curated trips, enquiry funnels, and an admin CRM for itineraries, pricing, and lead pipelines.",
+    "seo_keywords": [
+      "WanderRest",
+      "travel booking",
+      "tours and trips",
+      "travel CRM",
+      "Angular travel site",
+      "itinerary management",
+      "lead pipeline"
+    ],
     "last_updated_for_portfolio": "2025-12-22",
     "notes_for_future_edit": "Update metrics, real URLs, and exact stack choices before sharing with clients."
+  },
+  "content": {
+    "paragraphs": [
+      "WanderRest (ex-Wander365) helps travelers browse curated trips, treks, and getaways while the team manages packages, itineraries, and leads through a lightweight CRM. The public site surfaces destinations, day-wise details, FAQs, and galleries in a conversion-focused layout.",
+      "On the backend, the admin CRM centralizes enquiries, pricing matrices, itinerary templates, and follow-ups so the team no longer juggles WhatsApp and spreadsheets. Lead source tracking, UTM capture, and WhatsApp-ready shares keep the pipeline moving.",
+      "The architecture is intentionally simple for daily use yet ready for white-labeling: brand layers stay separate from core models, and the stack can be deployed on Vercel/Netlify/Firebase with a Dockerized API. Future multi-tenant rollout is planned without overhauling the UX."
+    ],
+    "bullets": [
+      "Destination and theme-based browsing with detailed itineraries, inclusions/exclusions, FAQs, and galleries.",
+      "Smart enquiry forms tied to CRM records with source/UTM tracking and WhatsApp-friendly sharing.",
+      "Admin CRM with lead pipeline, reusable package templates, pricing matrix, and quote exports.",
+      "Designed for daily simplicity while keeping the architecture ready for multi-tenant rollout.",
+      "SEO-friendly content structure plus basic reporting on leads, conversions, and top destinations."
+    ]
   }
 }

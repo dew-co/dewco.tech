@@ -8,193 +8,33 @@
     "Multi-timeframe signals with risk baked in.",
     "One engine for research, paper trading, and live modes."
   ],
-  "client": {
-    "brand_name_current": "Quant-Grade",
-    "industry": "FinTech / Algorithmic Trading / Quant Analytics",
-    "location": "India (NSE/BSE + global crypto exchanges)",
-    "audience": [
-      "Retail and swing traders",
-      "Crypto traders",
-      "Small desks and advisory firms"
-    ]
-  },
-  "studio": {
-    "owned_by": "Dipankar Chowdhury",
-    "brand": "Dew & Company (DewCo)",
-    "parent_company": "Gloventis Solution"
-  },
-  "snapshot": {
-    "role": [
-      "Product and quant system design",
-      "Backend/API engineering",
-      "Dashboard UX/UI",
-      "Automation and DevOps"
-    ],
-    "platform": [
-      "Web Dashboard (Analytics & Signals)",
-      "Background Trading Engine",
-      "Notification & Alert System"
-    ],
-    "project_type": "In-house product (SaaS-ready trading analytics and bot engine)",
-    "status": "Active – internal R&D + pre-SaaS productization",
-    "initial_launch_date": "2024-11-15",
-    "completed_date_v1": "2024-11-30",
-    "engagement_model": "Internal product build with future SaaS/white-label plans"
-  },
+  "project_type": "In-house product (SaaS-ready trading analytics and bot engine)",
+  "tech_stack": [
+    "Python engine for market data ingestion, features, and signals",
+    "FastAPI/Django REST for orchestration and APIs",
+    "Pandas/NumPy with pluggable AI/ML scoring and regime checks",
+    "React/Next.js dashboard with OHLC charts and overlays",
+    "PostgreSQL plus Redis for configs, signals, and caching",
+    "Dockerized workers with CI/CD and monitoring",
+    "Broker/exchange adapters and alert channels (email/Telegram style)"
+  ],
   "cover-image": {
     "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-trading_bot.webp",
     "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
   },
-  "body-image-1": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-1.webp",
-    "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
-  },
-  "body-image-2": {
-    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-2.webp",
-    "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
-  },
-  "body-media": {
-    "src": ""
-  },
-  "about": {
-    "short": "Quant-Grade is an internal trading engine that runs multi-timeframe analysis on Indian equities and crypto, producing rule-based signals, risk levels, and optional automation hooks.",
-    "long": "Quant-Grade brings structure to discretionary trading by treating every instrument through the same rule-based pipeline. The engine ingests market data, runs quant and technical models across multiple timeframes, and outputs directional bias with suggested levels.\n\nSignals surface in a web dashboard and can be piped to alerts or broker adapters for paper or live trading. The engine is modular, making it easy to test strategies, add AI-driven regime checks, and move toward a SaaS or white-label offer."
-  },
-  "roles_and_responsibilities": [
-    "Defined the product vision spanning research, alerts, and execution modes.",
-    "Designed the engine layers for data, features, signals, risk, and execution.",
-    "Implemented Python services plus the web dashboard for watchlists and signal views.",
-    "Planned alerting, broker adapters, and environment toggles (backtest/paper/live)."
-  ],
-  "objectives": [
-    "Provide disciplined, multi-timeframe analysis for stocks and crypto under one engine.",
-    "Reduce emotion by enforcing rule-based entries, exits, and sizing.",
-    "Keep the system modular for future SaaS or white-label use."
-  ],
-  "features": {
-    "core_engine": [
-      "Data ingestion for Indian equities/indices and crypto pairs.",
-      "Timeframes from 1m to 1W with trend/momentum/volatility features.",
-      "Signal engine with directional bias, confidence, and trade hypotheses.",
-      "Setup generation with entry, stop-loss, and take-profit levels."
-    ],
-    "ai_and_quant_layer": [
-      "Model-driven scoring to shortlist instruments per session.",
-      "Regime awareness to distinguish trending vs ranging conditions.",
-      "Alignment checks so trades trigger when multiple timeframes agree."
-    ],
-    "dashboard": [
-      "Watchlists with near-real-time status.",
-      "Instrument detail view with OHLC chart and signal overlays.",
-      "Signal summary showing bias, aligned timeframes, and suggested risk."
-    ],
-    "risk_management": [
-      "Configurable max risk per trade and per day.",
-      "Daily loss limits with blocking when breached.",
-      "Simulation/paper modes for safe testing."
-    ],
-    "automation_and_alerts": [
-      "Paper execution engine for strategy dry runs.",
-      "Broker/exchange adapters planned for Indian brokers and major crypto venues.",
-      "Email/Telegram-style alerts plus end-of-day/weekly recaps."
-    ],
-    "admin_and_config": [
-      "Strategy toggles and parameter controls without code changes.",
-      "Universe management for tracked instruments.",
-      "Environment modes for backtest, paper, and live."
-    ]
-  },
-  "tech_stack": {
-    "backend": [
-      "Python services for engine, data ingestion, and feature pipelines.",
-      "FastAPI / Django REST Framework for APIs and task orchestration.",
-      "Workers/queues for scheduled jobs and broker calls."
-    ],
-    "quant_and_data": [
-      "Pandas/NumPy for processing with custom indicator library.",
-      "Pluggable AI/ML models for scoring and classification.",
-      "Structured time-series storage for signals and prices."
-    ],
-    "frontend": [
-      "React / Next.js dashboard for live-ish views.",
-      "Reusable charts for OHLC, indicators, and signal overlays."
-    ],
-    "database_and_storage": [
-      "PostgreSQL for users, configs, signals, and trade logs.",
-      "Redis for caching latest signals and watchlists."
-    ],
-    "integrations": [
-      "Planned broker APIs for NSE/BSE participants.",
-      "Planned crypto exchange adapters (CoinDCX/Binance style).",
-      "Email/notification provider for alerts."
-    ],
-    "hosting_devops": [
-      "Dockerized services deployed on VPS/cloud with env separation.",
-      "CI/CD for pushing engine and dashboard updates.",
-      "Monitoring for task queues and signal freshness."
-    ]
-  },
-  "timeline": {
-    "research_and_design": {
-      "phase": "Market Research & System Design",
-      "start": "2024-07-01",
-      "end": "2024-08-15",
-      "summary": "Studied trader workflows and locked system architecture and strategies."
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-1.webp",
+      "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     },
-    "engine_v1": {
-      "phase": "Core Engine v1",
-      "start": "2024-08-16",
-      "end": "2024-10-15",
-      "summary": "Implemented ingestion, feature calc, and base signal engine with backtests."
-    },
-    "dashboard_v1": {
-      "phase": "Dashboard & Alerts v1",
-      "start": "2024-10-16",
-      "end": "2024-11-15",
-      "summary": "Built web dashboard for watchlists, signals, and notifications."
-    },
-    "internal_launch": {
-      "phase": "Internal Launch / Dogfooding",
-      "date": "2024-11-30",
-      "summary": "Started simulated and light live runs to validate signals and UX."
-    },
-    "ongoing_rnd": {
-      "phase": "Ongoing R&D & Refinement",
-      "start": "2024-12-01",
-      "end": null,
-      "summary": "Continuous tuning of strategies, models, and risk parameters toward SaaS."
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-2.webp",
+      "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
     }
-  },
-  "budget": {
-    "currency": "INR",
-    "internal_build_equivalent": 250000,
-    "internal_build_range": [
-      220000,
-      350000
-    ],
-    "notes": "Equivalent value for research, engine development, dashboard, and infra; mainly internal time and cloud costs."
-  },
-  "challenges": [
-    "Serving both Indian equities and crypto with one architecture and UX.",
-    "Balancing depth for advanced users with clarity for semi-beginners.",
-    "Keeping risk controls strict so trades stay disciplined."
   ],
-  "solutions": [
-    "Separated data, signals, risk, and execution layers so each can evolve independently.",
-    "Focused the dashboard on a handful of readable metrics instead of indicator overload.",
-    "Embedded environment modes and risk limits to block undisciplined trades."
-  ],
-  "outcomes": {
-    "qualitative": [
-      "Reusable engine that covers both Indian markets and crypto.",
-      "Standardized scoring and shortlisting to cut noise.",
-      "Strong base for a future retail/SaaS offering under the Quant-Grade brand."
-    ],
-    "example_metrics_note": "Current success is measured in stability, backtest coverage, and signal consistency; live numbers will come post productionization."
-  },
-  "portfolio_copy": {
-    "grid_card": "Quant-Grade – Multi-timeframe trading engine for Indian stocks and crypto with disciplined signals, risk controls, and a clean dashboard.",
-    "one_liner": "A modular trading engine that turns raw market data into rule-based decisions across Indian equities and crypto."
+  "body_media": {
+    "src": "",
+    "alt": ""
   },
   "links": {
     "live_dashboard": "Private Server Access Only",
@@ -203,7 +43,33 @@
     "github_or_repo": null
   },
   "meta": {
+    "seo_title": "Quant-Grade | Multi-Timeframe Trading Engine | DewCo Portfolio",
+    "seo_description": "AI-assisted trading engine for Indian equities and crypto with multi-timeframe signals, risk controls, and React/FastAPI stack.",
+    "seo_keywords": [
+      "Quant-Grade",
+      "trading bot",
+      "multi timeframe analysis",
+      "AI trading signals",
+      "FastAPI",
+      "React dashboard",
+      "Indian equities",
+      "crypto trading"
+    ],
     "last_updated_for_portfolio": "2025-12-24",
     "notes_for_future_edit": "Add concrete broker/exchange names and live performance summaries once production ready."
+  },
+  "content": {
+    "paragraphs": [
+      "Quant-Grade runs multi-timeframe analysis for Indian equities and crypto, producing disciplined signals, risk levels, and automation hooks for traders and small desks. It treats every instrument through the same rule-based pipeline so bias and guesswork are reduced.",
+      "The engine is modular across research, alerts, and execution, surfacing insights in a web dashboard and piping them into adapters for paper or live trading as the product moves toward SaaS readiness. Regime checks and alignment filters keep trades selective in noisy markets.",
+      "Configurable risk caps, environment modes, and plug-in strategy parameters make it safe to test and iterate. As SaaS packaging matures, the same stack can power white-label dashboards for desks needing disciplined, multi-market coverage."
+    ],
+    "bullets": [
+      "Ingests equities/indices and crypto pairs, scoring instruments from 1m to 1W with trend, momentum, and volatility features.",
+      "Generates trade hypotheses with entry, stop-loss, and take-profit levels plus regime awareness and alignment checks.",
+      "Dashboard watchlists show bias, aligned timeframes, and risk suggestions with near-real-time updates.",
+      "Risk controls enforce max per-trade and per-day loss, with environment toggles for backtest, paper, and live.",
+      "Adapters and alert channels (email/Telegram-style) keep traders informed and pave the way for broker connectivity."
+    ]
   }
 }
