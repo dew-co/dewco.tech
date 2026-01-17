@@ -1,5 +1,23 @@
 [
   {
+    "id": "story-2026-01-17-digitalaccessvault-origin",
+    "title": "From Everyday Friction to a New SaaS: The Origin of DigitalAccessVault",
+    "excerpt": "How relying on existing password managers led to building a fully owned, branded SaaS digital vault under the DewCo and Gloventis ecosystem.",
+    "date": "2026-01-17",
+    "tags": [
+      "DigitalAccessVault",
+      "Founder Story",
+      "SaaS",
+      "Security",
+      "Password Manager",
+      "DewCo",
+      "Gloventis",
+      "React",
+      "Firebase"
+    ],
+    "content": "For a long time, I’d been using popular password managers to handle my growing list of logins, identities, and secure notes. They worked — but somewhere in the middle of using them, a thought hit me:\n\n“If I rely on this so much, why can’t I create my own version — one that I fully control, brand, and offer as a service?”\n\nThat simple question sparked the idea for DigitalAccessVault.\n\nUnder the DewCo – Company of Ideas umbrella, I treat every pain point as a potential product. As the execution arm, Gloventis Solutions is where those ideas become real software. So I decided to build my own secure digital vault — not just as a tool for myself, but as a SaaS product I could eventually market, brand, and offer to individuals and teams.\n\nI quickly locked in the name DigitalAccessVault and purchased the domain digitalaccessvault.com. From there, I started building the platform using Google AI Studio to assist the development workflow and React (TypeScript) with Firebase (Firestore, Authentication, Hosting, Analytics) as the core stack.\n\nDigitalAccessVault is more than “just another password manager” for me — it’s a proof of what DewCo stands for: spotting everyday problems, designing better systems around them, and turning them into real, sellable products that others can trust and use."
+  },
+  {
     "id": "story-2025-11-22-testimonials",
     "title": "Documenting real client testimonials across Gloventis projects",
     "excerpt": "Drafted multiple testimonial variants (short, Google Review, emotional) for past projects and clients.",

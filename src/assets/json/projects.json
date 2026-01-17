@@ -1,0 +1,521 @@
+[
+    {
+        "id": "digitalaccessvault",
+        "project_name": "DigitalAccessVault – Secure Password Manager & Digital Vault SaaS",
+        "headline": "DigitalAccessVault: Own Your Passwords, Secrets, and Digital Life (React + Firebase SaaS)",
+        "short_headline": "DigitalAccessVault – Secure Password Manager & Vault",
+        "taglines": [
+            "A secure, zero-knowledge style vault for passwords, cards, identities, and SSH keys.",
+            "Built as a SaaS product under DewCo and Gloventis for individuals, teams, and organizations.",
+            "Modern React + Firebase stack with organization workspaces and clean UX."
+        ],
+        "project_type": "In-house SaaS product / security & productivity platform",
+        "tech_stack": [
+            "React 19 + TypeScript SPA for the vault UI",
+            "Firebase Authentication for secure, scalable auth",
+            "Firestore as the primary document database for vault items",
+            "Firebase Hosting for global, SSL-enabled deployment",
+            "Firebase Analytics for product usage and funnel insights",
+            "Client-side encryption & zero-knowledge style design principles",
+            "Google AI Studio-assisted development workflow and scaffolding"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-digitalaccessvault.webp",
+            "alt": "DigitalAccessVault web app mockup across multiple devices showing secure vault dashboard"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/digitalaccessvault-1.webp",
+                "alt": "DigitalAccessVault vault view with logins, folders, and categories"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/digitalaccessvault-2.webp",
+                "alt": "DigitalAccessVault organization workspace and shared secrets interface"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "live_app": "Coming soon.",
+            "demo_or_video": "Coming soon.",
+            "case_study_page": "Coming soon.",
+            "github_or_repo": null
+        },
+        "meta": {
+            "seo_title": "DigitalAccessVault | Secure Password Manager & Digital Vault | DewCo Portfolio",
+            "seo_description": "DigitalAccessVault is a secure SaaS password manager and digital vault built with React + Firebase, designed for individuals, teams, and organizations who want a zero-knowledge style, brand-owned alternative.",
+            "seo_keywords": [
+                "DigitalAccessVault",
+                "password manager",
+                "digital vault",
+                "secure SaaS",
+                "React TypeScript",
+                "Firebase Firestore",
+                "zero knowledge",
+                "DewCo",
+                "Gloventis"
+            ],
+            "last_updated_for_portfolio": "2026-01-17",
+            "notes_for_future_edit": "Replace placeholder images and add real app screenshots, live URL, and demo video links once the first public beta is ready."
+        },
+        "content": {
+            "paragraphs": [
+                "DigitalAccessVault is an in-house SaaS product from DewCo, built by Gloventis Solutions, to solve a simple but critical problem: managing passwords, identities, and secrets in a way that is secure, independent, and fully brand-owned. Instead of relying purely on third-party password managers, DigitalAccessVault offers a secure vault that DewCo can control, evolve, and offer as a service to users and organizations.",
+                "The platform is a browser-based digital vault where users can store logins, credit cards, identities, secure notes, and SSH keys in one place. It is designed with a zero-knowledge style mindset: sensitive data is handled so that only the user can access their decrypted information, while the backend focuses on safe storage, access control, and telemetry.",
+                "Built with React 19 and TypeScript on top of Firebase (Authentication, Firestore, Hosting, Analytics), DigitalAccessVault is structured as a SaaS product from day one. It supports personal vaults as well as future organization workspaces, where teams can share selected secrets securely while keeping everything auditable and organized under folders and categories.",
+                "This product also acts as a live demonstration of the DewCo philosophy: taking everyday friction (password chaos, scattered secrets, dependence on external tools) and turning it into a branded, technically solid SaaS offering. DigitalAccessVault is both a tool for real users and a portfolio piece that showcases Gloventis’ ability to design, architect, and ship secure web applications."
+            ],
+            "bullets": [
+                "Secure storage for logins, credit cards, identities, secure notes, and SSH keys inside a single digital vault.",
+                "Zero-knowledge style design principles so only users have access to decrypted data on their devices.",
+                "Planned organization workspaces for teams and companies to share specific items without exposing entire vaults.",
+                "Folder- and category-based organization for faster search, navigation, and mental clarity.",
+                "React 19 + TypeScript frontend integrated with Firebase Authentication, Firestore, Hosting, and Analytics.",
+                "SaaS-ready architecture with room for future pricing tiers, onboarding flows, and role-based access control.",
+                "Built under DewCo (idea and brand) and Gloventis Solutions (execution and engineering) as a long-term, extensible security product."
+            ]
+        }
+    },
+    {
+        "id": "arceon_ai",
+        "project_name": "Arceon AI – AI-powered document processing & claim automation SaaS",
+        "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
+        "short_headline": "Arceon AI – Document Processing & Claim Automation",
+        "taglines": [
+            "Automate claims with AI extraction and clear rules.",
+            "From documents to decisions — fast and auditable.",
+            "Built for speed, accuracy, and compliance."
+        ],
+        "project_type": "In-house SaaS product / enterprise automation platform",
+        "tech_stack": [
+            "Django + DRF APIs backed by PostgreSQL",
+            "Redis/Celery queues for extraction, validation, and routing jobs",
+            "OpenAI structured prompts for document field capture",
+            "React/Next.js-style admin and reviewer UI",
+            "S3-compatible object storage for documents and assets",
+            "Dockerized services with CI/CD and observability hooks",
+            "RBAC, audit logging, and webhooks for integrations"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-arceon-ai.webp",
+            "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-1.webp",
+                "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/arceon_ai-2.webp",
+                "alt": "Arceon AI claims automation dashboard mockup showing document extraction and workflow stats"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "live_app": "Coming soon.",
+            "demo_or_video": "Coming soon.",
+            "case_study_page": "Coming soon.",
+            "github_or_repo": null
+        },
+        "meta": {
+            "seo_title": "Arceon AI | Claims Automation SaaS | DewCo Portfolio",
+            "seo_description": "AI-powered claims automation using OpenAI + Django/DRF with rule-based validation, reviewer queues, and audit-ready decisions.",
+            "seo_keywords": [
+                "Arceon AI",
+                "claims automation",
+                "AI document processing",
+                "OpenAI structured extraction",
+                "Django DRF",
+                "rule engine",
+                "human in the loop",
+                "audit logs"
+            ],
+            "last_updated_for_portfolio": "2025-12-24",
+            "notes_for_future_edit": "Replace placeholder dates with exact milestones and add real links/screenshots before publishing the case study."
+        },
+        "content": {
+            "paragraphs": [
+                "Arceon AI ingests PDFs and images, extracts structured fields with OpenAI, validates them against configurable rules, and routes uncertain claims to human reviewers without breaking auditability. It is designed to replace copy-paste workflows with auditable, explainable automation for claims, reimbursements, and policy checks.",
+                "The platform blends AI extraction with a Django/DRF backbone, reviewer queues, and analytics so operations teams get speed without losing control. Every document, field change, and decision is captured with RBAC and audit logs to stay compliance-ready.",
+                "Rule packs, webhooks, and modular queues make it easy to tailor Arceon AI to different lines of business or regions while keeping a single, scalable codebase. Dashboards surface throughput, accuracy, and SLA performance so leaders can measure automation impact."
+            ],
+            "bullets": [
+                "Multiple ingest options (upload, batch, email/API) with versioning and re-processing.",
+                "Confidence-scored AI extraction plus rule engine for auto-approve, reject, or send-to-review paths.",
+                "Reviewer inbox with side-by-side document viewer, edit/override actions, and complete audit trails.",
+                "Role-based access with exportable logs and reports for compliance teams.",
+                "Dashboards that track volumes, throughput, and SLA-friendly accuracy metrics."
+            ]
+        }
+    },
+    {
+        "id": "gloveflix_platform",
+        "project_name": "GloVeFlix 2.0 – Hybrid Streaming & VIP Access Platform",
+        "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
+        "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
+        "taglines": [
+            "Publicly discover, privately enjoy.",
+            "SEO traffic that converts into a VIP community.",
+            "One brand, three pillars: SEO site, VIP club, private player."
+        ],
+        "project_type": "In-house product (SEO + community + streaming funnel)",
+        "tech_stack": [
+            "Angular SPA for public discovery and VIP flows",
+            "Firebase Hosting with Firestore and Authentication",
+            "Guarded VIP/player subdomain with route-level gating",
+            "Telegram/WhatsApp deep links for community onboarding",
+            "Schema-driven SEO structure and performance tuning",
+            "Feature flags and CI/CD via Firebase CLI",
+            "Optional Cloud Functions for secure operations"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-gloveflix.webp",
+            "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-1.webp",
+                "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/gloveflix-2.webp",
+                "alt": "GloVeFlix movie discovery and VIP access interface on desktop and mobile"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "public_site": "https://gloveflix.com/",
+            "vip_landing": "https://vip.gloveflix.com/",
+            "private_player_subdomain": "https://watch.gloveflix.com/",
+            "case_study_page": null
+        },
+        "meta": {
+            "seo_title": "GloVeFlix | SEO Discovery & VIP Streaming Funnel | DewCo Portfolio",
+            "seo_description": "SEO-first movie discovery platform with VIP community onboarding and a hidden, gated streaming subdomain built on Angular + Firebase.",
+            "seo_keywords": [
+                "GloVeFlix",
+                "movie discovery SEO",
+                "VIP streaming",
+                "Angular Firebase",
+                "Telegram community",
+                "WhatsApp community",
+                "private player"
+            ],
+            "last_updated_for_portfolio": "2025-12-24",
+            "notes_for_future_edit": "Insert real URLs, analytics highlights, and compliance notes as 2.0 ships."
+        },
+        "content": {
+            "paragraphs": [
+                "GloVeFlix is built as an SEO-first discovery experience that turns search traffic into VIP members and unlocks a hidden streaming player only for the community. Metadata-rich pages, schema markup, and fast Angular rendering drive organic reach without exposing the player.",
+                "The funnel relies on three layers: a public discovery site for growth, a VIP onboarding layer through Telegram/WhatsApp, and a guarded player subdomain controlled by Firebase access and feature flags. Visitors see collections and guides, opt into the VIP club, and then get directed to a private, non-indexed player.",
+                "Admins can refresh metadata, toggle VIP perks, and roll out new drops without touching code, while analytics watch conversion from search to VIP. The architecture keeps compliance and takedown risk low by isolating streaming behind authentication and role flags."
+            ],
+            "bullets": [
+                "Metadata-driven movie/series pages with search, filters, and editorial collections.",
+                "VIP landing with benefits and Firestore-powered segmentation for onboarding.",
+                "Hidden player subdomain gated by authentication, VIP flags, and optional expiring links.",
+                "Admin-friendly controls for metadata updates, feature flags, and future drops.",
+                "SEO markup, analytics, and performance tuning to watch conversions across the funnel."
+            ]
+        }
+    },
+    {
+        "id": "lan_cam",
+        "project_name": "LAN-Cam – Local Network Camera & Screen Sync",
+        "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
+        "short_headline": "LAN-Cam – Local Network Camera & Screen Sync Tool",
+        "taglines": [
+            "Turn any device into a low-latency camera on your Wi-Fi.",
+            "No internet, no cloud – just LAN streaming.",
+            "Screen and camera sync for classrooms, offices, and homes."
+        ],
+        "project_type": "In-house utility product (LAN-only streaming & screen sync)",
+        "tech_stack": [
+            "WebRTC streaming over local Wi-Fi",
+            "WebSockets/signalling service with LAN discovery (mDNS/broadcast)",
+            "Electron desktop sender with screen and camera capture modes",
+            "Browser-based viewer optimized for laptops, tablets, and phones",
+            "Node.js/FastAPI signalling that can run on LAN or small VPS",
+            "Dockerized deployments with optional auto-update channel"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-lan-cam.webp",
+            "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-1.webp",
+                "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/lan-cam-2.webp",
+                "alt": "LAN-Cam local network screen and camera streaming across multiple devices"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "landing_page": "Coming soon.",
+            "download_page": "Coming soon.",
+            "case_study_page": "Coming soon.",
+            "github_or_repo": null
+        },
+        "meta": {
+            "seo_title": "LAN-Cam | Local Wi-Fi Camera & Screen Streaming | DewCo Portfolio",
+            "seo_description": "LAN-only camera and screen streaming tool with WebRTC, LAN discovery, and browser viewers for classrooms, offices, and homes.",
+            "seo_keywords": [
+                "LAN-Cam",
+                "local streaming",
+                "LAN screen share",
+                "WebRTC",
+                "LAN discovery",
+                "Electron sender",
+                "low latency"
+            ],
+            "last_updated_for_portfolio": "2025-12-24",
+            "notes_for_future_edit": "Add installer links, screenshots, and measured latency once public beta ships."
+        },
+        "content": {
+            "paragraphs": [
+                "LAN-Cam is a LAN-only camera and screen streaming tool that broadcasts to multiple devices on the same Wi-Fi with low latency and zero internet dependency. By keeping traffic local, it avoids cloud lag, bandwidth bills, and privacy concerns.",
+                "It is built for classrooms, small offices, and at-home setups that need quick sharing without cloud complexity—simple discovery, QR/PIN joins, and a frictionless viewer keep the focus on the content. Broadcasters can switch between screen or webcam modes in seconds.",
+                "Admins get predictable performance because the signalling layer is lightweight and can run entirely on-prem. Diagnostics, quality presets, and optional PIN/locks make it practical for teachers, trainers, and demo rooms that need a reliable local broadcast."
+            ],
+            "bullets": [
+                "Screen or webcam mode with quality presets and optional audio for lessons or demos.",
+                "Auto-discovery on LAN with URL/QR/PIN fallback when networks are locked down.",
+                "Browser viewer with full-screen mode, latency indicator, and responsive layout.",
+                "Session controls for named rooms, PIN/locks, and basic viewer stats.",
+                "Local-first architecture with lightweight signalling that can stay on-prem or a small VPS."
+            ]
+        }
+    },
+    {
+        "id": "quantgrade_trading_bot",
+        "project_name": "Quant-Grade Trading Bot",
+        "headline": "Quant-Grade: Multi-Timeframe Algorithmic Trading Engine for Indian Markets & Crypto",
+        "short_headline": "Quant-Grade – AI-Assisted Trading Bot for Stocks & Crypto",
+        "taglines": [
+            "Quant discipline for Indian equities and crypto.",
+            "Multi-timeframe signals with risk baked in.",
+            "One engine for research, paper trading, and live modes."
+        ],
+        "project_type": "In-house product (SaaS-ready trading analytics and bot engine)",
+        "tech_stack": [
+            "Python engine for market data ingestion, features, and signals",
+            "FastAPI/Django REST for orchestration and APIs",
+            "Pandas/NumPy with pluggable AI/ML scoring and regime checks",
+            "React/Next.js dashboard with OHLC charts and overlays",
+            "PostgreSQL plus Redis for configs, signals, and caching",
+            "Dockerized workers with CI/CD and monitoring",
+            "Broker/exchange adapters and alert channels (email/Telegram style)"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-trading_bot.webp",
+            "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-1.webp",
+                "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trading_bot-2.webp",
+                "alt": "Quant-Grade trading analytics dashboard with multi-timeframe charts"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "live_dashboard": "Private Server Access Only",
+            "docs_or_notebook": "Private Server Access Only",
+            "case_study_page": null,
+            "github_or_repo": null
+        },
+        "meta": {
+            "seo_title": "Quant-Grade | Multi-Timeframe Trading Engine | DewCo Portfolio",
+            "seo_description": "AI-assisted trading engine for Indian equities and crypto with multi-timeframe signals, risk controls, and React/FastAPI stack.",
+            "seo_keywords": [
+                "Quant-Grade",
+                "trading bot",
+                "multi timeframe analysis",
+                "AI trading signals",
+                "FastAPI",
+                "React dashboard",
+                "Indian equities",
+                "crypto trading"
+            ],
+            "last_updated_for_portfolio": "2025-12-24",
+            "notes_for_future_edit": "Add concrete broker/exchange names and live performance summaries once production ready."
+        },
+        "content": {
+            "paragraphs": [
+                "Quant-Grade runs multi-timeframe analysis for Indian equities and crypto, producing disciplined signals, risk levels, and automation hooks for traders and small desks. It treats every instrument through the same rule-based pipeline so bias and guesswork are reduced.",
+                "The engine is modular across research, alerts, and execution, surfacing insights in a web dashboard and piping them into adapters for paper or live trading as the product moves toward SaaS readiness. Regime checks and alignment filters keep trades selective in noisy markets.",
+                "Configurable risk caps, environment modes, and plug-in strategy parameters make it safe to test and iterate. As SaaS packaging matures, the same stack can power white-label dashboards for desks needing disciplined, multi-market coverage."
+            ],
+            "bullets": [
+                "Ingests equities/indices and crypto pairs, scoring instruments from 1m to 1W with trend, momentum, and volatility features.",
+                "Generates trade hypotheses with entry, stop-loss, and take-profit levels plus regime awareness and alignment checks.",
+                "Dashboard watchlists show bias, aligned timeframes, and risk suggestions with near-real-time updates.",
+                "Risk controls enforce max per-trade and per-day loss, with environment toggles for backtest, paper, and live.",
+                "Adapters and alert channels (email/Telegram-style) keep traders informed and pave the way for broker connectivity."
+            ]
+        }
+    },
+    {
+        "id": "trac_app",
+        "project_name": "TRAC App – Tracking Remote Activity Control Application",
+        "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
+        "short_headline": "TRAC App – Tracking Remote Activity Control",
+        "taglines": [
+            "Live view of distributed machines from one dashboard.",
+            "Safe remote actions for classrooms, labs, and teams.",
+            "Lightweight agent plus simple admin UI."
+        ],
+        "project_type": "In-house product (remote activity tracking & control platform)",
+        "tech_stack": [
+            "FastAPI/Django-style backend for device and action APIs",
+            "Lightweight desktop agent service for heartbeats and commands",
+            "React/Next.js admin dashboard for monitoring and controls",
+            "PostgreSQL plus Redis for device state, actions, and logs",
+            "WebSockets/cron workers for alerts and notifications",
+            "Containerized deployment with environment-based configuration"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-2.webp",
+            "alt": "TRAC App dashboard showing remote device activity and control actions"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/trac-app-1.webp",
+                "alt": "TRAC App dashboard showing remote device activity and control actions"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "live_dashboard": "Coming soon.",
+            "agent_download": "Coming soon.",
+            "case_study_page": "Coming soon."
+        },
+        "meta": {
+            "seo_title": "TRAC App | Remote Activity Tracking & Control | DewCo Portfolio",
+            "seo_description": "Remote device visibility and safe control via lightweight agents, React dashboard, and FastAPI/Django backend with audit trails.",
+            "seo_keywords": [
+                "TRAC App",
+                "remote activity tracking",
+                "device monitoring",
+                "remote control actions",
+                "FastAPI",
+                "React dashboard",
+                "audit logging"
+            ],
+            "last_updated_for_portfolio": "2025-12-24",
+            "notes_for_future_edit": "Replace placeholder dates and add real URLs/screenshots before going public."
+        },
+        "content": {
+            "paragraphs": [
+                "TRAC App gives teams a real-time view of distributed devices and lets admins trigger safe actions like lock, restart, or custom scripts from a single dashboard. Heartbeats and activity hints surface which machines need attention without intrusive monitoring.",
+                "A lightweight agent plus clear APIs keep the system modular and privacy-friendly, making it useful for classrooms, labs, and remote teams that need auditability without heavy enterprise tooling. Actions are logged with user, timestamp, and optional notes for compliance.",
+                "Policies, tags, and webhook-style alerts make it adaptable to different environments—from labs that want quick lockdowns to teams that just need uptime visibility. The architecture is small enough for internal deployments but can scale into a SaaS seat model."
+            ],
+            "bullets": [
+                "Device registry with tags, online/offline status, and optional activity hints.",
+                "Remote actions such as lock, restart, or admin-defined commands with audit trails.",
+                "Search, filters, and detail views to triage devices quickly from the dashboard.",
+                "Alerts for offline or unusual activity with webhook/email-style notifications.",
+                "Privacy and safety controls through API-keyed agents, role-based access, and toggleable modules."
+            ]
+        }
+    },
+    {
+        "id": "wanderrest",
+        "project_name": "WanderRest (formerly Wander365)",
+        "headline": "Wander365 → WanderRest: Full-Stack Travel Experience Platform for Modern Explorers",
+        "short_headline": "WanderRest – Smart Tours & Travel Booking Platform",
+        "taglines": [
+            "Travel every day of the year, effortlessly.",
+            "From inspiration to itinerary – all in one place.",
+            "Where curated journeys meet intelligent automation.",
+            "Wander more, plan less.",
+            "Your 365-day companion for trips, treks, and tours."
+        ],
+        "project_type": "End-to-end product (branding + website + CRM)",
+        "tech_stack": [
+            "Angular/React SPA with Tailwind/SCSS for the public site",
+            "REST API (Node/Django/FastAPI) with RBAC for the admin CRM",
+            "PostgreSQL/MySQL or Firestore for packages, itineraries, and leads",
+            "Lead capture with analytics/UTM tracking plus email/WhatsApp integrations",
+            "Frontend hosting on Vercel/Netlify/Firebase; backend on VPS/Docker",
+            "CI/CD pipelines and environment-based configuration for deployments"
+        ],
+        "cover-image": {
+            "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-wanderrest.webp",
+            "alt": "WanderRest travel booking website shown on laptop and mobile screens"
+        },
+        "body_images": [
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-1.webp",
+                "alt": "WanderRest travel booking website shown on laptop and mobile screens"
+            },
+            {
+                "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/wanderrest-2.webp",
+                "alt": "WanderRest travel booking website shown on laptop and mobile screens"
+            }
+        ],
+        "body_media": {
+            "src": "",
+            "alt": ""
+        },
+        "links": {
+            "live_site": "https://wanderrest.in/",
+            "admin_panel": null,
+            "case_study_page": null,
+            "behance_or_dribbble": null
+        },
+        "meta": {
+            "seo_title": "WanderRest | Travel Booking Platform & CRM | DewCo Portfolio",
+            "seo_description": "Full-stack travel platform with curated trips, enquiry funnels, and an admin CRM for itineraries, pricing, and lead pipelines.",
+            "seo_keywords": [
+                "WanderRest",
+                "travel booking",
+                "tours and trips",
+                "travel CRM",
+                "Angular travel site",
+                "itinerary management",
+                "lead pipeline"
+            ],
+            "last_updated_for_portfolio": "2025-12-22",
+            "notes_for_future_edit": "Update metrics, real URLs, and exact stack choices before sharing with clients."
+        },
+        "content": {
+            "paragraphs": [
+                "WanderRest (ex-Wander365) helps travelers browse curated trips, treks, and getaways while the team manages packages, itineraries, and leads through a lightweight CRM. The public site surfaces destinations, day-wise details, FAQs, and galleries in a conversion-focused layout.",
+                "On the backend, the admin CRM centralizes enquiries, pricing matrices, itinerary templates, and follow-ups so the team no longer juggles WhatsApp and spreadsheets. Lead source tracking, UTM capture, and WhatsApp-ready shares keep the pipeline moving.",
+                "The architecture is intentionally simple for daily use yet ready for white-labeling: brand layers stay separate from core models, and the stack can be deployed on Vercel/Netlify/Firebase with a Dockerized API. Future multi-tenant rollout is planned without overhauling the UX."
+            ],
+            "bullets": [
+                "Destination and theme-based browsing with detailed itineraries, inclusions/exclusions, FAQs, and galleries.",
+                "Smart enquiry forms tied to CRM records with source/UTM tracking and WhatsApp-friendly sharing.",
+                "Admin CRM with lead pipeline, reusable package templates, pricing matrix, and quote exports.",
+                "Designed for daily simplicity while keeping the architecture ready for multi-tenant rollout.",
+                "SEO-friendly content structure plus basic reporting on leads, conversions, and top destinations."
+            ]
+        }
+    }
+]

@@ -1,5 +1,22 @@
 [
   {
+    "id": "digitalaccessvault",
+    "name": "DigitalAccessVault",
+    "headline": "DigitalAccessVault: Secure Password Manager & Digital Vault for Individuals and Teams",
+    "short_headline": "DigitalAccessVault – Secure Password Manager & Vault",
+    "tagline": "Own your passwords, secrets, and digital life.",
+    "category": "Security / SaaS",
+    "image-1": {
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/digitalaccessvault-cover-1.webp",
+      "alt": "DigitalAccessVault secure vault dashboard shown on laptop and mobile screens"
+    },
+    "image-2": {
+      "src": "https://res.cloudinary.com/dewco/image/upload/c_auto,h_646,w_646/assets/portfolio/cover/digitalaccessvault-cover-2.webp",
+      "alt": "DigitalAccessVault password manager interface with folders and items"
+    },
+    "link": "/portfolio/digitalaccessvault"
+  },
+  {
     "id": "wanderrest",
     "name": "WanderRest (formerly Wander365)",
     "headline": "Wander365 → WanderRest: Full-Stack Travel Experience Platform for Modern Explorers",

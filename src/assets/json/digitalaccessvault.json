@@ -1,0 +1,79 @@
+{
+  "id": "digitalaccessvault",
+  "project_name": "DigitalAccessVault – Secure Password Manager & Digital Vault SaaS",
+  "headline": "DigitalAccessVault: Own Your Passwords, Secrets, and Digital Life (React + Firebase SaaS)",
+  "short_headline": "DigitalAccessVault – Secure Password Manager & Vault",
+  "taglines": [
+    "A secure, zero-knowledge style vault for passwords, cards, identities, and SSH keys.",
+    "Built as a SaaS product under DewCo and Gloventis for individuals, teams, and organizations.",
+    "Modern React + Firebase stack with organization workspaces and clean UX."
+  ],
+  "project_type": "In-house SaaS product / security & productivity platform",
+  "tech_stack": [
+    "React 19 + TypeScript SPA for the vault UI",
+    "Firebase Authentication for secure, scalable auth",
+    "Firestore as the primary document database for vault items",
+    "Firebase Hosting for global, SSL-enabled deployment",
+    "Firebase Analytics for product usage and funnel insights",
+    "Client-side encryption & zero-knowledge style design principles",
+    "Google AI Studio-assisted development workflow and scaffolding"
+  ],
+  "cover-image": {
+    "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/all-devices-digitalaccessvault.webp",
+    "alt": "DigitalAccessVault web app mockup across multiple devices showing secure vault dashboard"
+  },
+  "body_images": [
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/digitalaccessvault-1.webp",
+      "alt": "DigitalAccessVault vault view with logins, folders, and categories"
+    },
+    {
+      "src": "https://res.cloudinary.com/dewco/image/upload/assets/portfolio/digitalaccessvault-2.webp",
+      "alt": "DigitalAccessVault organization workspace and shared secrets interface"
+    }
+  ],
+  "body_media": {
+    "src": "",
+    "alt": ""
+  },
+  "links": {
+    "live_app": "Coming soon.",
+    "demo_or_video": "Coming soon.",
+    "case_study_page": "Coming soon.",
+    "github_or_repo": null
+  },
+  "meta": {
+    "seo_title": "DigitalAccessVault | Secure Password Manager & Digital Vault | DewCo Portfolio",
+    "seo_description": "DigitalAccessVault is a secure SaaS password manager and digital vault built with React + Firebase, designed for individuals, teams, and organizations who want a zero-knowledge style, brand-owned alternative.",
+    "seo_keywords": [
+      "DigitalAccessVault",
+      "password manager",
+      "digital vault",
+      "secure SaaS",
+      "React TypeScript",
+      "Firebase Firestore",
+      "zero knowledge",
+      "DewCo",
+      "Gloventis"
+    ],
+    "last_updated_for_portfolio": "2026-01-17",
+    "notes_for_future_edit": "Replace placeholder images and add real app screenshots, live URL, and demo video links once the first public beta is ready."
+  },
+  "content": {
+    "paragraphs": [
+      "DigitalAccessVault is an in-house SaaS product from DewCo, built by Gloventis Solutions, to solve a simple but critical problem: managing passwords, identities, and secrets in a way that is secure, independent, and fully brand-owned. Instead of relying purely on third-party password managers, DigitalAccessVault offers a secure vault that DewCo can control, evolve, and offer as a service to users and organizations.",
+      "The platform is a browser-based digital vault where users can store logins, credit cards, identities, secure notes, and SSH keys in one place. It is designed with a zero-knowledge style mindset: sensitive data is handled so that only the user can access their decrypted information, while the backend focuses on safe storage, access control, and telemetry.",
+      "Built with React 19 and TypeScript on top of Firebase (Authentication, Firestore, Hosting, Analytics), DigitalAccessVault is structured as a SaaS product from day one. It supports personal vaults as well as future organization workspaces, where teams can share selected secrets securely while keeping everything auditable and organized under folders and categories.",
+      "This product also acts as a live demonstration of the DewCo philosophy: taking everyday friction (password chaos, scattered secrets, dependence on external tools) and turning it into a branded, technically solid SaaS offering. DigitalAccessVault is both a tool for real users and a portfolio piece that showcases Gloventis’ ability to design, architect, and ship secure web applications."
+    ],
+    "bullets": [
+      "Secure storage for logins, credit cards, identities, secure notes, and SSH keys inside a single digital vault.",
+      "Zero-knowledge style design principles so only users have access to decrypted data on their devices.",
+      "Planned organization workspaces for teams and companies to share specific items without exposing entire vaults.",
+      "Folder- and category-based organization for faster search, navigation, and mental clarity.",
+      "React 19 + TypeScript frontend integrated with Firebase Authentication, Firestore, Hosting, and Analytics.",
+      "SaaS-ready architecture with room for future pricing tiers, onboarding flows, and role-based access control.",
+      "Built under DewCo (idea and brand) and Gloventis Solutions (execution and engineering) as a long-term, extensible security product."
+    ]
+  }
+}
