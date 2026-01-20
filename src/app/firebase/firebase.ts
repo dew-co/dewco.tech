@@ -1,14 +1,28 @@
-import { getApps, initializeApp } from 'firebase/app';
+import { type FirebaseOptions, getApps, initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDWP5cXyEFRKeYjwQGmzlVZvbZC65dR7mY',
-  authDomain: 'dewco-tech.firebaseapp.com',
-  projectId: 'dewco-tech',
-  storageBucket: 'dewco-tech.firebasestorage.app',
-  messagingSenderId: '1036026597842',
-  appId: '1:1036026597842:web:c97933eeeffa1fd6e8f80b',
-  measurementId: 'G-T36T268FLW',
+type FirebaseRuntimeConfig = {
+  apiKey?: string;
+  authDomain?: string;
+  projectId?: string;
+  storageBucket?: string;
+  messagingSenderId?: string;
+  appId?: string;
+  measurementId?: string;
+};
+
+// Injected by public/env.js at runtime.
+const runtimeEnv = (globalThis as { __env?: { firebase?: FirebaseRuntimeConfig } })
+  .__env;
+
+const firebaseConfig: FirebaseOptions = {
+  apiKey: runtimeEnv?.firebase?.apiKey ?? '',
+  authDomain: runtimeEnv?.firebase?.authDomain ?? '',
+  projectId: runtimeEnv?.firebase?.projectId ?? '',
+  storageBucket: runtimeEnv?.firebase?.storageBucket ?? '',
+  messagingSenderId: runtimeEnv?.firebase?.messagingSenderId ?? '',
+  appId: runtimeEnv?.firebase?.appId ?? '',
+  measurementId: runtimeEnv?.firebase?.measurementId ?? '',
 };
 
 export const firebaseApp =

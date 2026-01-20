@@ -3,10 +3,14 @@
   "version": "0.1.9",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/generate-env.js",
     "start": "ng serve",
     "generate:sitemap": "node scripts/generate-sitemap.js",
+    "prebuild": "node scripts/generate-env.js",
     "build": "npm run generate:sitemap && ng build",
+    "prewatch": "node scripts/generate-env.js",
     "watch": "ng build --watch --configuration development",
+    "pretest": "node scripts/generate-env.js",
     "test": "ng test",
     "deploy": "npm run build && firebase deploy"
   },
