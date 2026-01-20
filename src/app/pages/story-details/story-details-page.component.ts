@@ -62,7 +62,7 @@ export class StoryDetailsPageComponent {
           map((stories) => ({ stories, slug })),
           switchMap(({ stories, slug }) => {
             const story = this.findStory(slug, stories);
-            const detailId = story?.id ?? slug;
+            const detailId = story?.slug ?? story?.id ?? slug;
             const { prev, next } = this.buildNav(story, stories);
 
             return this.storyService.getStoryDetail(detailId).pipe(
@@ -120,8 +120,13 @@ export class StoryDetailsPageComponent {
       stories.find((item) => {
         const linkSlug = this.slugFromLink(item.link);
         const idSlug = this.normalize(item.id);
+        const storySlug = item.slug ? this.normalize(item.slug) : '';
 
-        return linkSlug === normalizedSlug || idSlug === normalizedSlug;
+        return (
+          linkSlug === normalizedSlug ||
+          idSlug === normalizedSlug ||
+          storySlug === normalizedSlug
+        );
       }) ?? null
     );
   }

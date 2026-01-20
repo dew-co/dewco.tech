@@ -1,10 +1,12 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { DocumentData, QueryDocumentSnapshot, collection, getDocs } from 'firebase/firestore';
+import { Observable, defer, from } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { firestoreDb } from '../firebase/firebase';
 
 export interface Story {
   id: string;
+  slug: string;
   title: string;
   excerpt: string;
   date: string;
@@ -12,18 +14,23 @@ export interface Story {
 }
 
 interface StoryRaw {
-  id: string;
+  id?: string;
+  slug?: string;
   title: string;
-  excerpt: string;
-  date: string;
+  excerpt?: string;
+  date?: string;
+  tags?: string[];
+  content?: string;
 }
 
 export interface StoryDetail {
   id: string;
+  slug?: string;
   title: string;
   date?: string;
   tags?: string[];
   content: string;
+  excerpt?: string;
 }
 
 @Injectable({
@@ -33,26 +40,13 @@ export class StoryService {
   private readonly stories$: Observable<Story[]>;
   private readonly storyDetails$: Observable<StoryDetail[]>;
 
-  constructor(private readonly http: HttpClient) {
-    this.stories$ = this.http
-      .get<StoryRaw[]>('assets/json/stories.json')
-      .pipe(
-        map((items) => items.map((item) => this.mapStory(item))),
-        shareReplay(1)
-      );
-
-    this.storyDetails$ = this.http
-      .get<StoryDetail[]>('assets/json/story-details.json')
-      .pipe(
-        map((items) =>
-          items.map((detail) => ({
-            ...detail,
-            tags: detail.tags || [],
-            content: (detail.content || '').trim(),
-          }))
-        ),
-        shareReplay(1)
-      );
+  constructor() {
+    this.storyDetails$ = this.loadStoryDetails();
+    this.stories$ = this.storyDetails$.pipe(
+      map((items) => items.map((item) => this.mapStoryFromDetail(item))),
+      map((items) => this.sortStories(items)),
+      shareReplay(1)
+    );
   }
 
   getStories(): Observable<Story[]> {
@@ -73,26 +67,79 @@ export class StoryService {
     return this.storyDetails$.pipe(
       map(
         (items) =>
-          items.find((item) => this.normalize(item.id) === normalized) ?? null
+          items.find((item) =>
+            this.matchesStoryDetail(item, normalized)
+          ) ?? null
       )
     );
   }
 
-  defaultLink(id: string): string {
-    return `/stories/${id}`;
-  }
-
-  private mapStory(raw: StoryRaw): Story {
-    return {
-      id: raw.id,
-      title: raw.title,
-      excerpt: raw.excerpt,
-      date: raw.date,
-      link: this.defaultLink(raw.id),
-    };
+  defaultLink(slug: string): string {
+    return `/stories/${slug}`;
   }
 
   private normalize(value: string): string {
     return value.trim().toLowerCase();
+  }
+
+  private loadStoryDetails(): Observable<StoryDetail[]> {
+    return defer(() => from(getDocs(collection(firestoreDb, 'stories')))).pipe(
+      map((snapshot) => snapshot.docs.map((docSnap) => this.mapStoryDetailDoc(docSnap))),
+      shareReplay(1)
+    );
+  }
+
+  private mapStoryDetailDoc(
+    docSnap: QueryDocumentSnapshot<DocumentData>
+  ): StoryDetail {
+    const data = docSnap.data() as StoryRaw;
+    const id = data.id || docSnap.id;
+    const slug = data.slug || data.id || docSnap.id;
+
+    return {
+      ...data,
+      id,
+      slug,
+      title: data.title,
+      tags: data.tags || [],
+      content: (data.content || '').trim(),
+    };
+  }
+
+  private mapStoryFromDetail(detail: StoryDetail): Story {
+    const slug = detail.slug || detail.id;
+
+    return {
+      id: detail.id,
+      slug,
+      title: detail.title,
+      excerpt: detail.excerpt || '',
+      date: detail.date || '',
+      link: this.defaultLink(slug),
+    };
+  }
+
+  private matchesStoryDetail(detail: StoryDetail, normalized: string): boolean {
+    if (this.normalize(detail.id) === normalized) {
+      return true;
+    }
+
+    const slug = detail.slug ? this.normalize(detail.slug) : '';
+    return slug === normalized;
+  }
+
+  private sortStories(items: Story[]): Story[] {
+    return [...items].sort(
+      (a, b) => this.getDateValue(b.date) - this.getDateValue(a.date)
+    );
+  }
+
+  private getDateValue(value?: string): number {
+    if (!value) {
+      return 0;
+    }
+
+    const time = new Date(value).getTime();
+    return Number.isNaN(time) ? 0 : time;
   }
 }

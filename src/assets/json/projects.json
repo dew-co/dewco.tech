@@ -79,7 +79,7 @@
         }
     },
     {
-        "id": "arceon_ai",
+        "id": "arceon-ai",
         "project_name": "Arceon AI – AI-powered document processing & claim automation SaaS",
         "headline": "Arceon AI: Automate Document Processing and Claims at Scale (OpenAI + Django/DRF)",
         "short_headline": "Arceon AI – Document Processing & Claim Automation",
@@ -154,7 +154,7 @@
         }
     },
     {
-        "id": "gloveflix_platform",
+        "id": "gloveflix-platform",
         "project_name": "GloVeFlix 2.0 – Hybrid Streaming & VIP Access Platform",
         "headline": "GloVeFlix: SEO-First Movie Discovery Hub + Private VIP Streaming Experience",
         "short_headline": "GloVeFlix – Public Movie Hub with Private VIP Club",
@@ -228,7 +228,7 @@
         }
     },
     {
-        "id": "lan_cam",
+        "id": "lan-cam",
         "project_name": "LAN-Cam – Local Network Camera & Screen Sync",
         "headline": "LAN-Cam: Ultra-Low-Latency Camera & Screen Streaming Over Local Wi-Fi",
         "short_headline": "LAN-Cam – Local Network Camera & Screen Sync Tool",
@@ -301,7 +301,7 @@
         }
     },
     {
-        "id": "quantgrade_trading_bot",
+        "id": "quantgrade-trading-bot",
         "project_name": "Quant-Grade Trading Bot",
         "headline": "Quant-Grade: Multi-Timeframe Algorithmic Trading Engine for Indian Markets & Crypto",
         "short_headline": "Quant-Grade – AI-Assisted Trading Bot for Stocks & Crypto",
@@ -376,7 +376,7 @@
         }
     },
     {
-        "id": "trac_app",
+        "id": "trac-app",
         "project_name": "TRAC App – Tracking Remote Activity Control Application",
         "headline": "TRAC App: Real-Time Tracking & Remote Activity Control Across Distributed Devices",
         "short_headline": "TRAC App – Tracking Remote Activity Control",

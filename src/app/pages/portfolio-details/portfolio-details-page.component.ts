@@ -65,7 +65,7 @@ export class PortfolioDetailsPageComponent {
           map((portfolios) => ({ slug, portfolios })),
           switchMap(({ slug, portfolios }) => {
             const matched = this.findPortfolio(slug, portfolios);
-            const detailId = matched?.id ?? slug.replace(/-/g, '_');
+            const detailId = matched?.projectId ?? slug.replace(/-/g, '_');
             const { prev, next } = this.buildNav(matched, portfolios);
 
             return this.portfolioService.getPortfolioDetail(detailId).pipe(
